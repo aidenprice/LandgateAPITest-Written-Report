@@ -1,0 +1,91 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 OpenSans-Extrabold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 OpenSans;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+{\info
+{\author Aiden Price}
+{\*\company Curtin University}}\paperw11900\paperh16840\margl1440\margr1440\vieww37080\viewh21980\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+Project Title
+\f1\b0\fs28 \expnd0\expndtw0\kerning0
+\
+\
+
+\f2\b\fs32 \expnd0\expndtw0\kerning0
+Overview of Project
+\b0\fs28 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720\sl276\slmult1\sa400
+\cf0 It is our intention to evaluate the suitability of Landgate\'92s SLIP\'92s Application Programming Interfaces (APIs) for mobile users. Variants of a generic mobile mapping application (app) will connect with a single API each. Differences in user experience and data quality between apps will form the basis of the assessment.\
+An Application Programming Interface is a protocol allowing an external application to make requests of a program. In our context SLIP offers several APIs which a third party app may query to return map data. The Open Geospatial Consortium interoperability standards, WMS, WMTS, WFS, are APIs for our purposes. SLIP\'92s deprecated Google Maps Engine (GME) endpoints are also APIs.\
+In January 2015 Google deprecated Google Maps Engine and forewarned of its eventual closure by 26/1/2016 \kerning1\expnd0\expndtw0 (\'93Overview - Google Maps Engine API (Deprecated),\'94 2015)\expnd0\expndtw0\kerning0
+. The SLIP Future spatial data portal was built around GME\'92s API, they are thereby forced to choose a new provider. Landgate\'92s most recent newsletter announced that they will replace the GME service with an ESRI RESTful service \kerning1\expnd0\expndtw0 (\'93SLIP Stream,\'94 2015)\expnd0\expndtw0\kerning0
+. The new API should be fully implemented by the end of 2015 with GME running in parallel until Google finally closes it.\
+The researcher has experience in developing mobile applications for iOS devices and is familiar with the latest development approaches. Developing an app for an important organisation would add a significant highlight to the researcher\'92s resume.\
+Dr David McMeekin has graciously assented to supervise this research project. \
+\pard\pardeftab720
+
+\b\fs32 \cf0 \expnd0\expndtw0\kerning0
+Aims / Objectives
+\f1\b0\fs28 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720\sl276\slmult1\sa400
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+A period of rapid change is an excellent opportunity to tackle new challenges, particularly those around the new ways in which spatial data is consumed. This applied science project is squarely aimed at helping Landgate improve the SLIP service.\
+Many spatial data interoperability protocols were created with desktop GIS use in mind. Mobile users have very different expectations when compared to desktop users, however. Mobile users set out to achieve different tasks, such as browsing or address search, and expect results in far less time. The computing environment is also very different, there being less processing power and variable internet speeds. \
+The literature review will focus on best practice evaluation methods. The prime focus will be on those designed around web service evaluation or mobile experience assessment. Standard website or mobile application usability investigation methods are only tangentially useful in this study. It is expected that there will be no pre-existing or widely adopted assessment methodology concentrated on map data APIs. There may be such methods in similar fields, for instance, web services more generally. A critical review of related assessment methods and their applications will permit the creation of a customised methodology for this task. \
+The next step involves designing a generic iOS mapping app. It does not require complex code or masterful design. The ideal version will feature a code structure that enables easy interchange of data sources. The app and its code need not be obsessively optimised, so long as the display and interactivity does not favour a given API over any others. Indeed it is hoped that many component pieces of code will be freely available under open source licences. Using the generic apps as a basis, several variants will be contrived. Each variant will connect with a different API endpoint to retrieve data from SLIP.\
+An assessment of an API and the data storage and transmission infrastructure focusses on the data received at the point of use and factors concerning such. An initial list includes; \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl276\slmult1\sa400
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}Speed of data query, transmission and display\
+{\listtext	\'95	}Completeness and correctness of received data\
+{\listtext	\'95	}Connection stability and reliability\
+{\listtext	\'95	}Successful completion of common mobile mapping tasks such as browsing, geolocation and geocoding\
+{\listtext	\'95	}Human readable error messages\expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720\sl276\slmult1\sa400
+\cf0 \expnd0\expndtw0\kerning0
+Mobile applications consume data in a variety of contexts and environments unlikely to be considerations for desktop applications. The following are common variables in mobile use;\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl276\slmult1\sa400
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}Mobile operating software; iOS and Android\
+{\listtext	\'95	}Mobile devices of differing size and usage; tablets and phones\
+{\listtext	\'95	}Mobile devices of varying computational power and age\
+{\listtext	\'95	}Variable internet connection speed and reliability\expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720\sl276\slmult1\sa400
+\cf0 \expnd0\expndtw0\kerning0
+The evaluation will combine these factors. For example testing data quality and speed of interaction on a variety of devices in a variety of internet connectivity situations.\
+The assessment outcomes will point to recommendations for improvements. If Landgate can better accommodate mobile users now they will effectively future-proof their data portal. If action must be taken to improve mobile device access then now is an ideal time to implement that change. We can reduce the likelihood of or delay another critical transition in the future, thus minimising pain arising from organisational change.\
+\pard\pardeftab720
+
+\b\fs32 \cf0 \expnd0\expndtw0\kerning0
+Proposed Tasks
+\b0\fs28 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\pardeftab720\sl276\slmult1\sa400
+\cf0 The researcher studies part time around work and family commitments. All tasks must be complete by June 2016. Meetings with the supervisor need only be held once per fortnight. Further, there will be an interruption in meetings over the festive season, to be resumed in January 2016. \
+The literature review will take around seven weeks of part time work. All papers will be discovered online through the Curtin Library and proxy server. A draft will be ready for review by the supervisor by 5/10/2015.\
+The assessment plan should take into account feedback on the literature review and, hopefully, the views of Landgate staff. A feasible and thorough methodology will take a week to design and should be delivered on 12/10/2015.\
+The app development stage is duplicated for the creation of generic iOS and Android apps (note that the Android app will take much longer as it requires first learning how to develop Android apps). A shorter time is allowed for creating API specific app variants. The schedule allows for two and a half months to create and debug all apps. All should be delivered by 21/12/2015. \
+There will be a break for the festive season. Work should resume at the beginning of January.\
+The actual assessment will take three weeks with a further three weeks dedicated to analysing results. It is anticipated that this stage will be complete by 15/2/2016. It would be best if the assessment were complete before the GME shut down date as it will allow testing of yet more APIs. If the work is delayed and assessment can not begin before then the methodology and results are still valid.\
+The final stages involve the preparation of a draft report, due before 18/5/2016, and presentation slides, due before 3/6/2016. After putting into effect the supervisor\'92s thoughtful feedback the final version of the paper will be ready for binding by 13/6/2016.\
+\pard\pardeftab720
+
+\b\fs32 \cf0 \expnd0\expndtw0\kerning0
+References
+\b0\fs28 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\li400\fi-400\slleading240\pardirnatural
+\cf0 \kerning1\expnd0\expndtw0 Overview - Google Maps Engine API (Deprecated). (2015, February 18). Overview - Google Maps Engine API (Deprecated). Retrieved April 15, 2015, from https://developers.google.com/maps-engine/\
+SLIP Stream. (2015, July). SLIP Stream. Retrieved August 12, 2015, from http://slip.landgate.wa.gov.au/SiteAssets/Pages/SLIPStream/SLIPStream%20July%202015.pdf\expnd0\expndtw0\kerning0
+\
+\
+}
