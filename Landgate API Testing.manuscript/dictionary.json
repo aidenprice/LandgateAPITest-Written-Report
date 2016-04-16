@@ -1,0 +1,3844 @@
+{
+  "manuscript" : [
+    {
+      "createdAt" : 1444901934.034033,
+      "_id" : "MPAffiliation:EE3AB198-CE3B-48EA-A202-56A3892D6835",
+      "updatedAt" : 1460783385.716106,
+      "priority" : 1,
+      "objectType" : "MPAffiliation",
+      "_rev" : "2-fb9ccabdfa74a3f3a0b1eeedf67a59aa"
+    },
+    {
+      "updatedAt" : 1444854483.738607,
+      "objectType" : "MPAuxiliaryObjectReferenceStyle",
+      "_rev" : "1-ca59e13a3c86a1bb3d18571956bd97c8",
+      "_id" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "priority" : 10,
+      "prototype" : "MPAuxiliaryObjectReferenceStyle:default",
+      "title" : "Default",
+      "locked" : true,
+      "bundled" : 0,
+      "embeddedReferenceStringComponents" : [
+        {
+          "bold" : true,
+          "_id" : "MPStyleableStringComponent:B8CF9955-0956-4114-AAC7-F9C6CC99688F",
+          "placeholderString" : "${kind} ${elementIndex}",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        }
+      ],
+      "createdAt" : 1444854193.46347,
+      "name" : "default"
+    },
+    {
+      "updatedAt" : 1444854483.745402,
+      "objectType" : "MPBorderStyle",
+      "_rev" : "1-1f6b230a2c70e0a4a88f0c3af639e39a",
+      "_id" : "MPBorderStyle:0C48AF75-9D42-4AA9-A268-C623FA498B44",
+      "priority" : 40,
+      "prototype" : "MPBorderStyle:16583262-A260-4E35-A508-3F960F70074F",
+      "title" : "Double Lines",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463317,
+      "doubleLines" : true,
+      "name" : "double"
+    },
+    {
+      "updatedAt" : 1444854483.749237,
+      "objectType" : "MPBorderStyle",
+      "_rev" : "1-fbaa8433ff7acf6ab8f9b2194cf31224",
+      "_id" : "MPBorderStyle:245A9E61-4FF1-4BC9-9FF2-E2E86B60545C",
+      "priority" : 20,
+      "prototype" : "MPBorderStyle:E28AA90C-4379-434F-AF58-E2D8C8ED1EB4",
+      "title" : "Dashed",
+      "pattern" : [
+        2,
+        2
+      ],
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463306,
+      "name" : "dashed"
+    },
+    {
+      "updatedAt" : 1444854483.74238,
+      "objectType" : "MPBorderStyle",
+      "_rev" : "1-bee7b3296d24af775cc9b78e8b2a17c9",
+      "_id" : "MPBorderStyle:51C2E8DB-7D23-4860-B4FB-804BA5517030",
+      "priority" : 30,
+      "prototype" : "MPBorderStyle:00FD8810-B85D-4FC5-8C23-8022A36E07BD",
+      "title" : "Dotted",
+      "pattern" : [
+        1,
+        1
+      ],
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463312,
+      "name" : "dotted"
+    },
+    {
+      "locked" : true,
+      "_id" : "MPBorderStyle:7C35C327-2D79-45C8-8BC1-668F809CEB8B",
+      "objectType" : "MPBorderStyle",
+      "prototype" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+      "_rev" : "1-cbfda8fc561475d3805f3b08488f4be8",
+      "bundled" : 0,
+      "title" : "Solid",
+      "updatedAt" : 1444854483.755205,
+      "createdAt" : 1444854193.463296,
+      "priority" : 10,
+      "name" : "solid"
+    },
+    {
+      "updatedAt" : 1444854483.758377,
+      "figureTitleNumberingScheme" : "decimal",
+      "objectType" : "MPCaptionStyle",
+      "_rev" : "1-f28eb839557fd34948bbf81c170810c1",
+      "priority" : 10,
+      "_id" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "embeddedCaptionComponents" : [
+        {
+          "bold" : true,
+          "_id" : "MPStyleableStringComponent:E43EAFE4-7C81-468E-BF88-8CEF41435062",
+          "placeholderString" : "${kind} ${elementIndex}:",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        },
+        {
+          "editable" : true,
+          "bold" : false,
+          "_id" : "MPStyleableStringComponent:A6F4C1B4-597F-4206-A21A-4CA60F6C7A2E",
+          "placeholderString" : "${caption}",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        }
+      ],
+      "prototype" : "MPCaptionStyle:default",
+      "title" : "Default",
+      "locked" : true,
+      "bundled" : 0,
+      "embeddedFigureTitleComponents" : [
+        {
+          "bold" : true,
+          "_id" : "MPStyleableStringComponent:E5CB691A-EE39-41BD-8D78-22E02BD7782A",
+          "placeholderString" : "${figureIndex}. ",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        },
+        {
+          "editable" : true,
+          "bold" : false,
+          "_id" : "MPStyleableStringComponent:9E4DDC68-4667-49C8-9F3E-600E0258A53A",
+          "placeholderString" : "${title}",
+          "italic" : false,
+          "objectType" : "MPStyleableStringComponent"
+        }
+      ],
+      "createdAt" : 1444854193.463464,
+      "name" : "default"
+    },
+    {
+      "_id" : "MPColor:21C83EE6-AC21-47B7-A4E1-9DB119A4ACFF",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:black",
+      "_rev" : "1-a8de0a1bb0f26486f4686e05cc2f4ba5",
+      "bundled" : true,
+      "title" : "Black",
+      "updatedAt" : 1444854483.798609,
+      "createdAt" : 1444854193.463326,
+      "priority" : 10,
+      "name" : "black",
+      "value" : "#000000"
+    },
+    {
+      "updatedAt" : 1444854483.764801,
+      "objectType" : "MPColor",
+      "_rev" : "1-364fee378c39b09739c16ec81a99c9dd",
+      "_id" : "MPColor:2E0EFDD1-5363-436B-94AA-5EF56CE66950",
+      "priority" : 10,
+      "prototype" : "MPColor:black",
+      "title" : "Black",
+      "value" : "#000000",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463326,
+      "name" : "black"
+    },
+    {
+      "updatedAt" : 1444854483.791491,
+      "objectType" : "MPColor",
+      "_rev" : "1-8985a0c776132634b17e6513cdbbfcc1",
+      "_id" : "MPColor:32A314D9-3A44-400C-9E9C-158AB34F4F34",
+      "priority" : 50,
+      "prototype" : "MPColor:verylightgray",
+      "title" : "Very Light Gray",
+      "value" : "#f4f4f4",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.46334,
+      "name" : "verylightgray"
+    },
+    {
+      "_id" : "MPColor:45190F3C-46C2-4A35-A511-C76BD4B4A238",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:verylightgray",
+      "_rev" : "1-20d1773a1b4f3d268ccbe623715c3c16",
+      "bundled" : true,
+      "title" : "Very Light Gray",
+      "updatedAt" : 1444854483.798617,
+      "createdAt" : 1444854193.46334,
+      "priority" : 50,
+      "name" : "verylightgray",
+      "value" : "#f4f4f4"
+    },
+    {
+      "_id" : "MPColor:610C4E89-9D0B-4990-87AF-FDFB22BB07AB",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:white",
+      "_rev" : "1-dabed2fd0affa0cc7d2d1545c4d52412",
+      "bundled" : true,
+      "title" : "White",
+      "updatedAt" : 1444854483.798623,
+      "createdAt" : 1444854193.46335,
+      "priority" : 100,
+      "name" : "white",
+      "value" : "#ffffff"
+    },
+    {
+      "_id" : "MPColor:61709AE6-C46F-490D-AE64-8D6A6EEF48B8",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:blue",
+      "_rev" : "1-1f1376f94eaa590381f7c7665cd4f1b4",
+      "bundled" : true,
+      "title" : "Blue",
+      "updatedAt" : 1444854483.798632,
+      "createdAt" : 1444854193.463365,
+      "priority" : 130,
+      "name" : "blue",
+      "value" : "#0000ff"
+    },
+    {
+      "updatedAt" : 1444854483.767953,
+      "objectType" : "MPColor",
+      "_rev" : "1-9bed471211b8eeb22236fc9f9221343f",
+      "_id" : "MPColor:71EC7D83-0120-4A94-A361-8973E33F7BE6",
+      "priority" : 130,
+      "prototype" : "MPColor:blue",
+      "title" : "Blue",
+      "value" : "#0000ff",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463365,
+      "name" : "blue"
+    },
+    {
+      "_id" : "MPColor:720D1570-1AFD-452A-BD90-F327B0AFA408",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:red",
+      "_rev" : "1-7e9c36b42214a60da1d90a4fd468966f",
+      "bundled" : true,
+      "title" : "Red",
+      "updatedAt" : 1444854483.798626,
+      "createdAt" : 1444854193.463355,
+      "priority" : 110,
+      "name" : "red",
+      "value" : "#ff0000"
+    },
+    {
+      "_id" : "MPColor:7A0F2DDF-2A5A-41D9-9C10-4DB39078FBE0",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:gray",
+      "_rev" : "1-cb257ede97a347fe6c8c8c64414ae00e",
+      "bundled" : true,
+      "title" : "Gray",
+      "updatedAt" : 1444854483.798614,
+      "createdAt" : 1444854193.463335,
+      "priority" : 50,
+      "name" : "gray",
+      "value" : "#b0b0b0"
+    },
+    {
+      "_id" : "MPColor:9CA4E9F0-981E-42E2-873D-26BC529B0615",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:green",
+      "_rev" : "1-2de74a8e6721cbe47cb02ffc342c4f42",
+      "bundled" : true,
+      "title" : "Green",
+      "updatedAt" : 1444854483.798629,
+      "createdAt" : 1444854193.46336,
+      "priority" : 120,
+      "name" : "green",
+      "value" : "#00ff00"
+    },
+    {
+      "updatedAt" : 1444854483.787931,
+      "objectType" : "MPColor",
+      "_rev" : "1-c365e278fb96ac916830866ecc26d159",
+      "_id" : "MPColor:AA5F1190-F33F-4CB7-A92C-72FE0A3B59CA",
+      "priority" : 50,
+      "prototype" : "MPColor:verylightblue",
+      "title" : "Very Light Blue",
+      "value" : "#f0f0ff",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463345,
+      "name" : "verylightblue"
+    },
+    {
+      "updatedAt" : 1444854483.778356,
+      "objectType" : "MPColor",
+      "_rev" : "1-5ea5b0f6d164a6afcb9a8f97e194918e",
+      "_id" : "MPColor:AAD73E46-3D88-4E73-AEFE-E19990ADCAB3",
+      "priority" : 120,
+      "prototype" : "MPColor:green",
+      "title" : "Green",
+      "value" : "#00ff00",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.46336,
+      "name" : "green"
+    },
+    {
+      "_id" : "MPColor:B1E7F7D0-7651-4B29-8FD1-554B3221F288",
+      "objectType" : "MPColor",
+      "prototype" : "MPColor:verylightblue",
+      "_rev" : "1-0ea0805c28230cfecb678b76d19eef09",
+      "bundled" : true,
+      "title" : "Very Light Blue",
+      "updatedAt" : 1444854483.79862,
+      "createdAt" : 1444854193.463345,
+      "priority" : 50,
+      "name" : "verylightblue",
+      "value" : "#f0f0ff"
+    },
+    {
+      "updatedAt" : 1444854483.794706,
+      "objectType" : "MPColor",
+      "_rev" : "1-7f4658e0cd0802dd759ecd1c2ccfc609",
+      "_id" : "MPColor:C9F88C21-0D72-4DBD-B7FB-17CD04FC21AD",
+      "priority" : 100,
+      "prototype" : "MPColor:white",
+      "title" : "White",
+      "value" : "#ffffff",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.46335,
+      "name" : "white"
+    },
+    {
+      "updatedAt" : 1444854483.781711,
+      "objectType" : "MPColor",
+      "_rev" : "1-b66df26c992b9b54aecafe24d0537cc9",
+      "_id" : "MPColor:E2ECB2DF-D61E-48F3-BD90-5FE06877F691",
+      "priority" : 110,
+      "prototype" : "MPColor:red",
+      "title" : "Red",
+      "value" : "#ff0000",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463355,
+      "name" : "red"
+    },
+    {
+      "updatedAt" : 1444854483.775008,
+      "objectType" : "MPColor",
+      "_rev" : "1-6684c1a69d42b70cb0820ed74d676784",
+      "_id" : "MPColor:F1F168E1-1498-4A84-B258-E5A374724C35",
+      "priority" : 50,
+      "prototype" : "MPColor:gray",
+      "title" : "Gray",
+      "value" : "#b0b0b0",
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463335,
+      "name" : "gray"
+    },
+    {
+      "colors" : [
+        "MPColor:21C83EE6-AC21-47B7-A4E1-9DB119A4ACFF",
+        "MPColor:7A0F2DDF-2A5A-41D9-9C10-4DB39078FBE0",
+        "MPColor:45190F3C-46C2-4A35-A511-C76BD4B4A238",
+        "MPColor:B1E7F7D0-7651-4B29-8FD1-554B3221F288",
+        "MPColor:610C4E89-9D0B-4990-87AF-FDFB22BB07AB",
+        "MPColor:720D1570-1AFD-452A-BD90-F327B0AFA408",
+        "MPColor:9CA4E9F0-981E-42E2-873D-26BC529B0615",
+        "MPColor:61709AE6-C46F-490D-AE64-8D6A6EEF48B8"
+      ],
+      "locked" : true,
+      "objectType" : "MPColorScheme",
+      "prototype" : "MPColorScheme:default",
+      "_id" : "MPColorScheme:3B122F1A-89FD-4249-A0EF-9779E655B752",
+      "bundled" : 0,
+      "_rev" : "1-cfe8e09e8000d94e386957b178c1467a",
+      "updatedAt" : 1444854483.802702,
+      "createdAt" : 1444854193.463371,
+      "name" : "Manuscripts default colour scheme"
+    },
+    {
+      "prename" : "Aiden",
+      "updatedAt" : 1444901934.048031,
+      "lastName" : "Price",
+      "firstName" : "Aiden",
+      "objectType" : "MPContributor",
+      "_rev" : "3-653a47be787187f575886bbd58b0e5ee",
+      "_id" : "MPContributor:F59ABFF7-74CB-4442-9D94-2C43D8B9D4D8",
+      "affiliations" : [
+        "MPAffiliation:EE3AB198-CE3B-48EA-A202-56A3892D6835"
+      ],
+      "fullName" : "Aiden Price",
+      "isCorresponding" : 1,
+      "role" : "author",
+      "nameString" : "[1] Price [4] Aiden ",
+      "createdAt" : 1444901925.891807
+    },
+    {
+      "_id" : "MPContributorIdentity:F9D93E8B-4730-41E0-ADDC-181D3126CF97",
+      "objectType" : "MPContributorIdentity",
+      "_rev" : "1-9fcbcb8b066c794bd8d91a7acaea305f",
+      "namespace" : "com.manuscriptsapp.shared.package.identity",
+      "identifier" : "DE21E09D-5D3D-4E1B-9B8C-ECB8B453DCE3",
+      "contributor" : "MPContributor:F59ABFF7-74CB-4442-9D94-2C43D8B9D4D8",
+      "createdAt" : 1444901975.709461,
+      "updatedAt" : 1444901975.709461
+    },
+    {
+      "updatedAt" : 1444854483.82642,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-73929d95e6f69b67af3eb59e8bb59292",
+      "_id" : "MPFigureLayout:2AB4A6ED-4EF9-454D-8645-E22367A83730",
+      "priority" : 35,
+      "prototype" : "MPFigureLayout:three_figures_stacked",
+      "title" : "Three Figures Stacked",
+      "columns" : 1,
+      "rows" : 3,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463494,
+      "name" : "three_figures_stacked"
+    },
+    {
+      "updatedAt" : 1444854483.819634,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-4444ce3ea181df27938c874c2569e9a3",
+      "_id" : "MPFigureLayout:35C7C501-7EC9-4D63-A383-9CB185E650D3",
+      "priority" : 90,
+      "prototype" : "MPFigureLayout:nine_figures",
+      "title" : "Nine Figures (3×3)",
+      "columns" : 3,
+      "rows" : 3,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463506,
+      "name" : "nine_figures"
+    },
+    {
+      "updatedAt" : 1444854483.823341,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-ea3866e89488eb705ad5fa1e15cdd71f",
+      "_id" : "MPFigureLayout:6EAB61C5-C26A-413F-9393-A9D5F8EDBB9A",
+      "priority" : 30,
+      "prototype" : "MPFigureLayout:three_figures",
+      "title" : "Three Figures in a Row",
+      "columns" : 3,
+      "rows" : 1,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463491,
+      "name" : "three_figures"
+    },
+    {
+      "updatedAt" : 1444854483.835766,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-a7b79a357612172aa9c20d771069c90f",
+      "_id" : "MPFigureLayout:8A362420-3A42-4C2B-B78A-7B83EC9E7228",
+      "priority" : 25,
+      "prototype" : "MPFigureLayout:two_figures_stacked",
+      "title" : "Two Figures Stacked",
+      "columns" : 1,
+      "rows" : 2,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463488,
+      "name" : "two_figures_stacked"
+    },
+    {
+      "updatedAt" : 1444854483.832641,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-ee70a9e857a4c38bb6362090aee96e14",
+      "_id" : "MPFigureLayout:9788856B-883F-4254-8CA5-CF79CDA78F77",
+      "priority" : 20,
+      "prototype" : "MPFigureLayout:two_figures",
+      "title" : "Two Figures Side by Side",
+      "columns" : 2,
+      "rows" : 1,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463485,
+      "name" : "two_figures"
+    },
+    {
+      "updatedAt" : 1444854483.810044,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-2e71bcaa65a25c35a09a2ac1158be8a2",
+      "_id" : "MPFigureLayout:B916FE94-46E3-409D-90C2-3B0D0C9A1AA8",
+      "priority" : 60,
+      "prototype" : "MPFigureLayout:3_by_2",
+      "title" : "Six Figures (3×2)",
+      "columns" : 3,
+      "rows" : 2,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.4635,
+      "name" : "3_by_2"
+    },
+    {
+      "updatedAt" : 1444854483.816333,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-b694ee59b3c2949412077076363dfde0",
+      "_id" : "MPFigureLayout:BF66F440-7EE2-49CF-95E9-F8C81A93B8CB",
+      "priority" : 40,
+      "prototype" : "MPFigureLayout:four_figures",
+      "title" : "Four figures (2×2)",
+      "columns" : 2,
+      "rows" : 2,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463497,
+      "name" : "four_figures"
+    },
+    {
+      "updatedAt" : 1444854483.813222,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-6fc364f6309ee05fad9cbeb7740d50a8",
+      "_id" : "MPFigureLayout:C2B4F4E3-84A0-48D5-AFCF-4D704E3F71EB",
+      "priority" : 10,
+      "prototype" : "MPFigureLayout:default",
+      "title" : "Single Figure",
+      "columns" : 1,
+      "rows" : 1,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463479,
+      "name" : "default"
+    },
+    {
+      "updatedAt" : 1444854483.806929,
+      "objectType" : "MPFigureLayout",
+      "_rev" : "1-e141870287105d29290826728a71c1af",
+      "_id" : "MPFigureLayout:ED8791F8-90A2-4C8F-82BA-11DA3AFE2CDE",
+      "priority" : 65,
+      "prototype" : "MPFigureLayout:2_by_3",
+      "title" : "Six Figures (2×3)",
+      "columns" : 2,
+      "rows" : 3,
+      "locked" : true,
+      "bundled" : 0,
+      "createdAt" : 1444854193.463503,
+      "name" : "2_by_3"
+    },
+    {
+      "innerSpacing" : 1,
+      "updatedAt" : 1444854483.84281,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "_rev" : "1-b4d518cce83c5952cae3da4dc9b9a9b5",
+      "priority" : 30,
+      "_id" : "MPFigureStyle:3183BA18-6C65-4E75-AC79-AA1BFA28D8FC",
+      "prototype" : "MPFigureStyle:bordered-caption-below",
+      "title" : "Bordered, Caption Below",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "below",
+      "createdAt" : 1444854193.463454,
+      "name" : "bordered_caption_below",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "updatedAt" : 1444854483.853746,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "objectType" : "MPBorder",
+        "width" : 0
+      },
+      "priority" : 10,
+      "_id" : "MPFigureStyle:32CE919A-15D4-41A5-AAB2-7FA966EE758A",
+      "prototype" : "MPFigureStyle:default",
+      "title" : "Default",
+      "_rev" : "1-d6481aa440c48b611bc4422c76925f3e",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "below",
+      "createdAt" : 1444854193.46344,
+      "name" : "default",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "updatedAt" : 1444854483.847085,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:617000AE-D9C8-498C-A4F3-A000CCD2DD72",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "priority" : 90,
+      "_id" : "MPFigureStyle:7E7C5CEB-3F6F-445A-A245-9836885E434D",
+      "prototype" : "MPFigureStyle:borderless-caption-above",
+      "title" : "Borderless, Caption Above",
+      "_rev" : "1-5314da859eb1a56176a90f1da9dc4894",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "above",
+      "createdAt" : 1444854193.463457,
+      "name" : "borderless_caption_above",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "updatedAt" : 1444854483.839029,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:617000AE-D9C8-498C-A4F3-A000CCD2DD72",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "priority" : 90,
+      "_id" : "MPFigureStyle:9FCB1E7A-2207-45A3-9912-7B15497E3FF6",
+      "prototype" : "MPFigureStyle:bordered-caption-above",
+      "title" : "Bordered, Caption Above",
+      "_rev" : "1-96e88e77ba3dd674c0365343373777b2",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "above",
+      "createdAt" : 1444854193.46346,
+      "name" : "bordered_caption_above",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "innerSpacing" : 1,
+      "outerSpacing" : 0,
+      "updatedAt" : 1444854483.850431,
+      "objectType" : "MPFigureStyle",
+      "innerBorder" : {
+        "_id" : "MPBorder:0FFF4CDC-9D5C-4B7D-A606-F0374354FB7F",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 0,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "outerBorder" : {
+        "_id" : "MPBorder:1D66EC86-50A7-430B-A22F-EF025071C5D3",
+        "objectType" : "MPBorder",
+        "width" : 0
+      },
+      "priority" : 20,
+      "_id" : "MPFigureStyle:F3F83A39-0A52-4416-A2D4-E56AB518B70B",
+      "prototype" : "MPFigureStyle:borderless-caption-below",
+      "title" : "Borderless, Caption Below",
+      "_rev" : "1-4c68a74712990944824b1691069ccd84",
+      "locked" : true,
+      "bundled" : 0,
+      "captionPosition" : "below",
+      "createdAt" : 1444854193.463447,
+      "name" : "borderless_caption_below",
+      "preferredXHTMLElement" : "figure"
+    },
+    {
+      "bundle" : "MPBundle:www-zotero-org-styles-apa-fr-universite-de-montreal",
+      "manuscriptType" : 1,
+      "objectType" : "MPManuscript",
+      "_id" : "MPManuscript:F160F7A4-7122-40A6-9DF8-08BC76B59DB4",
+      "_rev" : "5-7abd0b272b5a5b7a6607d1be3d60528f",
+      "collection" : "Manuscripts",
+      "title" : "Landgate API Testing",
+      "sessionID" : "a3562a78-22ab-49b3-ef08-61335799088f",
+      "createdAt" : 1444854481.503089,
+      "updatedAt" : 1444901609.789855
+    },
+    {
+      "_id" : "MPMetadata:manuscript",
+      "creatorAppBundleIdentifier" : "com.manuscripts.Manuscripts",
+      "_rev" : "1-bb72135033c306c854055f726c246c4a",
+      "creatorAppBundleVersion" : "1.1.1-37-G0269"
+    },
+    {
+      "updatedAt" : 1444854483.857273,
+      "topMargin" : 20,
+      "objectType" : "MPPageLayout",
+      "defaultParagraphStyle" : "MPParagraphStyle:bodyText",
+      "_rev" : "1-716dd69a26a01c33394c54994c8bd917",
+      "_id" : "MPPageLayout:84FD0D3A-109F-4F40-BFD5-7A80187B7A12",
+      "prototype" : "MPPageLayout:defaultA4",
+      "beginChaptersOnRightHandPages" : true,
+      "displayUnits" : "mm",
+      "leftMargin" : 20,
+      "locked" : true,
+      "bottomMargin" : 20,
+      "mirrorPagesHorizontally" : true,
+      "bundled" : 0,
+      "rightMargin" : 20,
+      "createdAt" : 1444854193.46328,
+      "embeddedNumberingStyle" : {
+        "_id" : "MPNumberingStyle:CB6FF724-7F91-454A-9A3C-30293471E039",
+        "prefix" : "[",
+        "objectType" : "MPNumberingStyle",
+        "startIndex" : 1,
+        "suffix" : "]",
+        "priority" : 99,
+        "numberingScheme" : "decimal"
+      },
+      "pageSize" : "a4"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Section Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:0EDB4CCD-F5B9-402D-A4CB-D9C7D08A73AE",
+      "kind" : "heading",
+      "createdAt" : 1444854193.463408,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:2E2D93EB-2474-4494-AD92-B5EAD46A38BE",
+        "color" : "MPColor:black",
+        "fontSize" : 16,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "heading1",
+      "preferredXHTMLElement" : "h1",
+      "priority" : 20,
+      "topSpacing" : 8,
+      "updatedAt" : 1444901842.7322,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-e21d61b89724cb594c2b420dc016dca6",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H1"
+    },
+    {
+      "firstLineIndent" : 0,
+      "embeddedListItemNumberingStyles" : {
+        "1" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:5A479546-C898-4C4B-9836-202EA34332A8",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        },
+        "2" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:BE16BD50-9F21-49A7-8F66-15011A3DBCEE",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        },
+        "3" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:5AC47239-EDA2-4314-8BE5-8A5399F379DF",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        }
+      },
+      "locked" : true,
+      "sessionID" : "A4A46D67-6E44-4D49-93CC-B94424CD90E2",
+      "title" : "Footnote",
+      "bottomSpacing" : 10,
+      "listTailIndent" : 0,
+      "_id" : "MPParagraphStyle:111B53E9-C96F-445F-84C1-E785AC567EA5",
+      "kind" : "footnote",
+      "createdAt" : 1460783388.59586,
+      "bundled" : 0,
+      "hideListNumberingSuffixForLastLevel" : true,
+      "hierarchicalListNumbering" : false,
+      "name" : "footnote",
+      "preferredXHTMLElement" : "p",
+      "priority" : 100,
+      "textStyling" : {
+        "_id" : "MPTextStyling:A6E169AC-4610-44C6-A979-7FD95AE787CC",
+        "color" : "MPColor:black",
+        "fontSize" : 10,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Charter",
+        "bold" : false
+      },
+      "lineSpacing" : 2,
+      "nextStyle" : "MPParagraphStyle:footnote",
+      "topSpacing" : 10,
+      "listItemIndentPerLevel" : 30,
+      "updatedAt" : 1460783388.708562,
+      "headIndent" : 0,
+      "_rev" : "1-7b68aa3da5afd30d31ef1d1acb30379a",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "listHeadIndent" : 30,
+      "embeddedListItemBulletStyles" : {
+        "1" : {
+          "_id" : "MPListItemBulletStyle:0E9110F4-8426-4B66-B97A-9053CFC9C77A",
+          "bulletStyle" : "disc",
+          "objectType" : "MPListItemBulletStyle"
+        },
+        "2" : {
+          "_id" : "MPListItemBulletStyle:1066DC6B-704F-4CA0-B807-72F461F5E0BA",
+          "bulletStyle" : "circle",
+          "objectType" : "MPListItemBulletStyle"
+        }
+      },
+      "prototype" : "MPParagraphStyle:footnote"
+    },
+    {
+      "firstLineIndent" : 0,
+      "sessionID" : "A4A46D67-6E44-4D49-93CC-B94424CD90E2",
+      "locked" : true,
+      "title" : "Listing",
+      "bottomSpacing" : 10,
+      "_id" : "MPParagraphStyle:39AFED07-F9B0-4CBC-831C-17623C385A0B",
+      "kind" : "listing",
+      "createdAt" : 1460783388.595871,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:38ED2127-F6B6-4465-B739-09A3701A832D",
+        "color" : "MPColor:black",
+        "fontSize" : 11,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Menlo",
+        "bold" : false
+      },
+      "name" : "listing",
+      "preferredXHTMLElement" : "pre",
+      "priority" : 110,
+      "topSpacing" : 10,
+      "updatedAt" : 1460783388.715263,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:listing",
+      "headIndent" : 0,
+      "_rev" : "1-e42f1e600b47dfe51d4954e72170e367",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:listing"
+    },
+    {
+      "firstLineIndent" : 0,
+      "embeddedListItemNumberingStyles" : {
+        "1" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:5A479546-C898-4C4B-9836-202EA34332A8",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        },
+        "2" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:BE16BD50-9F21-49A7-8F66-15011A3DBCEE",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        },
+        "3" : {
+          "numberingScheme" : "decimal",
+          "_id" : "MPNumberingStyle:5AC47239-EDA2-4314-8BE5-8A5399F379DF",
+          "prefix" : "",
+          "suffix" : ".",
+          "objectType" : "MPNumberingStyle",
+          "startIndex" : 1
+        }
+      },
+      "locked" : true,
+      "title" : "Body Text",
+      "bottomSpacing" : 10,
+      "listTailIndent" : 0,
+      "_id" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "kind" : "body",
+      "createdAt" : 1444854193.463432,
+      "bundled" : 0,
+      "hideListNumberingSuffixForLastLevel" : true,
+      "hierarchicalListNumbering" : false,
+      "name" : "bodyText",
+      "preferredXHTMLElement" : "p",
+      "priority" : 10,
+      "textStyling" : {
+        "_id" : "MPTextStyling:A6E169AC-4610-44C6-A979-7FD95AE787CC",
+        "color" : "MPColor:F1F168E1-1498-4A84-B258-E5A374724C35",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : false
+      },
+      "lineSpacing" : 1.75,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "topSpacing" : 10,
+      "listItemIndentPerLevel" : 15,
+      "updatedAt" : 1444902444.807974,
+      "headIndent" : 0,
+      "_rev" : "19-dd9750e5ec6d8c8f5c3752315a48a868",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "listHeadIndent" : 15,
+      "embeddedListItemBulletStyles" : {
+        "1" : {
+          "_id" : "MPListItemBulletStyle:0E9110F4-8426-4B66-B97A-9053CFC9C77A",
+          "bulletStyle" : "disc",
+          "objectType" : "MPListItemBulletStyle"
+        },
+        "2" : {
+          "_id" : "MPListItemBulletStyle:1066DC6B-704F-4CA0-B807-72F461F5E0BA",
+          "bulletStyle" : "circle",
+          "objectType" : "MPListItemBulletStyle"
+        }
+      },
+      "prototype" : "MPParagraphStyle:bodyText"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsubsubsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:8BB3270D-1EE5-4E6C-B61D-17F3A0DAE48F",
+      "kind" : "heading",
+      "createdAt" : 1444854193.463428,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:5507294C-AD8D-48EC-B86A-A4E5AE6C34D5",
+        "color" : "MPColor:black",
+        "fontSize" : 10,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "heading6",
+      "preferredXHTMLElement" : "h6",
+      "priority" : 25,
+      "topSpacing" : 8,
+      "updatedAt" : 1444901875.059096,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-2dd6e5c71f6b3c4c19fc83d5537d3bcc",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H6"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Manuscript Title",
+      "bottomSpacing" : 10,
+      "_id" : "MPParagraphStyle:A242F6F4-7D17-4FC6-95DB-F7037A143197",
+      "kind" : "heading",
+      "createdAt" : 1444854193.463397,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:BBA06E82-F724-419F-A81E-1886644AA4B9",
+        "color" : "MPColor:black",
+        "fontSize" : 20,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "manuscriptTitle",
+      "preferredXHTMLElement" : "h1",
+      "priority" : 19,
+      "topSpacing" : 10,
+      "updatedAt" : 1444901830.438448,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-c0395b357affb5a68dc157773cd85742",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:manuscriptTitle"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:CCDF6965-8553-4388-B115-CD11B0788A16",
+      "kind" : "heading",
+      "createdAt" : 1444854193.46342,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:A3F0EF28-7A3F-4208-9205-5BD3FF8C1066",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "heading4",
+      "preferredXHTMLElement" : "h4",
+      "priority" : 23,
+      "topSpacing" : 8,
+      "updatedAt" : 1444901862.048138,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-043f9ba22d0b8732dc0a88ba25177a79",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H4"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:DD1EDA36-3685-4D80-95C1-EE8E75D480C8",
+      "kind" : "heading",
+      "createdAt" : 1444854193.463412,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:0A37ACFF-1D8A-4068-ABD0-0594C99C8EE0",
+        "color" : "MPColor:black",
+        "fontSize" : 14,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "heading2",
+      "preferredXHTMLElement" : "h2",
+      "priority" : 21,
+      "topSpacing" : 8,
+      "updatedAt" : 1444901849.521533,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-2aa98e82aff6d3d6fc3ccf7e9159ad26",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H2"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsubsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:EE280170-B2B3-4E5D-8402-379BBD1B0B95",
+      "kind" : "heading",
+      "createdAt" : 1444854193.463424,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:6094A8B5-2751-489F-B4A5-699E54B57DC3",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "heading5",
+      "preferredXHTMLElement" : "h5",
+      "priority" : 24,
+      "topSpacing" : 8,
+      "updatedAt" : 1444901867.853157,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-985d40ee509b694dbab99487968ecf90",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H5"
+    },
+    {
+      "firstLineIndent" : 0,
+      "locked" : true,
+      "title" : "Subsubsection Heading",
+      "bottomSpacing" : 5,
+      "_id" : "MPParagraphStyle:FE2B7655-A2C0-4C16-9E2A-F71B9AAEE906",
+      "kind" : "heading",
+      "createdAt" : 1444854193.463416,
+      "bundled" : 0,
+      "textStyling" : {
+        "_id" : "MPTextStyling:055123F5-3704-49FE-B59B-D801598C67C4",
+        "color" : "MPColor:black",
+        "fontSize" : 12,
+        "italic" : false,
+        "objectType" : "MPTextStyling",
+        "fontFamily" : "Open Sans",
+        "bold" : true
+      },
+      "name" : "heading3",
+      "preferredXHTMLElement" : "h3",
+      "priority" : 22,
+      "topSpacing" : 8,
+      "updatedAt" : 1444901856.210611,
+      "lineSpacing" : 1.5,
+      "nextStyle" : "MPParagraphStyle:bodyText",
+      "headIndent" : 0,
+      "_rev" : "2-26bd1ca426092a71b8c5564e10e34c60",
+      "tailIndent" : 0,
+      "alignment" : "left",
+      "objectType" : "MPParagraphStyle",
+      "prototype" : "MPParagraphStyle:H3"
+    },
+    {
+      "headerTopBorder" : {
+        "_id" : "MPBorder:9CB78DD5-BB21-473B-8276-DAB70873FE7D",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 2,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "locked" : true,
+      "headerRightBorder" : {
+        "_id" : "MPBorder:6FBF5B35-27A4-4146-87DE-162D05D368A9",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 3,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:blue"
+      },
+      "title" : "Colorful Test Table Style",
+      "bodyColumnSeparatorBorder" : {
+        "_id" : "MPBorder:24484580-1489-40A1-82F4-717FB5E54F33",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:red"
+      },
+      "footerBottomBorder" : {
+        "_id" : "MPBorder:1179659A-2E24-4A75-A80D-133B0F9BD2CC",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "footerBackgroundColor" : "MPColor:gray",
+      "footerTopSpacing" : 3,
+      "_id" : "MPTableStyle:A80CA35B-F5CC-4559-97AE-313F44B66BC3",
+      "bodyBackgroundAlternateColor" : "MPColor:verylightgray",
+      "bundled" : 0,
+      "createdAt" : 1444854193.463387,
+      "headerBottomBorder" : {
+        "_id" : "MPBorder:25556D0A-70E4-4288-AB10-508A7459FEF4",
+        "style" : "MPBorderStyle:00FD8810-B85D-4FC5-8C23-8022A36E07BD",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "name" : "crazy",
+      "priority" : 20,
+      "updatedAt" : 1444854483.888958,
+      "bodyBackgroundColor" : "MPColor:white",
+      "headerBottomSpacing" : 3,
+      "_rev" : "1-e4c17ffa0acd9db6706b0611cce5bfea",
+      "footerTopBorder" : {
+        "_id" : "MPBorder:3AE3F286-E87C-4E3B-B3FF-B75F43F8AD91",
+        "style" : "MPBorderStyle:00FD8810-B85D-4FC5-8C23-8022A36E07BD",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "bodyLeftBorder" : {
+        "_id" : "MPBorder:BFEABE48-E03A-47FE-ABA1-C58850BE89EC",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 2,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "objectType" : "MPTableStyle",
+      "footerRightBorder" : {
+        "_id" : "MPBorder:2E392D61-2E57-49D6-BAFE-87B996140586",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 3,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:green"
+      },
+      "prototype" : "MPTableStyle:colorful-test-table-style",
+      "headerBackgroundColor" : "MPColor:verylightgray"
+    },
+    {
+      "headerTopBorder" : {
+        "_id" : "MPBorder:6BC92907-B7DF-4542-84CF-1456246EFEA9",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 2,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "locked" : true,
+      "title" : "Default Table Style",
+      "bodyColumnSeparatorBorder" : {
+        "_id" : "MPBorder:EBB5D0B3-A9FE-49B3-ADAD-2CC5851D91F9",
+        "style" : "MPBorderStyle:00FD8810-B85D-4FC5-8C23-8022A36E07BD",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "footerBottomBorder" : {
+        "_id" : "MPBorder:EC933CA4-ABBB-49D0-A2EF-4B0B2D1DA786",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "footerBackgroundColor" : "MPColor:white",
+      "footerTopSpacing" : 3,
+      "_id" : "MPTableStyle:E20DE21E-C7BF-4AAB-B2DC-F2498C8B1AEE",
+      "bodyBackgroundAlternateColor" : "MPColor:white",
+      "bundled" : 0,
+      "createdAt" : 1444854193.46338,
+      "headerBottomBorder" : {
+        "_id" : "MPBorder:EB6A90B8-E464-4016-A6E7-90F704EC63C2",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "name" : "default",
+      "priority" : 10,
+      "updatedAt" : 1444854483.892637,
+      "bodyBackgroundColor" : "MPColor:white",
+      "headerBottomSpacing" : 3,
+      "_rev" : "1-df8a434a5566bf085bca4873528614ab",
+      "footerTopBorder" : {
+        "_id" : "MPBorder:2338AB83-D20B-4118-8C38-D0F330E85F23",
+        "style" : "MPBorderStyle:EBBB68B9-16A9-4EA2-8817-43755FF1B7A1",
+        "width" : 1,
+        "objectType" : "MPBorder",
+        "color" : "MPColor:black"
+      },
+      "objectType" : "MPTableStyle",
+      "prototype" : "MPTableStyle:default",
+      "headerBackgroundColor" : "MPColor:verylightgray"
+    }
+  ],
+  "annotations" : [
+
+  ],
+  "bibliography" : [
+
+  ],
+  "analysis" : [
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460783389.10706,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB" : 0,
+        "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F" : 20
+      },
+      "contentWordCount" : 3,
+      "artefact" : "MPSection:783737D6-3504-419A-F9C1-D2A9EA670A08",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-8983aa48dfcae0739ec197e54fc00224",
+      "_id" : "MPContentSummary:0509F1C0-179F-464B-AF96-A14BAA71BDE8",
+      "elementWordCounts" : {
+        "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB" : 0,
+        "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F" : 3
+      },
+      "titleWordCount" : 4,
+      "createdAt" : 1460783389.10706,
+      "contentCharacterCount" : 20,
+      "titleCharacterCount" : 36
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.111441,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:8A620CB5-67DC-41A1-9CC0-ADF144AFEB78",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-b97dc23f26c261a047a131486bc8d5b3",
+      "_id" : "MPContentSummary:151F4A6B-7C2B-435E-A017-84547E09EC06",
+      "elementWordCounts" : {
+        "MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.111441,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 7
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460783389.000529,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0" : 0,
+        "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06" : 158,
+        "MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC" : 0
+      },
+      "contentWordCount" : 26,
+      "artefact" : "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-ecfb8e883a9edc427832ea85b29ae714",
+      "_id" : "MPContentSummary:1C69FFBE-02DA-4474-8BC3-BCC7F159BDBF",
+      "elementWordCounts" : {
+        "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0" : 0,
+        "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06" : 26,
+        "MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.000529,
+      "contentCharacterCount" : 158,
+      "titleCharacterCount" : 12
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.098189,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759" : 558
+      },
+      "contentWordCount" : 89,
+      "artefact" : "MPSection:39F18579-2AEA-44F4-8547-A72EC4D7F6AD",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-52c7c0713bff3c3918591ecfb95e06ca",
+      "_id" : "MPContentSummary:2437DA39-A652-47BE-AC2E-9C153678F7CF",
+      "elementWordCounts" : {
+        "MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759" : 89
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.098189,
+      "contentCharacterCount" : 558,
+      "titleCharacterCount" : 10
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.131345,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:9EAEEE7C-D5CB-4BA5-88EC-32037E13303E",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-50fdcde3ca0a28b085de5b5865fc656a",
+      "_id" : "MPContentSummary:25B3EE75-F5AD-40D6-8F44-7063046263C6",
+      "elementWordCounts" : {
+        "MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.131345,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 15
+    },
+    {
+      "contentParagraphCount" : 21,
+      "updatedAt" : 1460783389.082142,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5" : 454,
+        "MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C" : 260,
+        "MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9" : 523,
+        "MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8" : 372,
+        "MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8" : 643,
+        "MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6" : 327,
+        "MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF" : 402,
+        "MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B" : 273,
+        "MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D" : 620,
+        "MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA" : 692,
+        "MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4" : 343,
+        "MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79" : 392,
+        "MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB" : 531,
+        "MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715" : 219,
+        "MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37" : 397,
+        "MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7" : 508,
+        "MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD" : 258,
+        "MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09" : 696,
+        "MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5" : 387,
+        "MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB" : 205,
+        "MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25" : 598
+      },
+      "contentWordCount" : 1411,
+      "artefact" : "MPSection:A2B81672-83E9-40F1-8203-47643B8BD475",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-a34f81c6584b4f6dc45b07e64759a04e",
+      "_id" : "MPContentSummary:27804142-8576-4B55-86CF-93CF5BD6E307",
+      "elementWordCounts" : {
+        "MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5" : 71,
+        "MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C" : 45,
+        "MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9" : 85,
+        "MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8" : 60,
+        "MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8" : 99,
+        "MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6" : 48,
+        "MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF" : 64,
+        "MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B" : 45,
+        "MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D" : 93,
+        "MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA" : 111,
+        "MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4" : 54,
+        "MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79" : 60,
+        "MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB" : 80,
+        "MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715" : 37,
+        "MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37" : 62,
+        "MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7" : 75,
+        "MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD" : 39,
+        "MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09" : 98,
+        "MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5" : 60,
+        "MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB" : 31,
+        "MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25" : 94
+      },
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.082142,
+      "contentCharacterCount" : 9100,
+      "titleCharacterCount" : 12
+    },
+    {
+      "contentParagraphCount" : 5,
+      "updatedAt" : 1460783389.012618,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320" : 579,
+        "MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C" : 607,
+        "MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6" : 379,
+        "MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480" : 721,
+        "MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83" : 461
+      },
+      "contentWordCount" : 398,
+      "artefact" : "MPSection:49196AC1-57C2-4CAE-9978-9E18D73C1D42",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-829512cbe23d99c17d0cd00a36f19dcc",
+      "_id" : "MPContentSummary:3FA02CC1-3A72-4A8F-9F95-D477925BE982",
+      "elementWordCounts" : {
+        "MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320" : 83,
+        "MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C" : 78,
+        "MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6" : 58,
+        "MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480" : 112,
+        "MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83" : 67
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.012618,
+      "contentCharacterCount" : 2747,
+      "titleCharacterCount" : 8
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.146655,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:4373C645-8679-4C7A-B641-FDAEB656B4D9",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-8cb45d1d9edb8193a758ee1dab6e3829",
+      "_id" : "MPContentSummary:46AF5DBD-77A6-4DA6-B55F-1FD8D213A1F6",
+      "elementWordCounts" : {
+        "MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1" : 0
+      },
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.146655,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 18
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460783389.051534,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1" : 277,
+        "MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295" : 266
+      },
+      "contentWordCount" : 88,
+      "artefact" : "MPSection:B72150BC-3874-44BA-AD9B-C66233E80DC3",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-ff902d6c235de6d7fc914093b035097f",
+      "_id" : "MPContentSummary:53401D68-992D-4A51-98F8-12474CF3FBCB",
+      "elementWordCounts" : {
+        "MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1" : 43,
+        "MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295" : 45
+      },
+      "titleWordCount" : 8,
+      "createdAt" : 1460783389.051534,
+      "contentCharacterCount" : 543,
+      "titleCharacterCount" : 42
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.13986,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:52D8989D-A8E7-4B55-ABF6-96EC3584B476",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-be2ed668fb02e2a6a7404281ab31def0",
+      "_id" : "MPContentSummary:5DEF2F28-5A46-4FC5-B96C-ADD555929690",
+      "elementWordCounts" : {
+        "MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E" : 0
+      },
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.13986,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 20
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.102456,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:70DC8945-FE66-452E-E0A9-3D23FC0F28C3" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:C6005E8A-5094-41FB-85C2-BC0A0F64AA33",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-3a180a5290ed0c6c6d7a6cdbbdf87880",
+      "_id" : "MPContentSummary:688E225D-1564-470B-9C32-E08E07AC1B68",
+      "elementWordCounts" : {
+        "MPParagraphElement:70DC8945-FE66-452E-E0A9-3D23FC0F28C3" : 0
+      },
+      "titleWordCount" : 3,
+      "createdAt" : 1460783389.102456,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 21
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783388.979615,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:E1452A91-D5FE-4E22-A33B-538E5C7AF1FD",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-7ce4eaa4b52556b367ba2da3182be114",
+      "_id" : "MPContentSummary:689936FA-A2BB-4429-BC9A-C7AC04E9CFBB",
+      "elementWordCounts" : {
+        "MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783388.979615,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 8
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.150826,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:DDFCD241-8B8E-40C4-8439-7CA8CB1DE187",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-7376af65c146cc2b8b54cb1ee9aaf6f8",
+      "_id" : "MPContentSummary:86E4666F-7865-4150-9D29-D94E476F11DE",
+      "elementWordCounts" : {
+        "MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.150826,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 10
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.115592,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:6E0C405D-86E5-4D0A-AB26-3B327F15B007",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-1a1b921fe5ebf94f3ab64266ce2073f7",
+      "_id" : "MPContentSummary:86F8844E-67E9-452A-945D-DE170401FCCB",
+      "elementWordCounts" : {
+        "MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.115592,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 10
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460783389.120308,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053" : 11,
+        "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2" : 114,
+        "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140" : 76
+      },
+      "contentWordCount" : 33,
+      "artefact" : "MPSection:C521A0F5-9681-428C-E64C-07AD8D85BB9F",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-63958c5704ab867ee59742fd8da28175",
+      "_id" : "MPContentSummary:AB6029B5-2576-44A1-A161-EC8D033743FC",
+      "elementWordCounts" : {
+        "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053" : 2,
+        "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2" : 18,
+        "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140" : 13
+      },
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.120308,
+      "contentCharacterCount" : 201,
+      "titleCharacterCount" : 11
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460783389.019331,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C" : 260,
+        "MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4" : 463,
+        "MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B" : 634
+      },
+      "contentWordCount" : 203,
+      "artefact" : "MPSection:B5C2A232-F890-4564-8DA7-EE50D82182C6",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-c6bbd18ab386e419f2e2db0891e82d19",
+      "_id" : "MPContentSummary:AC9BD645-5592-4057-B8FD-11E7B72D7413",
+      "elementWordCounts" : {
+        "MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C" : 40,
+        "MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4" : 70,
+        "MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B" : 93
+      },
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.019331,
+      "contentCharacterCount" : 1357,
+      "titleCharacterCount" : 12
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460783389.035939,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D" : 336,
+        "MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022" : 290
+      },
+      "contentWordCount" : 104,
+      "artefact" : "MPSection:FE8C941A-72A8-49B5-B623-7AB37E7A4684",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-213c9ae9b99aafd688fb245c7109938c",
+      "_id" : "MPContentSummary:BD1B57E8-F3A3-446E-BF73-CBF2FDC6DB1D",
+      "elementWordCounts" : {
+        "MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D" : 55,
+        "MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022" : 49
+      },
+      "titleWordCount" : 6,
+      "createdAt" : 1460783389.035939,
+      "contentCharacterCount" : 626,
+      "titleCharacterCount" : 46
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460783389.024813,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4" : 231,
+        "MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55" : 307
+      },
+      "contentWordCount" : 86,
+      "artefact" : "MPSection:371C53B9-143D-4BC2-B2EA-D177F9331B22",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-fb7f40fe0b4cba43561114b75a6f0098",
+      "_id" : "MPContentSummary:C23697A4-5487-4744-B920-8FAE0C144ED6",
+      "elementWordCounts" : {
+        "MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4" : 37,
+        "MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55" : 49
+      },
+      "titleWordCount" : 6,
+      "createdAt" : 1460783389.024813,
+      "contentCharacterCount" : 538,
+      "titleCharacterCount" : 42
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1460783389.127234,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC" : 498,
+        "MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31" : 284,
+        "MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8" : 263,
+        "MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501" : 0,
+        "MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3" : 189,
+        "MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473" : 93,
+        "MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7" : 318
+      },
+      "contentWordCount" : 256,
+      "artefact" : "MPSection:0965D3C5-E5A4-4223-AF8C-007E39E8504D",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-d7ddcb350221fef6dc5448964d51b6a6",
+      "_id" : "MPContentSummary:CB3EBEAF-DA7F-460E-A4ED-2F42A5B9CBE6",
+      "elementWordCounts" : {
+        "MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC" : 78,
+        "MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31" : 44,
+        "MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8" : 40,
+        "MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501" : 0,
+        "MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3" : 27,
+        "MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473" : 16,
+        "MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7" : 51
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.127234,
+      "contentCharacterCount" : 1645,
+      "titleCharacterCount" : 11
+    },
+    {
+      "_id" : "MPContentSummary:D34DC79C-B21F-4E60-AB87-4A3ADD9CF67C",
+      "contentCharacterCount" : 0,
+      "contentParagraphCount" : 0,
+      "artefact" : "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+      "contentWordCount" : 0,
+      "objectType" : "MPContentSummary",
+      "titleCharacterCount" : 17,
+      "_rev" : "1-3ec2ac625468df8b2ec3a26c1c32cdaf",
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.064776,
+      "updatedAt" : 1460783389.064776
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460783389.041637,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62" : 247,
+        "MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364" : 184,
+        "MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2" : 658
+      },
+      "contentWordCount" : 171,
+      "artefact" : "MPSection:5450F0EB-C94C-411A-A7E7-278FCC27D8A1",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-5897faea12e603db7fa9c2ee0fd6796d",
+      "_id" : "MPContentSummary:D373B177-8291-44B8-8245-1E3A72038AE6",
+      "elementWordCounts" : {
+        "MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62" : 36,
+        "MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364" : 31,
+        "MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2" : 104
+      },
+      "titleWordCount" : 3,
+      "createdAt" : 1460783389.041637,
+      "contentCharacterCount" : 1089,
+      "titleCharacterCount" : 18
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460783389.13587,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:83F9A661-AC18-43CE-AC00-4F65C7F2FD8C",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-566458141547d129d9773f4435821176",
+      "_id" : "MPContentSummary:E1B60579-F6B6-4AAA-9FFF-0BBC2F2750B5",
+      "elementWordCounts" : {
+        "MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3" : 0
+      },
+      "titleWordCount" : 1,
+      "createdAt" : 1460783389.13587,
+      "contentCharacterCount" : 0,
+      "titleCharacterCount" : 13
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1460783389.060332,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80" : 401,
+        "MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE" : 104,
+        "MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93" : 171,
+        "MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB" : 742,
+        "MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1" : 1056,
+        "MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8" : 27,
+        "MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3" : 103
+      },
+      "contentWordCount" : 364,
+      "artefact" : "MPSection:050E293E-D327-4220-8388-2B04DF8CCB95",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-be9a42896e68180f1f3a3cbfef36737c",
+      "_id" : "MPContentSummary:E8FB18FF-9E86-47F5-8459-896167421894",
+      "elementWordCounts" : {
+        "MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80" : 64,
+        "MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE" : 18,
+        "MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93" : 28,
+        "MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB" : 88,
+        "MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1" : 146,
+        "MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8" : 4,
+        "MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3" : 16
+      },
+      "titleWordCount" : 3,
+      "createdAt" : 1460783389.060332,
+      "contentCharacterCount" : 2604,
+      "titleCharacterCount" : 22
+    },
+    {
+      "_id" : "MPContentSummary:EE6E1723-10FE-4BA3-AF9B-53B3500ACE55",
+      "contentCharacterCount" : 0,
+      "contentParagraphCount" : 0,
+      "artefact" : "MPSection:510D0720-6717-48DD-B353-7DF90521139A",
+      "contentWordCount" : 0,
+      "objectType" : "MPContentSummary",
+      "titleCharacterCount" : 12,
+      "_rev" : "1-54331fc974dcec5e8906a2d0afb64818",
+      "titleWordCount" : 2,
+      "createdAt" : 1460783389.154725,
+      "updatedAt" : 1460783389.154725
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1460783389.093284,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3" : 248,
+        "MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877" : 525,
+        "MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446" : 528,
+        "MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389" : 711,
+        "MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF" : 308,
+        "MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B" : 338,
+        "MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D" : 451
+      },
+      "contentWordCount" : 486,
+      "artefact" : "MPSection:98DB30A8-E962-429E-8F46-EE53B94E095B",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-8774f019d6be5f5ee2066e3a51ca7d33",
+      "_id" : "MPContentSummary:F5EF7551-D956-45EF-8419-E741B049AC7D",
+      "elementWordCounts" : {
+        "MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3" : 34,
+        "MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877" : 80,
+        "MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446" : 75,
+        "MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389" : 115,
+        "MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF" : 53,
+        "MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B" : 57,
+        "MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D" : 72
+      },
+      "titleWordCount" : 5,
+      "createdAt" : 1460783389.093284,
+      "contentCharacterCount" : 3109,
+      "titleCharacterCount" : 33
+    }
+  ],
+  "sections" : [
+    {
+      "contentParagraphCount" : 5,
+      "updatedAt" : 1460369521.33651,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320" : 579,
+        "MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C" : 607,
+        "MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6" : 379,
+        "MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480" : 721,
+        "MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83" : 461
+      },
+      "contentWordCount" : 398,
+      "artefact" : "MPSection:49196AC1-57C2-4CAE-9978-9E18D73C1D42",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-d258346bedb6fa939a5868da43ba0d6e",
+      "_id" : "MPContentSummary:03B601EB-2678-4F6E-B0D3-4E6703B2BDEA",
+      "elementWordCounts" : {
+        "MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320" : 83,
+        "MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C" : 78,
+        "MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6" : 58,
+        "MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480" : 112,
+        "MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83" : 67
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.33651,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460369521.467457,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1" : 277,
+        "MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295" : 266
+      },
+      "contentWordCount" : 88,
+      "artefact" : "MPSection:B72150BC-3874-44BA-AD9B-C66233E80DC3",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-31c38d63e1ccef7b3a0b9fe32f737d69",
+      "_id" : "MPContentSummary:18B4E844-CFEC-4773-A553-8E23B0349EBB",
+      "elementWordCounts" : {
+        "MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1" : 43,
+        "MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295" : 45
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.467457,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460369521.441953,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D" : 336,
+        "MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022" : 290
+      },
+      "contentWordCount" : 104,
+      "artefact" : "MPSection:FE8C941A-72A8-49B5-B623-7AB37E7A4684",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-f5126f346fb355214611189ed9bc8a5b",
+      "_id" : "MPContentSummary:19A547D9-825E-4EDC-A7AF-7AFBC3B07A58",
+      "elementWordCounts" : {
+        "MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D" : 55,
+        "MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022" : 49
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.441953,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460369521.401104,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C" : 260,
+        "MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4" : 463,
+        "MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B" : 634
+      },
+      "contentWordCount" : 203,
+      "artefact" : "MPSection:B5C2A232-F890-4564-8DA7-EE50D82182C6",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-12b919c56a746fa3c7ee34cc1ea9b8af",
+      "_id" : "MPContentSummary:36D3A5C0-CE5B-4380-8555-0251B7697039",
+      "elementWordCounts" : {
+        "MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C" : 40,
+        "MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4" : 70,
+        "MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B" : 93
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.401104,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460369521.417404,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4" : 231,
+        "MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55" : 307
+      },
+      "contentWordCount" : 86,
+      "artefact" : "MPSection:371C53B9-143D-4BC2-B2EA-D177F9331B22",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-f4ceeed1f43a11ebcdfdd5ad03196b7c",
+      "_id" : "MPContentSummary:518BD5DA-18A1-4BF0-B7D9-D7C6E7DAC920",
+      "elementWordCounts" : {
+        "MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4" : 37,
+        "MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55" : 49
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.417404,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.660246,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:4373C645-8679-4C7A-B641-FDAEB656B4D9",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-0c5f63b1a0117cf959281c251cb4c69a",
+      "_id" : "MPContentSummary:5445355C-3FD0-46BF-B508-BAB354B9DEE5",
+      "elementWordCounts" : {
+        "MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.660246,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.568143,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:8A620CB5-67DC-41A1-9CC0-ADF144AFEB78",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-a637bedbe4f4090cda544adf982b8695",
+      "_id" : "MPContentSummary:5D981355-48D6-4B4A-AD84-172862CB3A1F",
+      "elementWordCounts" : {
+        "MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.568143,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1460369521.479444,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80" : 401,
+        "MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE" : 104,
+        "MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93" : 171,
+        "MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB" : 742,
+        "MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1" : 1056,
+        "MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8" : 27,
+        "MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3" : 103
+      },
+      "contentWordCount" : 364,
+      "artefact" : "MPSection:050E293E-D327-4220-8388-2B04DF8CCB95",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-2a51ad2e775ed286d33ccb6a9afacf82",
+      "_id" : "MPContentSummary:61698AA6-7A62-44C6-957C-423F80D85732",
+      "elementWordCounts" : {
+        "MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80" : 64,
+        "MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE" : 18,
+        "MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93" : 28,
+        "MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB" : 88,
+        "MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1" : 146,
+        "MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8" : 4,
+        "MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3" : 16
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.479444,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.589392,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:6E0C405D-86E5-4D0A-AB26-3B327F15B007",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-815c755791de01ed6427c288e892f0dc",
+      "_id" : "MPContentSummary:641E8273-6919-47FE-BD42-73BD91499104",
+      "elementWordCounts" : {
+        "MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.589392,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.615741,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:83F9A661-AC18-43CE-AC00-4F65C7F2FD8C",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-ee142fdf28209015a4d9628a1a6b1393",
+      "_id" : "MPContentSummary:6876D171-63B5-4647-A402-1E0FAB0F038E",
+      "elementWordCounts" : {
+        "MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.615741,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 0,
+      "updatedAt" : 1460371562.52666,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:53695952-FFB3-466F-8A97-4C62DE6F2088" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:C6005E8A-5094-41FB-85C2-BC0A0F64AA33",
+      "objectType" : "MPContentSummary",
+      "_rev" : "2-4be4d67f34943ba24611035023ef12c7",
+      "_id" : "MPContentSummary:76EF8BB7-8AC3-423D-8D83-BC4175ED2E7E",
+      "elementWordCounts" : {
+        "MPParagraphElement:53695952-FFB3-466F-8A97-4C62DE6F2088" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.558139,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.636272,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:52D8989D-A8E7-4B55-ABF6-96EC3584B476",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-fa14fa55a931200f63c3c3af714737e1",
+      "_id" : "MPContentSummary:80BB8D92-6532-47DF-9008-7B3DAF3ECE3F",
+      "elementWordCounts" : {
+        "MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.636272,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.129564,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:E1452A91-D5FE-4E22-A33B-538E5C7AF1FD",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-52cc9d387bef740cdbd65d504c265068",
+      "_id" : "MPContentSummary:96F9A0BC-AB60-4414-8E46-CD1DF049DE5D",
+      "elementWordCounts" : {
+        "MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.129564,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1460369521.517683,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3" : 248,
+        "MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877" : 525,
+        "MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446" : 528,
+        "MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389" : 711,
+        "MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF" : 308,
+        "MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B" : 338,
+        "MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D" : 451
+      },
+      "contentWordCount" : 486,
+      "artefact" : "MPSection:98DB30A8-E962-429E-8F46-EE53B94E095B",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-545be612dcb1797b62eff1f44ae61eef",
+      "_id" : "MPContentSummary:99A6DB97-2BC3-45D8-A968-EE06E8D78811",
+      "elementWordCounts" : {
+        "MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3" : 34,
+        "MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877" : 80,
+        "MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446" : 75,
+        "MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389" : 115,
+        "MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF" : 53,
+        "MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B" : 57,
+        "MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D" : 72
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.517683,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 0,
+      "updatedAt" : 1460371575.471649,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:0D566F8A-3B60-4782-FD92-2D1894627CE6" : 0,
+        "MPParagraphElement:98BD82C5-07D9-4CED-9DC4-87BAFF541DF3" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+      "objectType" : "MPContentSummary",
+      "_rev" : "5-d9182edf3124bcbb76187f1db2551d6e",
+      "_id" : "MPContentSummary:99FE260A-B8AA-4C4F-B069-23B9B4DACF17",
+      "elementWordCounts" : {
+        "MPParagraphElement:0D566F8A-3B60-4782-FD92-2D1894627CE6" : 0,
+        "MPParagraphElement:98BD82C5-07D9-4CED-9DC4-87BAFF541DF3" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.488683,
+      "titleCharacterCount" : 0
+    },
+    {
+      "_id" : "MPContentSummary:9D7B1686-269F-4E12-A50C-AE71995087CB",
+      "contentWordCount" : 0,
+      "contentParagraphCount" : 0,
+      "artefact" : "MPSection:510D0720-6717-48DD-B353-7DF90521139A",
+      "objectType" : "MPContentSummary",
+      "titleCharacterCount" : 0,
+      "_rev" : "1-4f5946471886eaebcb06154ab56f6e13",
+      "titleWordCount" : 0,
+      "createdAt" : 1460372062.381755,
+      "updatedAt" : 1460372062.381755
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.537773,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759" : 558
+      },
+      "contentWordCount" : 89,
+      "artefact" : "MPSection:39F18579-2AEA-44F4-8547-A72EC4D7F6AD",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-562eb6a85d7ea1c0a001c5958c10cc52",
+      "_id" : "MPContentSummary:A2FFA192-C333-4975-B72E-D23ADEE52288",
+      "elementWordCounts" : {
+        "MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759" : 89
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.537773,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 21,
+      "updatedAt" : 1460369521.5092,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5" : 454,
+        "MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C" : 260,
+        "MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9" : 523,
+        "MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8" : 372,
+        "MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8" : 643,
+        "MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6" : 327,
+        "MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF" : 402,
+        "MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B" : 273,
+        "MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D" : 620,
+        "MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA" : 692,
+        "MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4" : 343,
+        "MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79" : 392,
+        "MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB" : 531,
+        "MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715" : 219,
+        "MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37" : 397,
+        "MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7" : 508,
+        "MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD" : 258,
+        "MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09" : 696,
+        "MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5" : 387,
+        "MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB" : 205,
+        "MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25" : 598
+      },
+      "contentWordCount" : 1411,
+      "artefact" : "MPSection:A2B81672-83E9-40F1-8203-47643B8BD475",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-e874d6232f1dc790aa2b7fa5ce5950ed",
+      "_id" : "MPContentSummary:AD7E897D-49EE-4808-9E86-264E0D775ECC",
+      "elementWordCounts" : {
+        "MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5" : 71,
+        "MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C" : 45,
+        "MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9" : 85,
+        "MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8" : 60,
+        "MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8" : 99,
+        "MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6" : 48,
+        "MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF" : 64,
+        "MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B" : 45,
+        "MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D" : 93,
+        "MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA" : 111,
+        "MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4" : 54,
+        "MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79" : 60,
+        "MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB" : 80,
+        "MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715" : 37,
+        "MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37" : 62,
+        "MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7" : 75,
+        "MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD" : 39,
+        "MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09" : 98,
+        "MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5" : 60,
+        "MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB" : 31,
+        "MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25" : 94
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.5092,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 7,
+      "updatedAt" : 1460371468.378626,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC" : 498,
+        "MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31" : 284,
+        "MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8" : 263,
+        "MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501" : 0,
+        "MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3" : 189,
+        "MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473" : 93,
+        "MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7" : 318
+      },
+      "contentWordCount" : 256,
+      "artefact" : "MPSection:0965D3C5-E5A4-4223-AF8C-007E39E8504D",
+      "objectType" : "MPContentSummary",
+      "_rev" : "2-d2a8829712f2ea2bc393687e3138df51",
+      "_id" : "MPContentSummary:B20FDA11-C924-4FB1-926D-E544E2E755B6",
+      "elementWordCounts" : {
+        "MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC" : 78,
+        "MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31" : 44,
+        "MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8" : 40,
+        "MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501" : 0,
+        "MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3" : 27,
+        "MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473" : 16,
+        "MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7" : 51
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.606862,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460410185.475173,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053" : 11,
+        "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2" : 114,
+        "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140" : 76
+      },
+      "contentWordCount" : 33,
+      "artefact" : "MPSection:C521A0F5-9681-428C-E64C-07AD8D85BB9F",
+      "objectType" : "MPContentSummary",
+      "_rev" : "18-ccb242b906d74c6e759b4fe1dbaf1729",
+      "_id" : "MPContentSummary:B4705B0A-03EE-436C-9BB9-10E80BEB07FC",
+      "elementWordCounts" : {
+        "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053" : 2,
+        "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2" : 18,
+        "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140" : 13
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460371877.966954,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 2,
+      "updatedAt" : 1460371971.718887,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:D0F57DFE-6C3D-4240-E1C1-D951CD3DD4E0" : 23,
+        "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB" : 0,
+        "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F" : 20
+      },
+      "contentWordCount" : 3,
+      "artefact" : "MPSection:783737D6-3504-419A-F9C1-D2A9EA670A08",
+      "objectType" : "MPContentSummary",
+      "_rev" : "7-a7f5b2b356c5b32abdbf5dac15dcf365",
+      "_id" : "MPContentSummary:C3CF1683-2513-4A67-8B66-63BA314B7AD6",
+      "elementWordCounts" : {
+        "MPParagraphElement:D0F57DFE-6C3D-4240-E1C1-D951CD3DD4E0" : 4,
+        "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB" : 0,
+        "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F" : 3
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460371591.031493,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460454122.528887,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0" : 0,
+        "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06" : 158,
+        "MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC" : 0
+      },
+      "contentWordCount" : 26,
+      "artefact" : "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+      "objectType" : "MPContentSummary",
+      "_rev" : "7-7e87ec895fb211532fd73ee12a0a62f6",
+      "_id" : "MPContentSummary:D492AEB5-F42D-4581-8189-0165BCE3E847",
+      "elementWordCounts" : {
+        "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0" : 0,
+        "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06" : 26,
+        "MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.25048,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 3,
+      "updatedAt" : 1460369521.461701,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62" : 247,
+        "MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364" : 184,
+        "MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2" : 658
+      },
+      "contentWordCount" : 171,
+      "artefact" : "MPSection:5450F0EB-C94C-411A-A7E7-278FCC27D8A1",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-d76bb370c0a2821904f5a6ebd9cff0af",
+      "_id" : "MPContentSummary:EB16F43B-9590-472F-9E29-05B47B885AA5",
+      "elementWordCounts" : {
+        "MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62" : 36,
+        "MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364" : 31,
+        "MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2" : 104
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.461701,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.611557,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:9EAEEE7C-D5CB-4BA5-88EC-32037E13303E",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-a5f21d13d56bc22d506a97f4f2d1b712",
+      "_id" : "MPContentSummary:F65EB1CE-A5B4-4622-848C-99A1616E996D",
+      "elementWordCounts" : {
+        "MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.611557,
+      "titleCharacterCount" : 0
+    },
+    {
+      "contentParagraphCount" : 1,
+      "updatedAt" : 1460369521.697631,
+      "elementCharacterCounts" : {
+        "MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43" : 0
+      },
+      "contentWordCount" : 0,
+      "artefact" : "MPSection:DDFCD241-8B8E-40C4-8439-7CA8CB1DE187",
+      "objectType" : "MPContentSummary",
+      "_rev" : "1-eb83db1b8e92e546c0a5c3bcb4eb3a19",
+      "_id" : "MPContentSummary:FA5A0C2C-099E-42B8-807D-06F827428D90",
+      "elementWordCounts" : {
+        "MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43" : 0
+      },
+      "titleWordCount" : 0,
+      "createdAt" : 1460369521.697631,
+      "titleCharacterCount" : 0
+    },
+    {
+      "id" : "MPEquation:9696C4D2-7BF6-46FD-A699-06F32831E477",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "OMMLStringRepresentation" : "<m:oMath xmlns:m=\"http:\/\/schemas.openxmlformats.org\/officeDocument\/2006\/math\"><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsia=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Cambria Math\"><\/w:rFonts><\/w:rPr><m:t>a+b=c<\/m:t><\/m:r><\/m:oMath>",
+      "updatedAt" : 1444902278.71364,
+      "MathMLStringRepresentation" : "<?xml version=\"1.0\" standalone=\"no\"?><math xmlns=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mi>a<\/mi><mo>+<\/mo><mi>b<\/mi><mo>=<\/mo><mi>c<\/mi><\/math>",
+      "objectType" : "MPEquation",
+      "_rev" : "5-c4001cfc33000d730c5de2e944daf811",
+      "_id" : "MPEquation:9696C4D2-7BF6-46FD-A699-06F32831E477",
+      "title" : "Equation",
+      "TeXRepresentation" : "a + b = c",
+      "createdAt" : 1444902265,
+      "SVGStringRepresentation" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"9.188ex\" height=\"1.949ex\" viewBox=\"0 -720.7 3972 829.4\" style=\"vertical-align: -0.278ex; margin: 1px 0ex;\"><defs id=\"MathJax_SVG_glyphs\"><path stroke-width=\"10\" id=\"MJMATHI-61\" d=\"M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z\"><\/path><path stroke-width=\"10\" id=\"MJMAIN-2B\" d=\"M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z\"><\/path><path stroke-width=\"10\" id=\"MJMATHI-62\" d=\"M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z\"><\/path><path stroke-width=\"10\" id=\"MJMAIN-3D\" d=\"M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z\"><\/path><path stroke-width=\"10\" id=\"MJMATHI-63\" d=\"M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z\"><\/path><\/defs><g stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"0\" transform=\"matrix(1 0 0 -1 0 0)\"><use xlink:href=\"#MJMATHI-61\" x=\"0\" y=\"0\"><\/use><use xlink:href=\"#MJMAIN-2B\" x=\"756\" y=\"0\"><\/use><use xlink:href=\"#MJMATHI-62\" x=\"1761\" y=\"0\"><\/use><use xlink:href=\"#MJMAIN-3D\" x=\"2473\" y=\"0\"><\/use><use xlink:href=\"#MJMATHI-63\" x=\"3534\" y=\"0\"><\/use><\/g><\/svg>",
+      "collection" : "equations"
+    },
+    {
+      "_id" : "MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1",
+      "objectType" : "MPListElement",
+      "elementType" : "ol",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-04d136325d5da8abb7b2e73dc11310e8",
+      "contents" : "<ol id=\"MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1\" class=\"MPElement\" data-object-type=\"MPListElement\">\n      <li>Response Time - the time interval between\n        the transmission of a request and the receipt of a\n        response. The total time is composed of the time taken for\n        the client to compose the request and decompose the\n        response plus the network transmission time to and from the\n        server plus the time taken for the server to process the\n        request and formulate a response.<\/li>\n      <li>Maximum Throughput - the maximum number of\n        requests a service can reliably respond to in a unit of\n        time.<\/li>\n      <li>Availability - the proportion of time the\n        server is operational, the complement of service downtime\n        per measured time.<\/li>\n      <li>Accessibility - the probability of the web\n        service can be reached when the system is operational,\n        quantified as the number of received acknowledgement\n        messages divided by the total number of requests.<\/li>\n      <li>Successability - the probability of\n        receiving a successful response to a web service request,\n        the number of responses divided by the number of\n        requests.<\/li><\/ol>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.485159,
+      "updatedAt" : 1444902481.485159
+    },
+    {
+      "_id" : "MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB",
+      "objectType" : "MPListElement",
+      "elementType" : "ol",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-880fac4a96e0ff73edbd7a32eeccf889",
+      "contents" : "<ol id=\"MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB\" class=\"MPElement\" data-object-type=\"MPListElement\">\n      <li>Business Value Quality - the value arising\n        from using a web service as compared to the cost.<\/li>\n      <li>Service Level Measurement Quality - the\n        service responsiveness from a client's point of view,\n        including time and success criteria.<\/li>\n      <li>Interoperability Quality - the degree to\n        which a service conforms to appropriate standards.<\/li>\n      <li>Business Processing Quality - the\n        service's reliability for business use considering\n        transmission integrity and integration with other\n        processes.<\/li>\n      <li>Manageability Quality - management\n        processes to ensure web service quality.<\/li>\n      <li>Security Quality - the service's ability\n        to prevent intrusion, interception or destruction of the\n        service itself or its messages.<\/li><\/ol>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.471751,
+      "updatedAt" : 1444902481.471751
+    },
+    {
+      "_id" : "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F",
+      "objectType" : "MPListElement",
+      "elementType" : "ol",
+      "id" : "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<ol class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F\" id=\"MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F\" data-object-type=\"MPListElement\"><li data-placeholder-text=\"List item\">Speed of development<\/li><\/ol>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460371627,
+      "_rev" : "2-141c233d88cfc88c1781311fe3777605"
+    },
+    {
+      "_id" : "MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-aeefffd6a134f2df81378e439d1b6db8",
+      "contents" : "<p id=\"MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Hamas, Saad and Abed {*Hamad:2010tr} compare the performance of SOAP and ReST APIs on mobile devices. The measured criteria are response time and transmission size which predictably favour ReST interfaces.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.502306,
+      "updatedAt" : 1444902481.502306
+    },
+    {
+      "_id" : "MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "collection" : "elements",
+      "placeholderInnerHTML" : "The Introduction section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state - and, if helpful, illustrate - the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.",
+      "contents" : "<p id=\"MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F placeholder\" data-object-type=\"MPParagraphElement\" data-placeholder-text=\"The Introduction section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state - and, if helpful, illustrate - the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.\"><\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1444854481.90926,
+      "updatedAt" : 1444854481.90926,
+      "_rev" : "6-e7142a702359bedb357b3072be6738db"
+    },
+    {
+      "_id" : "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F\" data-object-type=\"MPParagraphElement\">Android app<\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460410180,
+      "_rev" : "2-3965a1d6c2daa69f4df7d91fdb54d9a1"
+    },
+    {
+      "_id" : "MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-d78dfd3fbe9ce9c883d8359b720b2ee1",
+      "contents" : "<p id=\"MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Palacios, Garcia-Banjul and Tuya {*Palacios:2011eo} surveyed Service Oriented Architecture literature to find articles focussed on dynamic binding. 57% of the 33 articles detected faults in web services and thereby excluded non-responsive services.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.587374,
+      "updatedAt" : 1444902481.587374
+    },
+    {
+      "_id" : "MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-08a9f9d7543f88517d34e6fb4a04af67",
+      "contents" : "<p id=\"MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">ArcGIS for Server is Esri's enterprise level product for intra\/internet GIS and provisioning web services {Anonymous:BHtz-GD9}. ArcGIS for Server has a long development history and has been an established (or entrenched rather) product in geospatial enterprises for many years.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.455202,
+      "updatedAt" : 1444902481.455202
+    },
+    {
+      "_id" : "MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-f232f875e077d0aa3bed2ea3c2ec8329",
+      "contents" : "<p id=\"MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Their role incorporates managing property ownership and transfer records, as well as property valuations to government agencies {Anonymous:x1iQOCOB}. Vital to society in the connected age, Landgate is Western Australia's leading spatial data agency. Landgate has successfully commercialised spatial data creation and access. Their cumulative efforts considerably lessened their dependence on funding from the state government {Anonymous:2015va}. The success of this strategy has lead to a projected 5% increase in the number of datasets served through the 2015\/16 financial year.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.374213,
+      "updatedAt" : 1444902481.374213
+    },
+    {
+      "_id" : "MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-447f6212923687505ccca80b87a24f4a",
+      "contents" : "<p id=\"MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Mobile application testing is a rapidly growing field. Gao et al. {*Gao:2014fp} identified four classes of mobile application testing approaches. Emulation-based testing, as seen above, where a device simulator runs on a desktop computer, is commonplace as emulators ship with most app development environments. Device-based testing runs the application and its services on a range of real devices to find edge case failures. Cloud testing suits large-scale tests scaleable to requirements. Crowd-based testing employs volunteers or contractors to test apps and can reach reasonable scales, they note that tests may not be completely thorough.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.568617,
+      "updatedAt" : 1444902481.568617
+    },
+    {
+      "_id" : "MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-70702993004ae17212181b8fcc2f7ccf",
+      "contents" : "<p id=\"MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The emergence of ReSTful web services engendered many studies comparing performance to entrenched SOAP services. Few experimental designs take advantage of SOAP's inherent advantages, i.e. a message layer and orchestrated distributed computing, such a design would allow SOAP APIs to be compared more favourably with ReST APIs.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.549444,
+      "updatedAt" : 1444902481.549444
+    },
+    {
+      "_id" : "MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-f16d0da807453b85ae8ad8c651f256e4",
+      "contents" : "<p id=\"MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The sub-categories include;<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.482589,
+      "updatedAt" : 1444902481.482589
+    },
+    {
+      "_id" : "MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-4013c77413159b50ce9719ace681e726",
+      "contents" : "<p id=\"MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Similarly, service providers must prepare for a changing landscape that may not even be partially realised yet. Landgate has evolved and changed direction since early in the decade to build the SLIP Future program. They must continue to adopt new technologies and processes so as to remain relevant to their customers.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.63555,
+      "updatedAt" : 1444902481.63555
+    },
+    {
+      "_id" : "MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "In order to give appropriate credit to each author of a paper, the individual contributions of authors to the manuscript should be specified in this section.",
+      "_rev" : "1-59d5bf975c56de0e12559d5c53cd917c",
+      "contents" : "<p id=\"MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854482.075647,
+      "updatedAt" : 1444854482.075647
+    },
+    {
+      "_id" : "MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-3cd8561d66be8156746d0d124ee05dd4",
+      "contents" : "<p id=\"MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Firstly, we test services from an actual mobile device in real-world mobile usage situations. Tests are therefore as close to the real mobile experience as possible. This contrasts with the bulk of academic literature that performs tests on desktop computers emulating mobile devices.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.642638,
+      "updatedAt" : 1444902481.642638
+    },
+    {
+      "_id" : "MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-fcd9f9b51f611f9b91fe566ab6e4f98d",
+      "contents" : "<p id=\"MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The scope of this study is limited to those aspects of Landgate's service that affect their suitability for use on mobile devices. The business process and value, management, interoperability and security factors cannot be tested with a mobile device. These are more suited to desktop studies and surveys of existing clients. Only Service Level Measurement Quality is within the purview of this study.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.476879,
+      "updatedAt" : 1444902481.476879
+    },
+    {
+      "_id" : "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F\" data-object-type=\"MPParagraphElement\">Identify objectives, what does the solution look like, how will I achieve my objectives, give structure of report (where to find things in the report itself).<\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460454049,
+      "_rev" : "5-db79ebd3ecfda74fdf1e20914bffa4e5"
+    },
+    {
+      "_id" : "MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-0af39ef48981f9c7ff9c715fc4e6fe37",
+      "contents" : "<p id=\"MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Park and Ohm {*Park:2014jp} used survey data to construct a technology acceptance model to investigate users' acceptance of mobile mapping applications. They found that acceptance and hence intention to use a mobile mapping service depended to a large degree upon two factors; perceived locational accuracy and processing speed. Park and Ohm defined perceived locational accuracy as how well users envision their location in the map, essentially the degree to which mapped features correspond with a user's mental model of the world and where they are in it.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.61569,
+      "updatedAt" : 1444902481.61569
+    },
+    {
+      "_id" : "MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-935564d6dbc94d589da45092182b9552",
+      "contents" : "<p id=\"MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Web services are widely studied. However, the scope of applications for web services is broad to say the least. There are, therefore, few studies that examine the intersection of geographic web service performance, mobile device context and an individual, state-level spatial data infrastructure. Following are a cross-section of papers with aims partially aligned to those of this work.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.499765,
+      "updatedAt" : 1444902481.499765
+    },
+    {
+      "_id" : "MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-070a7a5f96747a20c002334a14ceb37a",
+      "contents" : "<p id=\"MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">From the 22nd of November 2014, Google redirected GME website bound traffic to their Google Maps for Work service {Anonymous:A_DLJUOY}, a more streamlined approach to providing enterprise mapping solutions than the previous five separate products.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.440758,
+      "updatedAt" : 1444902481.440758
+    },
+    {
+      "_id" : "MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-d7e8c1cfbdfa2db8fab03ee92f80e607",
+      "contents" : "<p id=\"MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Provisioning web services from a mobile device faces similar network and device limitations as consuming a service from a mobile device. Nguyen, Jørstad and van Thanh {*Nguyen:2008jt} explored web service performance on an emulated mobile device. While investigating the influence of varied simulated mobile network speeds, they concluded that testing on an actual device would provide ideal settings for their network simulation. Indeed, the subsequent experiment showed considerable differences between emulated and real network speed influence on web service performance. Even after modifying their simulated network speed to approximate real world network speed the difference is significant.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.52537,
+      "updatedAt" : 1444902481.52537
+    },
+    {
+      "_id" : "MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-168131954894892ac3613a531945d6a7",
+      "contents" : "<p id=\"MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Landgate is the trading name of the Western Australian Land Information Authority, the statutory authority given charge of maintaining the state's land and property information system {Anonymous:2004tv}. The organisation is the inheritor of the mandate of various incarnations of the Department of Lands and Surveys, dating back to the original Survey Office in the 19th Century.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.371012,
+      "updatedAt" : 1444902481.371012
+    },
+    {
+      "_id" : "MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-89fb585292299ebaf3bde8b53e2cd637",
+      "contents" : "<p id=\"MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">In a commercial decision, Google Inc. announced the deprecation of the GME API on the 29th of January 2015 {Anonymous:2015tg}. Google shuttered the service on the 29th of January 2016.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.443229,
+      "updatedAt" : 1444902481.443229
+    },
+    {
+      "_id" : "MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-0a84e5cef726513d250fac497805a847",
+      "contents" : "<p id=\"MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Our study's contexts are in a state of nearly constant change. Web services have lost complexity due to the dominance of ReST APIs, but the number of services available has grown exponentially. Mobile devices have more processing power, larger batteries and faster connections to the internet. There are whole new categories of mobile devices, such as smartwatches, that change the mobile device landscape. Web service evaluation studies must be continually revisited just to keep pace with change.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.629354,
+      "updatedAt" : 1444902481.629354
+    },
+    {
+      "_id" : "MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-a4399643f9293e2ca07928dbd13ce8d4",
+      "contents" : "<p id=\"MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The OASIS Web Services Quality Factors {Kim:2012wm} defines six quality factors with 28 sub-categories.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.468811,
+      "updatedAt" : 1444902481.468811
+    },
+    {
+      "_id" : "MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "collection" : "elements",
+      "placeholderInnerHTML" : "This should state clearly the main conclusions of the research and give a clear explanation of their importance and relevance. Summary illustrations may be included.",
+      "contents" : "<p id=\"MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1444854482.001729,
+      "updatedAt" : 1444854482.001729,
+      "_rev" : "3-3c9dbcb65bea451429da92a027e37dac"
+    },
+    {
+      "_id" : "MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-5dbbc33c079e3cb96db0e9d659e1eb83",
+      "contents" : "<p id=\"MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Their experiment design emulates a mobile device on a desktop computer; further they restrict the simulated mobile network speed. These are useful controls in an experiment designed with a very clear aim of finding which service is faster. But real world complications such as heavy network traffic or poor signal are not addressed as a factor in the outcome. As an example, SOAP's WS-ReliableMessaging protocol may reduce overall transfer time in areas with weak signal by minimising the number of failed message attempts.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.505275,
+      "updatedAt" : 1444902481.505275
+    },
+    {
+      "_id" : "MPParagraphElement:53695952-FFB3-466F-8A97-4C62DE6F2088",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "collection" : "elements",
+      "placeholderInnerHTML" : "The Materials and methods section should include the design of the study, the type of materials involved, a clear description of all comparisons, and the type of analysis used, to enable replication.",
+      "contents" : "<p id=\"MPParagraphElement:53695952-FFB3-466F-8A97-4C62DE6F2088\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854481.930432,
+      "updatedAt" : 1444854481.930432,
+      "_rev" : "3-b43d446818eaffae11d0a2a2ff729ff0"
+    },
+    {
+      "_id" : "MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-e0d2a75bcfa64399e74e88d9a346f977",
+      "contents" : "<p id=\"MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">In January 2015, Google announced the deprecation of Google Maps Engine {SLIPFuture:2015uc}. Further, they planned to shutter the service entirely by the end of January 2016 {Anonymous:2015tg}. Landgate and WALIS were left in search of a new provider for the SLIP Future programme. ESRI aggressively sought the business of GME refugee organisations {Anonymous:7YAzB1Ym} offering free software replacements and membership to business partnership programs. In July 2015, Landgate selected Esri's ArcGIS Server and Portal as the replacement for GME {Anonymous:2015uc}. Web services offering datasets in Esri's ArcGIS REST APIs will replace GME's API through a transition period through the end of 2015 and beginning of 2016.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.382792,
+      "updatedAt" : 1444902481.382792
+    },
+    {
+      "_id" : "MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-f4c79971e34b182aa4f376d5608e91b7",
+      "contents" : "<p id=\"MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Working in the pre-smartphone era the team simulated an iPAQ Pocket PC, emulating the device on a Pentium III laptop. The laptop emulating the client is connected to the server via WiFi, Bluetooth or a simulated mobile network. To simulate the increased latency and slower connection speed of a GPRS network, they introduce another server that throttles network speed by artificially delaying messages.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.510901,
+      "updatedAt" : 1444902481.510901
+    },
+    {
+      "_id" : "MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "Please acknowledge anyone who contributed towards the article by making substantial contributions to conception, design, acquisition of data, or analysis and interpretation of data, or who was involved in drafting the manuscript or revising it critically for important intellectual content, but who does not meet the criteria for authorship. Please also include the source(s) of funding for each author, and for the manuscript preparation. Authors must describe the role of the funding body, if any, in design, in the collection, analysis, and interpretation of data; in the writing of the manuscript; and in the decision to submit the manuscript for publication. Please also acknowledge anyone who contributed materials essential for the study. If a language editor has made significant revision of the manuscript, we recommend that you acknowledge the editor by name, where possible.\n\nAuthors should obtain permission to acknowledge from all those mentioned in the Acknowledgements section.",
+      "_rev" : "1-17ef0e7a18dafcf1b64c477432f34ae5",
+      "contents" : "<p id=\"MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854482.023692,
+      "updatedAt" : 1444854482.023692
+    },
+    {
+      "_id" : "MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-cde7d7ee5b6fefca9748f5b7c074a897",
+      "contents" : "<p id=\"MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The Western Australian Land Information System (WALIS) is a partnership between government agencies, the private sector and the community. Their aim is to improve access to location information for the betterment of the Western Australian community {LocationInformationStrategyProgramCoordinationTeam:2012te}. The Shared Location Information Platform (SLIP) is WALIS's spatial data portal, the Western Australian government's Spatial Data Infrastructure (SDI), managed by Landgate. The portal presents datasets owned and maintained by authoritative agencies, standardises data formats and simplifies access.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.377212,
+      "updatedAt" : 1444902481.377212
+    },
+    {
+      "_id" : "MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-ae608535dd61772d11c5794ae93b66dd",
+      "contents" : "<p id=\"MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Their experiment implemented the proposed service and interacted with it from a custom application deployed on a Nokia N95. Given the focus on minimising data sent and received from the device, the results vindicated their hypothesis. Unfortunately, the team declined to study response time results due to \"severe fluctuations\" that they attributed to an overcrowded network. They conclude, by extension not experiment, that smaller volumes of transmitted data would result in faster map interaction overall.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.516585,
+      "updatedAt" : 1444902481.516585
+    },
+    {
+      "_id" : "MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-5a7764f99da8c037526456aa99854a99",
+      "contents" : "<p id=\"MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Google Inc.'s Google Maps Engine (GME) service enabled the creation of more sophisticated web mapping services on top of the Google Maps interface. Whereas the familiar Google Maps application only allowed one or two additional map layers to be displayed, Google Maps Engine could host many hundreds of datasets in the cloud and perform multi-layer geographic analysis {Anonymous:s3eShq99}. The full version was a true enterprise application and cloud service, with off-the-shelf or bespoke solutions created to suit a client's needs. The scalability and reliability of Google's service were a significant attractor to geospatial providers, such as Landgate.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.437655,
+      "updatedAt" : 1444902481.437655
+    },
+    {
+      "_id" : "MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-47db3cf0e3dddfc9835e377de46b5fc2",
+      "contents" : "<p id=\"MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Kanagasundaram et al. {*Kanagasundaram:2012wv} expose a student database as a resource and perform Create, Read, Update Delete operations over SOAP and ReST web services. The comparison of response time between different operations leads the team to propose a hybrid SOAP and ReST web service that incorporates the security and reliability aspects of SOAP with ReST APIs' ease of development.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.55888,
+      "updatedAt" : 1444902481.55888
+    },
+    {
+      "_id" : "MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-79be68f70e7b1deac94f13397a5cb59d",
+      "contents" : "<p id=\"MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Representational State Transfer (ReST) services are much easier to develop and consume {Castillo:2011ve}. The adoption of ReSTful services has led to an explosion of data available on the web, particularly with mobile applications in mind as the end consumers.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.399378,
+      "updatedAt" : 1444902481.399378
+    },
+    {
+      "_id" : "MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "collection" : "elements",
+      "_rev" : "6-ce20ceb96181866c21f8451f47b646d5",
+      "contents" : "<p id=\"MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F\" data-object-type=\"MPParagraphElement\">Wu et al. {*Wu:2011kk} propose web service registries evaluate the quality of services they expose. Service downtime, mismatches between catalogued metadata and current capability or inconsistencies when registered in multiple catalogues can lead to the selection of a suboptimal web mapping service. The catalogue service periodically interrogates an OGC WMS testing all operations listed in its GetCapabilities document. Successful tests decrease the frequency of future tests while a lack of response increases the frequency.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.593822,
+      "updatedAt" : 1444906022.9293
+    },
+    {
+      "_id" : "MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-9a61649b11347842e56771af333c962e",
+      "contents" : "<p id=\"MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Hussain, Wang and Toure {*Hussain:2014ce} test the response time and throughput of a variety of real world web services over DSL, WiFi and LAN internet connections. Results are simplified to descriptive statistics, average, minimum and maximum response time.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.536304,
+      "updatedAt" : 1444902481.536304
+    },
+    {
+      "_id" : "MPParagraphElement:70DC8945-FE66-452E-E0A9-3D23FC0F28C3",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:70DC8945-FE66-452E-E0A9-3D23FC0F28C3",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:70DC8945-FE66-452E-E0A9-3D23FC0F28C3\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460371582,
+      "_rev" : "1-b98d7c5a11a4517b4522779d6726b628"
+    },
+    {
+      "_id" : "MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-22ed64f5d8858565bd12c058557313a7",
+      "contents" : "<p id=\"MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The development of powerful and flexible web services was the foundation that allowed the mobile web to blossom. Web services enable interaction between computer systems over a network. One system may call on another to provide data or a service without requiring a human user to mediate the interaction {Anonymous:bRhwymPh}. Mobile devices have limited processing power and storage available, so off-device storage and processing empowers on-device applications.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.394098,
+      "updatedAt" : 1444902481.394098
+    },
+    {
+      "_id" : "MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-35b1bf254cb56f38968a64e3f2237ea8",
+      "contents" : "<p id=\"MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Fowler and Peterson {*Fowler:2012bn} built a custom iPhone application to test the performance of SOAP and ReST versions of a public transportation web service in Hamburg over a typical working day. They measured response time, data serialisation\/deserialisation time and response size on the device itself and returned the results to their own web service. Simple and detailed messages of significantly different response size control whether response time is dependent upon message size. The results, as is common, are given as mean and standard deviation, descriptive statistics without discussion of error responses.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.519303,
+      "updatedAt" : 1444902481.519303
+    },
+    {
+      "_id" : "MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-0e7b79bf4ac611c510e0898050a4ff1d",
+      "contents" : "<p id=\"MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Lastly, our examination of a single service provider, Landgate and WALIS's SLIP service, should produce practical and actionable recommendations to improve its suitability for mobile users.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.6495,
+      "updatedAt" : 1444902481.6495
+    },
+    {
+      "_id" : "MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-5fd10004cc0607c2c14384e3512c9622",
+      "contents" : "<p id=\"MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The open source and standards driven approach meant that WMS was widely adopted and became a cornerstone web mapping technology. The standard is now quite old; it was last updated to version 1.3.0 in 2006 {delaBeaujardiere:2006vq}.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.412719,
+      "updatedAt" : 1444902481.412719
+    },
+    {
+      "_id" : "MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-4c8e5551f07a86c0cebca5a483d663e5",
+      "contents" : "<p id=\"MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Miao, Shi and Cao developed a C based program to crawl 100 WMS servers to measure their performance and stability as per their procedure. The conference paper referenced here omitted a table listing the servers assessed. As with Wu et al., the team leaves data quality assessment to a survey of expert users.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.60343,
+      "updatedAt" : 1444902481.60343
+    },
+    {
+      "_id" : "MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-251dd01834842fc14efdf81501dad8b6",
+      "contents" : "<p id=\"MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Like other researchers, Castillo et al. relate the results of their performance tests as average response time with a margin of error. They discuss accuracy, but this is in terms of their genetic algorithm's accuracy, not the error rate of the web service API.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.556242,
+      "updatedAt" : 1444902481.556242
+    },
+    {
+      "_id" : "MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "If abbreviations are used in the text they should be defined in the text at first use, and a list of abbreviations can be provided, which should precede the competing interests and authors' contributions.",
+      "_rev" : "1-4a90e7d002f97676f61921965ff8b50c",
+      "contents" : "<p id=\"MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854482.049716,
+      "updatedAt" : 1444854482.049716
+    },
+    {
+      "_id" : "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460371619,
+      "_rev" : "3-8a72d1c5f6c5633fc38d0bce399fcfc9"
+    },
+    {
+      "_id" : "MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-3b10c4fca2d420584875d914edf1acc5",
+      "contents" : "<p id=\"MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries but was not widely adopted in the years after its release.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.426611,
+      "updatedAt" : 1444902481.426611
+    },
+    {
+      "_id" : "MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-93e6fe4d7fd3b7ed0b0dd64782f0dbf4",
+      "contents" : "<p id=\"MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Yang, Cao and Evans {*Yang:2013ff} demonstrate that WMS servers struggle with heavy loads of simultaneous requests. They recorded response times to 1, 5, 10. 30, 50 and 100 concurrent requests to six important WMS servers. They found that response times increased with the number of requests until many servers either blocked all incoming requests to handle the load or simply timed out. They make several recommendations, particularly regarding parallel requests and processing. Most helpfully to this study, a simple progress bar to indicate to a user that their request is still being processed.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.54556,
+      "updatedAt" : 1444902481.54556
+    },
+    {
+      "_id" : "MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-729f6308d76cc36e1334567aed8ee255",
+      "contents" : "<p id=\"MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Expedients such as simulated mobile networks or emulated mobile devices can be more easily understood when considered in the context of testing a production server. Stress testing and automated test case generation, for example, both benefit from a quantity of tests unachievable with a few handheld devices. Services such as Load Impact {Anonymous:0z5u-mT-} emulate thousands of mobile users on a variety of devices with a range of network connectivity.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.565079,
+      "updatedAt" : 1444902481.565079
+    },
+    {
+      "_id" : "MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-d9cc5203d9a764ed47102bf2ca10c096",
+      "contents" : "<p id=\"MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Yan et al. {*Yan:2012uf} built a cloud testing suite, an approach they called Web Service - Testing-as-a-Service (WS-TaaS). Their experiment showed that cloud tested web services were capable of responding to significantly more requests than one tested on a single desktop computer. Most likely due to the limited bandwidth and processing power of the single testing node.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.571316,
+      "updatedAt" : 1444902481.571316
+    },
+    {
+      "_id" : "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F\" data-object-type=\"MPParagraphElement\">Compare errors to Landgate’s server logs for more insight into error causes.<\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460372241,
+      "_rev" : "2-8f2ac56892911c0c537d033cca2bd21d"
+    },
+    {
+      "_id" : "MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-3d7785b9e9806c3f2c1e450da87e6f5d",
+      "contents" : "<p id=\"MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Miao, Shi and Cao {*Miao:2011dh} build upon Wu et al.'s method of adaptable testing frequency by halving test intervals when the response time is greater than the average of earlier tests. They go further to parameterise the proportion of failed requests. Their process is explained well in a flow chart, omitted from many similar papers.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.599916,
+      "updatedAt" : 1444902481.599916
+    },
+    {
+      "_id" : "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F\" data-object-type=\"MPParagraphElement\">Other jurisdictions (NSW LPI for instance) allows the various data providers to learn from each other and improve.<\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460371885,
+      "_rev" : "16-cb46c8a064eefe8b3c643a2e832b79a2"
+    },
+    {
+      "_id" : "MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-02f7b5f6ea7499f5ca1dee879606fdb9",
+      "contents" : "<p id=\"MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Castillo et al. {*Castillo:2011ve} compare ReST and SOAP service implementations as the intermediary messaging layer for a genetic algorithm and a fitness evaluator. They also present one of the few papers to elaborate the advantages of the older SOAP API standard against a ReST API, but their experiment doesn't build on this. Their proof of concept methodology introduces a useful control, requests via SOAP and ReST send strings of either 100 or 1,000 characters. The proportional time difference between large and small requests controls whether the response time depends upon the amount of data sent and received, illuminating how much response time overhead is due to the API employed.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.553385,
+      "updatedAt" : 1444902481.553385
+    },
+    {
+      "_id" : "MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-3173e8fa7b03a062ffe860b868bdf112",
+      "contents" : "<p id=\"MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Orion, Marco and French {*Oriol:2014kq} reviewed the state of the art in quality of service models for web services, surveying 65 papers written between 2001 and 2012. They showed that most researchers were assessing web services quality in terms of availability (essentially the probability a request will receive a response) with 94% of surveyed papers defining the metric. Response time was second place at 83% coverage and accuracy third with 62%.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.5904,
+      "updatedAt" : 1444902481.5904
+    },
+    {
+      "_id" : "MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-2f87986ad00496fb3018760eb2f92c20",
+      "contents" : "<p id=\"MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Automating web service discovery is a much more active field of research with the aim of supporting semantic web development. An application should be able to bind the web service without supervision from the end user. How then, though, should the application choose which web service to employ from the multitude available, also without requiring user intervention. The investigators below are proponents of systematically and automatically applied quality metrics as a basis for deciding which web services should be bound.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.58425,
+      "updatedAt" : 1444902481.58425
+    },
+    {
+      "_id" : "MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-d841d06525ed0c5fa38feb20093007b2",
+      "contents" : "<p id=\"MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Tian et al. {*Tian:2004cb} design a server-client system that can optionally compress responses to save the client's download limit or skip compression when the server is under heavy load to minimise timed out requests.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.508007,
+      "updatedAt" : 1444902481.508007
+    },
+    {
+      "_id" : "MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "The Discussion should be an interpretation of the results and their significance with reference to work by other authors.",
+      "_rev" : "1-8c350fe855028d1948a8771ffce98e4c",
+      "contents" : "<p id=\"MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854481.979767,
+      "updatedAt" : 1444854481.979767
+    },
+    {
+      "_id" : "MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-6a58bf590548665c55f97c619009171e",
+      "contents" : "<p id=\"MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Fowler and Peterson's methodology called for the mobile user to remain \"fixed\" while requesting and receiving the response, which we interpret as stationary. This is contrary behaviour for mobile device use. There are countless situations in which a mobile user would be active and moving while concurrently requesting data from a web service.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.522103,
+      "updatedAt" : 1444902481.522103
+    },
+    {
+      "_id" : "MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-b05908eafc62d619182740720efffb81",
+      "contents" : "<p id=\"MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Davis, Kimo and Duarte-Figueiredo {*Davis:2009hf} focus on OGC Web Map Service (WMS) optimisation for mobile devices. They elaborate a service that combines the multi-layer composition of WMS with the mobile device response speed of AJAX-based web maps such as Google Maps.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.514094,
+      "updatedAt" : 1444902481.514094
+    },
+    {
+      "_id" : "MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-828707d8d466f4b2ac59531c3666a539",
+      "contents" : "<p id=\"MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Wu et al. model quality factors using a hierarchical tree, proposed by Hanwu Zhang, one of the authors in their Ph.D. dissertation from 2008 (reference not found in English translation). This is a helpful concept for automated quality analysis as branches in the hierarchy can be weighted differently, emphasising categories of metrics (the \"leaves\") over others. Unfortunately, Wu et al.'s automated analysis stops after comparing the most recent response time to a weighted average of previously recorded response times. They go on to assess map data quality through a survey method. A GUI program presents returned data to an expert user for assessment and scoring out of five on a series of quality metrics.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.59718,
+      "updatedAt" : 1444902481.59718
+    },
+    {
+      "_id" : "MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "collection" : "elements",
+      "placeholderInnerHTML" : "A letter sent along with your manuscript to explain it.",
+      "contents" : "<p id=\"MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43\" class=\"MPElement MPParagraphStyle_455441C1-8FBE-4B28-A491-7677A37D3B5F placeholder\" data-object-type=\"MPParagraphElement\" data-placeholder-text=\"A letter sent along with your manuscript to explain it.\"><\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1444854483.643219,
+      "updatedAt" : 1444854483.643219,
+      "_rev" : "2-670df6c9ddb4de718661eed2098414c9"
+    },
+    {
+      "_id" : "MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-889b48cbf1d33dd06e5fe4a1ba1ff02c",
+      "contents" : "<p id=\"MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">We propose to track these factors through a series of frequent but irregularly timed tests from a mobile device deployed in situations common to the mobile network milieu.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.48787,
+      "updatedAt" : 1444902481.48787
+    },
+    {
+      "_id" : "MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-751e66e01dd57daaafe5c38e2a42fa31",
+      "contents" : "<p id=\"MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Service Oriented Architectures (SOA) is a standard governing software design that aims to compose a software product from loosely coupled, and hence replaceable, components {Endo:2010wf}. Designers commonly employ this pattern as a method for distributed computing {Palacios:2011eo}. A set of descriptive XML documents, such as Web Services Description Language (WSDL), enable service builders to publish to service registries and then consumers to find and bind to services suited to their needs. Communication is carried out with XML-based messages based on the Simple Object Access Protocol (SOAP), another highly capable standard.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.396884,
+      "updatedAt" : 1444902481.396884
+    },
+    {
+      "_id" : "MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-15e65a04c0b633413259dc2d561bcf32",
+      "contents" : "<p id=\"MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">In this work we contribute to three aspects of the body of web service evaluation literature.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.639414,
+      "updatedAt" : 1444902481.639414
+    },
+    {
+      "_id" : "MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-84d52789890491bc9d2699affcf132d6",
+      "contents" : "<p id=\"MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">A Web Feature Service (WFS) returns geographic vector data in GML (Geographic Markup Language, a derivative of XML) in response to a URL request. It is a more complex and capable service than WMS. If fully deployed, WFS allows external users full create, read, update and delete (CRUD) access to a geographic database {Vretanos:2005ut}.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.423874,
+      "updatedAt" : 1444902481.423874
+    },
+    {
+      "_id" : "MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-3bef8d9eb11e3e18fd295c4be1ae725c",
+      "contents" : "<p id=\"MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The ArcGIS REST API exposes ArcGIS for Server data and functions as web services. This modern API has been fully developed since 2010 {Anonymous:hoTu0aor}. ArcGIS for Server's age means it is also fully capable of supporting older web service standards such as SOAP.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.457749,
+      "updatedAt" : 1444902481.457749
+    },
+    {
+      "_id" : "MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-3dc7aacf1204c21fd884d9d19118841b",
+      "contents" : "<p id=\"MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Taken all together these represent all factors that affect a client's decision to consume a web service.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.474337,
+      "updatedAt" : 1444902481.474337
+    },
+    {
+      "_id" : "MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-4667f290063126c49d91e1f4dea99be7",
+      "contents" : "<p id=\"MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Secondly, we examine more aspects of the interaction between client and server than merely average response time. Examining error responses and the conditions that lead to them will give valuable insight into mobile-specific situations likely to result in errors.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.646072,
+      "updatedAt" : 1444902481.646072
+    },
+    {
+      "_id" : "MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "This section should describe the outcome of the study. Data should be presented as concisely as possible, if appropriate in the form of tables or figures.",
+      "_rev" : "1-f61170c4dd953d28a7d61ba6b43bfb37",
+      "contents" : "<p id=\"MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854481.948978,
+      "updatedAt" : 1444854481.948978
+    },
+    {
+      "_id" : "MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-81f974120c6b987aeb5da8e7030f1179",
+      "contents" : "<p id=\"MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">SLIP Future is WALIS's programme to revamp the original SLIP Enabler portal and infrastructure {Anonymous:2014ww}. The custom built and open-source based infrastructure was deemed incapable of handling projected usage and implementing new features. WALIS built a new platform around Google's Software as a Service (SaaS) Google Maps Engine (GME). The new environment offered significant advantages in reliability, scalability and feature set {Anonymous:2014ww}.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.380157,
+      "updatedAt" : 1444902481.380157
+    },
+    {
+      "_id" : "MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "You may choose to use this section to include any relevant information about the author(s) that may aid the reader's interpretation of the article, and understand the standpoint of the author(s). This may include details about the authors' qualifications, current positions they hold at institutions or societies, or any other relevant background information. Please refer to authors using their initials. Note this section should not be used to describe any competing interests.",
+      "_rev" : "1-111d658cbdca1b63ff8543f0bdd7d260",
+      "contents" : "<p id=\"MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854483.559087,
+      "updatedAt" : 1444854483.559087
+    },
+    {
+      "_id" : "MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "A short summary of your work.",
+      "_rev" : "1-9f1225444fa34cfffc8d26da6beebb6e",
+      "contents" : "<p id=\"MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854481.822568,
+      "updatedAt" : 1444854481.822568
+    },
+    {
+      "_id" : "MPParagraphElement:DE2B3DF5-79FB-4FC0-9BD7-2DE76DEF2731",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:bodyText",
+      "placeholderInnerHTML" : "A competing interest exists when your interpretation of data or presentation of information may be influenced by your personal or financial relationship with other people or organizations. Authors must disclose any financial competing interests; they should also reveal any non-financial competing interests that may cause them embarrassment were they to become public after the publication of the manuscript.\n\nAuthors are required to complete a declaration of competing interests. All competing interests that are declared will be listed at the end of published articles. Where an author gives no competing interests, the listing will read 'The author(s) declare that they have no competing interests'.",
+      "_rev" : "1-a1edaf6f03700337c0c893058e8bc3c0",
+      "contents" : "<p id=\"MPParagraphElement:DE2B3DF5-79FB-4FC0-9BD7-2DE76DEF2731\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444854483.610001,
+      "updatedAt" : 1444854483.610001
+    },
+    {
+      "_id" : "MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-a0e7f7f9e6eae285c1eb11f86d783aa7",
+      "contents" : "<p id=\"MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">The experiment design places the client and server processes on separate cores of a single processor. This works well as an experimental control but comes at the expense of measuring real world performance. Furthermore, the results obtained by Kanagasundaram et al. {*Kanagasundaram:2012wv} are averaged response times from experiments repeated until they achieved a 95% confidence level. But not all are presented in the paper, only a select subset. Presumably messages resulting in errors were excluded from the averaged results.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.562258,
+      "updatedAt" : 1444902481.562258
+    },
+    {
+      "_id" : "MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-cfba4fb2600e6df68ffbf599d7565fb5",
+      "contents" : "<p id=\"MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">Hussain, Wang and Toure discuss some tests with unusually long response times and speculate that it may be due to other web traffic. The specific time or other conditions of these particular tests are not elucidated. In fact, the methodology is not sufficiently detailed to provide all the parameters used in web service requests. Repeating their experiments will likely produce different results.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.541768,
+      "updatedAt" : 1444902481.541768
+    },
+    {
+      "_id" : "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "id" : "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0",
+      "collection" : "elements",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "contents" : "<p id=\"MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0\" class=\"MPElement\" data-object-type=\"MPParagraphElement\"><\/p>",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460454056,
+      "_rev" : "1-0e18e76cb12c8ee9bdcf70a39c520370"
+    },
+    {
+      "_id" : "MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55",
+      "objectType" : "MPParagraphElement",
+      "elementType" : "p",
+      "paragraphStyle" : "MPParagraphStyle:455441C1-8FBE-4B28-A491-7677A37D3B5F",
+      "_rev" : "1-536a1994461fd51bb131ab2bd5bd4552",
+      "contents" : "<p id=\"MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55\" class=\"MPElement\" data-object-type=\"MPParagraphElement\">A Web Map Service (WMS) composes an image file from server stored vector and raster layers in response to a request in a URL. Despite their focus on returning an image file, WMS operations are still dependent upon XML, especially for GetCapabilities, GetFeatureInfo, error descriptions and layer style code.<\/p>",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC",
+      "createdAt" : 1444902481.41005,
+      "updatedAt" : 1444902481.41005
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:4C205E5A-1647-41A0-8595-FF2F8A87E1D3",
+        "MPListElement:83EA0038-D4D7-4173-A565-F802EECB72EB",
+        "MPParagraphElement:C7DB1BFB-F7E5-4314-918D-B34A1C2E80BE",
+        "MPParagraphElement:39F2A733-19E2-45A5-930D-EE7331D48D80",
+        "MPParagraphElement:1CF3E396-6D0B-4C61-8162-9EE3A03D99C8",
+        "MPListElement:3A2ECE8F-3A6E-46C7-B642-857A25FE05C1",
+        "MPParagraphElement:BA9B7A29-BBCD-424A-8E23-DB0CCD1FCC93"
+      ],
+      "updatedAt" : 1444902658.297955,
+      "objectType" : "MPSection",
+      "_rev" : "10-43a83a38a14a0bb340bb93d8e0e1147c",
+      "_id" : "MPSection:050E293E-D327-4220-8388-2B04DF8CCB95",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:050E293E-D327-4220-8388-2B04DF8CCB95"
+      ],
+      "title" : "Web Service Evaluation",
+      "priority" : 6,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.490769,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:4F70F6C8-6E8B-4707-A293-6B5FC18F0501",
+        "MPParagraphElement:4B6D11F7-5D6A-4E5B-AD99-7A764DDE76AC",
+        "MPParagraphElement:1F67CA8E-3D09-4312-8490-D75AB146DCE7",
+        "MPParagraphElement:BFCF0B27-F212-4305-AA42-DC80BC0F6473",
+        "MPParagraphElement:35C402C8-2D75-4695-BBBF-97B4D7577F31",
+        "MPParagraphElement:CA8A65E2-201F-4DEC-8457-FCADAAD2D0F8",
+        "MPParagraphElement:7198335A-F636-42B5-83F0-78D45A1643B3"
+      ],
+      "category" : "MPSectionCategory:conclusions",
+      "updatedAt" : 1444854482.003865,
+      "objectType" : "MPSection",
+      "_rev" : "15-70d8eb7e4d2efea49848a1dfdd0a31b8",
+      "_id" : "MPSection:0965D3C5-E5A4-4223-AF8C-007E39E8504D",
+      "firstElementPlaceholderString" : "This should state clearly the main conclusions of the research and give a clear explanation of their importance and relevance. Summary illustrations may be included.",
+      "title" : "Conclusions",
+      "path" : [
+        "MPSection:0965D3C5-E5A4-4223-AF8C-007E39E8504D"
+      ],
+      "priority" : 6,
+      "createdAt" : 1444854481.995928,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:40480D80-B592-488A-B4B5-D35606031E06",
+        "MPParagraphElement:F935308B-602A-4E42-BCDA-31429847B6D0",
+        "MPParagraphElement:079BDD52-3395-4B7E-9889-B97317146FEC"
+      ],
+      "category" : "MPSectionCategory:introduction",
+      "updatedAt" : 1444854481.911484,
+      "objectType" : "MPSection",
+      "_rev" : "15-f98de9de549608dab264f0c0611b7ec0",
+      "_id" : "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+      "firstElementPlaceholderString" : "The Introduction section should be written in a way that is accessible to researchers without specialist knowledge in that area and must clearly state - and, if helpful, illustrate - the background to the research and its aims. The section should end with a brief statement of what is being reported in the article.",
+      "title" : "Introduction",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0"
+      ],
+      "priority" : 1,
+      "createdAt" : 1444854481.905115,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:FBC357EA-E252-40C0-A3A8-CE27832EBA55",
+        "MPParagraphElement:7B0676D8-2F19-4C80-83E0-B84AEDF836D4"
+      ],
+      "updatedAt" : 1444902658.252605,
+      "objectType" : "MPSection",
+      "_rev" : "6-f4102a39db71a96902d21a7e65f9eccd",
+      "_id" : "MPSection:371C53B9-143D-4BC2-B2EA-D177F9331B22",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:371C53B9-143D-4BC2-B2EA-D177F9331B22"
+      ],
+      "title" : "Open Geospatial Consortium Web Map Service",
+      "priority" : 2,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.415314,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:43AA096A-58FF-44D1-9E93-978BF0963759"
+      ],
+      "updatedAt" : 1444902658.337748,
+      "objectType" : "MPSection",
+      "_rev" : "14-ec4d457f204a1d441655abbd925b16a6",
+      "_id" : "MPSection:39F18579-2AEA-44F4-8547-A72EC4D7F6AD",
+      "path" : [
+        "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+        "MPSection:39F18579-2AEA-44F4-8547-A72EC4D7F6AD"
+      ],
+      "title" : "Acceptance",
+      "priority" : 9,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.620365,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:D82869F7-900B-4284-A096-D88F8DD3E2A1"
+      ],
+      "category" : "MPSectionCategory:author-information",
+      "updatedAt" : 1444854483.561012,
+      "objectType" : "MPSection",
+      "_rev" : "9-7202a1dab6b79390f43aa87ac53ea8fd",
+      "_id" : "MPSection:4373C645-8679-4C7A-B641-FDAEB656B4D9",
+      "firstElementPlaceholderString" : "You may choose to use this section to include any relevant information about the author(s) that may aid the reader's interpretation of the article, and understand the standpoint of the author(s). This may include details about the authors' qualifications, current positions they hold at institutions or societies, or any other relevant background information. Please refer to authors using their initials. Note this section should not be used to describe any competing interests.",
+      "title" : "Author Information",
+      "path" : [
+        "MPSection:4373C645-8679-4C7A-B641-FDAEB656B4D9"
+      ],
+      "priority" : 10,
+      "createdAt" : 1444854483.554551,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:48049012-E0B1-4DAD-A66F-60D572803FA6",
+        "MPParagraphElement:145DC62B-4532-4902-9E1C-1277302B8320",
+        "MPParagraphElement:570DBB20-8C55-41F6-A009-69BE21DCF85C",
+        "MPParagraphElement:D429FF98-4577-45BC-9853-043FB95EDD83",
+        "MPParagraphElement:55932598-438B-4351-B2C3-008156B9E480"
+      ],
+      "updatedAt" : 1444902658.228232,
+      "objectType" : "MPSection",
+      "_rev" : "4-865d975d3d2dcd7fefc3fa731b10a648",
+      "_id" : "MPSection:49196AC1-57C2-4CAE-9978-9E18D73C1D42",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:49196AC1-57C2-4CAE-9978-9E18D73C1D42"
+      ],
+      "title" : "Landgate",
+      "priority" : 0,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.385942,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "_id" : "MPSection:510D0720-6717-48DD-B353-7DF90521139A",
+      "objectType" : "MPSection",
+      "id" : "MPSection:510D0720-6717-48DD-B353-7DF90521139A",
+      "_rev" : "4-b70105bc6f8c726050bf2328469f2738",
+      "collection" : "sections",
+      "elementIDs" : [
+
+      ],
+      "title" : "All Requests",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460372062,
+      "path" : [
+        "MPSection:DDFCD241-8B8E-40C4-8439-7CA8CB1DE187",
+        "MPSection:510D0720-6717-48DD-B353-7DF90521139A"
+      ],
+      "priority" : 13
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:2046185A-2499-47A0-A054-FF281314D35E"
+      ],
+      "category" : "MPSectionCategory:author-contributions",
+      "updatedAt" : 1444854482.077739,
+      "objectType" : "MPSection",
+      "_rev" : "9-aaad6c16e22fe6a4dfdc83792d218c40",
+      "_id" : "MPSection:52D8989D-A8E7-4B55-ABF6-96EC3584B476",
+      "firstElementPlaceholderString" : "In order to give appropriate credit to each author of a paper, the individual contributions of authors to the manuscript should be specified in this section.",
+      "title" : "Author contributions",
+      "path" : [
+        "MPSection:52D8989D-A8E7-4B55-ABF6-96EC3584B476"
+      ],
+      "priority" : 9,
+      "createdAt" : 1444854482.067937,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:638FC8B5-B220-4181-B028-9E11C5225CA2",
+        "MPParagraphElement:4515E87A-6647-42CF-8BAB-70C104010F62",
+        "MPParagraphElement:49B10C33-AEF5-4FA1-9191-4BC15C1AB364"
+      ],
+      "updatedAt" : 1444902658.275018,
+      "objectType" : "MPSection",
+      "_rev" : "8-b2c61760da13e1327834eb8ff85eb471",
+      "_id" : "MPSection:5450F0EB-C94C-411A-A7E7-278FCC27D8A1",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:5450F0EB-C94C-411A-A7E7-278FCC27D8A1"
+      ],
+      "title" : "Google Maps Engine",
+      "priority" : 4,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.446078,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:AA489501-072E-44F7-BE74-161773A7D4EB"
+      ],
+      "category" : "MPSectionCategory:discussion",
+      "updatedAt" : 1444854481.981788,
+      "objectType" : "MPSection",
+      "_rev" : "9-3397c4f50f472f2c948052c6c03bb6f0",
+      "_id" : "MPSection:6E0C405D-86E5-4D0A-AB26-3B327F15B007",
+      "firstElementPlaceholderString" : "The Discussion should be an interpretation of the results and their significance with reference to work by other authors.",
+      "title" : "Discussion",
+      "path" : [
+        "MPSection:6E0C405D-86E5-4D0A-AB26-3B327F15B007"
+      ],
+      "priority" : 4,
+      "createdAt" : 1444854481.971349,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "_id" : "MPSection:783737D6-3504-419A-F9C1-D2A9EA670A08",
+      "objectType" : "MPSection",
+      "id" : "MPSection:783737D6-3504-419A-F9C1-D2A9EA670A08",
+      "_rev" : "9-2e34d7639d7c967f20ba03f3f02a2449",
+      "collection" : "sections",
+      "elementIDs" : [
+        "MPListElement:A5E2F613-9C67-46DB-E4BD-9D971ADD754F",
+        "MPParagraphElement:8753C7C6-E235-4B86-EFE4-88B737113EFB"
+      ],
+      "title" : "Mobile Application Design Principles",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460371591,
+      "path" : [
+        "MPSection:C6005E8A-5094-41FB-85C2-BC0A0F64AA33",
+        "MPSection:783737D6-3504-419A-F9C1-D2A9EA670A08"
+      ],
+      "priority" : 3
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:86B43939-74C2-45B5-9889-D7748800AEE3"
+      ],
+      "category" : "MPSectionCategory:abbreviations",
+      "updatedAt" : 1444854482.05198,
+      "objectType" : "MPSection",
+      "_rev" : "9-c403666fcaecd080f6dc2b12af8cfdcf",
+      "_id" : "MPSection:83F9A661-AC18-43CE-AC00-4F65C7F2FD8C",
+      "firstElementPlaceholderString" : "If abbreviations are used in the text they should be defined in the text at first use, and a list of abbreviations can be provided, which should precede the competing interests and authors' contributions.",
+      "title" : "Abbreviations",
+      "path" : [
+        "MPSection:83F9A661-AC18-43CE-AC00-4F65C7F2FD8C"
+      ],
+      "priority" : 8,
+      "createdAt" : 1444854482.044917,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:D372474A-6EAF-4C1A-B180-AE7431A63514"
+      ],
+      "category" : "MPSectionCategory:results",
+      "updatedAt" : 1444854481.950908,
+      "objectType" : "MPSection",
+      "_rev" : "9-e4e64c46b4902549840b1aa126686a66",
+      "_id" : "MPSection:8A620CB5-67DC-41A1-9CC0-ADF144AFEB78",
+      "firstElementPlaceholderString" : "This section should describe the outcome of the study. Data should be presented as concisely as possible, if appropriate in the form of tables or figures.",
+      "title" : "Results",
+      "path" : [
+        "MPSection:8A620CB5-67DC-41A1-9CC0-ADF144AFEB78"
+      ],
+      "priority" : 3,
+      "createdAt" : 1444854481.945187,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:A74A570C-82CF-4CFD-AEF2-3CAFD5969877",
+        "MPParagraphElement:125075F8-C1EC-4264-8A18-41E3EA7583D3",
+        "MPParagraphElement:A603B052-81D3-4EA0-91D4-F8871D80A42D",
+        "MPParagraphElement:6D90C8B2-7992-4D6A-AFC4-B11E2CE6E446",
+        "MPParagraphElement:AD916A38-F5B9-48BF-A266-AEB310B5B389",
+        "MPParagraphElement:95EF5980-4DBB-478F-B6EC-16FDCE9E745B",
+        "MPParagraphElement:813A22F0-C697-442D-9558-3BC8320FCBCF"
+      ],
+      "updatedAt" : 1444902658.325423,
+      "objectType" : "MPSection",
+      "_rev" : "13-291c7eda8c128fe16a523607b441c79d",
+      "_id" : "MPSection:98DB30A8-E962-429E-8F46-EE53B94E095B",
+      "path" : [
+        "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+        "MPSection:98DB30A8-E962-429E-8F46-EE53B94E095B"
+      ],
+      "title" : "Web Service Quality and Discovery",
+      "priority" : 8,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.606092,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:568E992F-4C36-4390-8B03-8EBF620CABF6"
+      ],
+      "category" : "MPSectionCategory:acknowledgement",
+      "updatedAt" : 1444854482.025911,
+      "objectType" : "MPSection",
+      "_rev" : "9-672ede1778dc60caafb455c85f7e9317",
+      "_id" : "MPSection:9EAEEE7C-D5CB-4BA5-88EC-32037E13303E",
+      "firstElementPlaceholderString" : "Please acknowledge anyone who contributed towards the article by making substantial contributions to conception, design, acquisition of data, or analysis and interpretation of data, or who was involved in drafting the manuscript or revising it critically for important intellectual content, but who does not meet the criteria for authorship. Please also include the source(s) of funding for each author, and for the manuscript preparation. Authors must describe the role of the funding body, if any, in design, in the collection, analysis, and interpretation of data; in the writing of the manuscript; and in the decision to submit the manuscript for publication. Please also acknowledge anyone who contributed materials essential for the study. If a language editor has made significant revision of the manuscript, we recommend that you acknowledge the editor by name, where possible.\n\nAuthors should obtain permission to acknowledge from all those mentioned in the Acknowledgements section.",
+      "title" : "Acknowledgments",
+      "path" : [
+        "MPSection:9EAEEE7C-D5CB-4BA5-88EC-32037E13303E"
+      ],
+      "priority" : 7,
+      "createdAt" : 1444854482.018928,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "id" : "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+      "elementIDs" : [
+
+      ],
+      "objectType" : "MPSection",
+      "_rev" : "16-2ffa6eba24e9e36ff8a825d37d8f32cb",
+      "_id" : "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+      "path" : [
+        "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A"
+      ],
+      "priority" : 1,
+      "title" : "Literature Review",
+      "contents" : "<h1 id=\"MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A\" class=\"MPSection MPParagraphStyle_0EDB4CCD-F5B9-402D-A4CB-D9C7D08A73AE\" data-placeholder-text=\"Section heading\">Literature Review<\/h1>",
+      "createdAt" : 1444902408,
+      "collection" : "sections",
+      "sessionID" : "a3562a78-22ab-49b3-ef08-61335799088f"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:43DF8BD3-F986-4E22-A1BC-C8776F89FAC5",
+        "MPParagraphElement:0776BABC-A3C9-40B4-BF76-A3125EBC68EB",
+        "MPParagraphElement:4F8F66D8-5A98-4427-9123-3D0D1A3B79E9",
+        "MPParagraphElement:A9E0835C-217A-4CCC-AB9C-BEE1C6307715",
+        "MPParagraphElement:56049FEF-E8DC-45E8-9E54-FFF7D42FA2DF",
+        "MPParagraphElement:ABBA73EE-4059-4EFA-8F22-00486627530B",
+        "MPParagraphElement:58D5B172-7472-48A3-88A6-164767BF6AF7",
+        "MPParagraphElement:71810909-50F7-4AB2-BDDF-C6FD9E6A393D",
+        "MPParagraphElement:AA82A9ED-4C7D-40E7-8522-3D096D1E0BD4",
+        "MPParagraphElement:47692520-1D98-4ACA-9478-7100B3B8DA09",
+        "MPParagraphElement:6E2F8E1B-E29A-4106-8545-D8817344E8FD",
+        "MPParagraphElement:EF394693-10A5-4363-B46F-39899E61CC37",
+        "MPParagraphElement:8E9E4F67-D2DA-460F-BB22-0728C25CFD25",
+        "MPParagraphElement:1C0832EF-3F54-4D89-9241-D5E50C5D9EB6",
+        "MPParagraphElement:A0525464-6BA3-4C18-AD0F-F5C58F2109DA",
+        "MPParagraphElement:86789BF7-D49E-493F-8D92-A03A7B19BF4C",
+        "MPParagraphElement:66E0D3DA-3BE5-4A54-8E6D-9C8E1AFBCC79",
+        "MPParagraphElement:E2EBFAA6-2AA5-4404-9485-6BD9141E48DB",
+        "MPParagraphElement:8F15E00E-8FED-4A28-A58E-D049A92028E5",
+        "MPParagraphElement:16775F6A-CBEC-4088-A8B3-170995EA26A8",
+        "MPParagraphElement:93C31B92-142C-460A-8145-C71A30790EC8"
+      ],
+      "updatedAt" : 1444902658.310315,
+      "objectType" : "MPSection",
+      "_rev" : "12-9debd362222be0bc612b6f3bced14cfa",
+      "_id" : "MPSection:A2B81672-83E9-40F1-8203-47643B8BD475",
+      "path" : [
+        "MPSection:9F4C209C-4326-4CBB-B157-683FAEC2120A",
+        "MPSection:A2B81672-83E9-40F1-8203-47643B8BD475"
+      ],
+      "title" : "Similar Work",
+      "priority" : 7,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.574007,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:717CAE49-C6A2-4FF1-93DE-0DAC485612B4",
+        "MPParagraphElement:BD0459EB-822A-424B-AA75-93B530B4974B",
+        "MPParagraphElement:69BF3B41-9675-4391-9A24-177955C4707C"
+      ],
+      "updatedAt" : 1444902658.240467,
+      "objectType" : "MPSection",
+      "_rev" : "5-4b944b9f6984938c58d842ad43598d7c",
+      "_id" : "MPSection:B5C2A232-F890-4564-8DA7-EE50D82182C6",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:B5C2A232-F890-4564-8DA7-EE50D82182C6"
+      ],
+      "title" : "Web Services",
+      "priority" : 1,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.401892,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:13A768DF-AA9D-4B5D-8602-EF1AACB39BE1",
+        "MPParagraphElement:C7A806E9-6E6A-4E0E-93F3-599AE2856295"
+      ],
+      "updatedAt" : 1444902658.286499,
+      "objectType" : "MPSection",
+      "_rev" : "9-cda222a7ce1baccbbf12d264dafea2ad",
+      "_id" : "MPSection:B72150BC-3874-44BA-AD9B-C66233E80DC3",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:B72150BC-3874-44BA-AD9B-C66233E80DC3"
+      ],
+      "title" : "Esri ArcGIS for Server and ArcGIS ReST API",
+      "priority" : 5,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.460376,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "_id" : "MPSection:C521A0F5-9681-428C-E64C-07AD8D85BB9F",
+      "objectType" : "MPSection",
+      "id" : "MPSection:C521A0F5-9681-428C-E64C-07AD8D85BB9F",
+      "_rev" : "9-9fa13816dc98ca43794052f6ea59a708",
+      "collection" : "sections",
+      "elementIDs" : [
+        "MPParagraphElement:0F665B67-CC63-4980-B454-260C424D7053",
+        "MPParagraphElement:9BBDCF95-3A03-4533-D87B-5C22039BBBC2",
+        "MPParagraphElement:95110954-67D9-4E90-A577-FCB1AB640140"
+      ],
+      "title" : "Future Work",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7",
+      "createdAt" : 1460371877,
+      "path" : [
+        "MPSection:C521A0F5-9681-428C-E64C-07AD8D85BB9F"
+      ],
+      "priority" : 5
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:70DC8945-FE66-452E-E0A9-3D23FC0F28C3"
+      ],
+      "category" : "MPSectionCategory:materials-method",
+      "updatedAt" : 1444854481.932503,
+      "objectType" : "MPSection",
+      "_rev" : "12-0523255711e7b7acff4c46f2d332c42e",
+      "_id" : "MPSection:C6005E8A-5094-41FB-85C2-BC0A0F64AA33",
+      "firstElementPlaceholderString" : "The Materials and methods section should include the design of the study, the type of materials involved, a clear description of all comparisons, and the type of analysis used, to enable replication.",
+      "title" : "Materials and methods",
+      "path" : [
+        "MPSection:C6005E8A-5094-41FB-85C2-BC0A0F64AA33"
+      ],
+      "priority" : 2,
+      "createdAt" : 1444854481.926459,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:B0C17107-9F45-462B-84D6-27AB18CF8D43"
+      ],
+      "category" : "MPSectionCategory:cover-letter",
+      "updatedAt" : 1444854483.645459,
+      "objectType" : "MPSection",
+      "_rev" : "10-cd49f0a8311402938a3587f25cc60b8d",
+      "_id" : "MPSection:DDFCD241-8B8E-40C4-8439-7CA8CB1DE187",
+      "path" : [
+        "MPSection:DDFCD241-8B8E-40C4-8439-7CA8CB1DE187"
+      ],
+      "title" : "Appendices",
+      "priority" : 12,
+      "createdAt" : 1444854483.633545,
+      "collection" : "sections",
+      "sessionID" : "15e79e6b-d67d-4802-c283-20e6001b8ea7"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:D9649391-34BA-4301-BB2F-F3D1CF18E619"
+      ],
+      "category" : "MPSectionCategory:abstract",
+      "updatedAt" : 1444854481.876528,
+      "objectType" : "MPSection",
+      "_rev" : "8-67934bafe4a8a26ea763e9141bd627c1",
+      "_id" : "MPSection:E1452A91-D5FE-4E22-A33B-538E5C7AF1FD",
+      "path" : [
+        "MPSection:E1452A91-D5FE-4E22-A33B-538E5C7AF1FD"
+      ],
+      "title" : "Abstract",
+      "priority" : 0,
+      "maxWordCountRequirement" : "MPMaximumSectionWordCountRequirement:EBEF174E-387E-4FE1-9DB8-EF2E2A5F0279",
+      "createdAt" : 1444854481.77974,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    },
+    {
+      "elementIDs" : [
+        "MPParagraphElement:C574EA57-D795-4FDE-AE4E-13DEAC3BFF3D",
+        "MPParagraphElement:878BC83C-E770-45C2-8A76-47BCE06CA022"
+      ],
+      "updatedAt" : 1444902658.263796,
+      "objectType" : "MPSection",
+      "_rev" : "7-bea1dafee1132623fbbe52ff28787b2a",
+      "_id" : "MPSection:FE8C941A-72A8-49B5-B623-7AB37E7A4684",
+      "path" : [
+        "MPSection:19638190-44F3-45A6-87CC-96F384E050E0",
+        "MPSection:FE8C941A-72A8-49B5-B623-7AB37E7A4684"
+      ],
+      "title" : "Open Geospatial Consortium Web Feature Service",
+      "priority" : 3,
+      "auxiliaryObjectReferenceStyle" : "MPAuxiliaryObjectReferenceStyle:A7F871C6-1983-42B1-84B7-C3DF4459A30D",
+      "captionStyle" : "MPCaptionStyle:202F5016-B85D-4323-A331-40931B3697F7",
+      "createdAt" : 1444902481.429359,
+      "collection" : "sections",
+      "sessionID" : "97EF603B-EF87-4FAC-A86C-358DC2CA48DC"
+    }
+  ],
+  "snapshots" : [
+
+  ]
+}
