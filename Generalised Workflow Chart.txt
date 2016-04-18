@@ -1,0 +1,39 @@
+graph TD
+
+  subgraph Web Service
+    Ws1[Store<br>tests] --> Ws2[Add to<br>queue]
+    Ws2 --> Ws3[Analyse]
+    Ws3 --> Ws4{All 3<br>prior tests and<br>all 3 following<br>tests<br>present?}
+    Ws4 --> |Yes| Ws5[Store Vector<br>data structure]
+    Ws4 --> |No| Ws6[Ignore test]
+    Ws5 --> Ws7[Produce graphs<br>on demand]
+    Ws6 --> Ws8(End)
+    Ws7 --> Ws8
+  end
+
+  subgraph On Device
+    Dev0(Begin) --> Dev1
+    Dev1[User<br>initiated<br>test] --> Dev2[Location<br>test]
+    Dev2 --> Dev3[Network<br>test]
+    Dev3 --> Dev4[Ping<br>test]
+    Dev4 --> Dev5{More<br>endpoint<br>tests?}
+    Dev5 -->|Yes| Dev6[Endpoint<br>test]
+    Dev5 -->|No| Dev7[Store test<br>results]
+    Dev6 --> Dev2
+    Dev6 --> |Query| LGA1
+    LGA1[ArcGIS Server] --> |Response| Dev6
+    Dev7 -->|Upload|Ws1
+  end
+
+
+  classDef Device fill:#f59064,stroke:#222,stroke-width:2px,fontFamily:Helvetica,fontStyle:bold;
+  classDef WebService fill:#5b9eec,stroke:#222,stroke-width:2px,fontFamily:Helvetica,fontStyle:bold;
+  classDef LandgateServer fill:#99e37f,stroke:#222,stroke-width:2px,fontFamily:Helvetica,fontStyle:bold;
+  classDef Decision fill:#e4e47b,stroke:#222,stroke-width:2px,fontFamily:Helvetica,fontStyle:bold;
+
+  linkStyle default stroke-width:2px,fill:none,stroke:#222,fontFamily:Helvetica,fontStyle:bold;
+
+  class Dev1,Dev2,Dev3,Dev4,Dev6,Dev7 Device;
+  class Ws1,Ws2,Ws3,Ws5,Ws6,Ws7 WebService;
+  class LGA1,Ws8,Dev0 LandgateServer;
+  class Dev5,Ws4 Decision;
