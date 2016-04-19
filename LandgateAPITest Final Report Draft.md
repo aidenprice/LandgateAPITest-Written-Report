@@ -256,11 +256,19 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 ##### Transporter State Machine
 
+
+
 ##### Reachability
+
+Ashley Mill's Reachability library queries the device to determine whether and how it is connected to a network {ashleymillsReachabi:2015to}. LandgateAPITest depends upon Reachability's response in two areas. Firstly, having a network connection is a prerequisite to starting a test, either through wifi or 2G, 3G or 4G mobile network. Secondly, the iOS standard telephony libraries report a mobile network connection regardless of whether there may be an overriding wifi network connection. LandgateAPITest checks Reachability beforehand for a wifi connection and takes it for preference.
 
 ##### KDCircularProgress
 
+Kaan Dedeoglu's KDCircularProgress library initiates a progress indicator that fulfills a circular ring as the task approaches completion {kaandedeogluKDCircu:2015vt}. LandgateAPITest uses KDCircularProgress to show the percent completion of a test, updating the indicator each time a sub-test calls its completion delegate method. The library was chosen as it aligned with the design aesthetic of recent iOS releases.
+
 #### Hardware
+
+All tests were performed on an Apple iPhone 6S, model A1688, with 64GB of storage. The standard device comes with a range of mobile radios across a number of bands; LTE, HSDPA, CDMA, GSM, EDGE, wifi radios a/b/g/n/ac and GPS and GLONASS location radios {Anonymous:uf}.
 
 ### Google Apps Engine Web Service
 
@@ -271,6 +279,8 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 #### Python Open Source Packages
 
 ##### Matplotlib
+
+
 
 ### Other Applications Deployed
 
