@@ -250,17 +250,26 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 #### iOS Application Architecture
 
+
+
+Firing requests at Landgate's endpoints concurrently, rather than synchronously, would give unreliable response time results. Analysis would not be able to determine what proportion of response time was a factor of the device resolving multiple threads of computation. To avoid this complication LandgateAPITest's iOS app uses a state machine architecture.
+
+
 #### Swift Open Source Packages
+
+
 
 ##### Realm Mobile Database
 
+The Realm open source mobile database {realmrealmcocoa:2016vs} is a much simpler on-device storage solution than the proprietary Apple Inc solution. LandgateAPITest stores all test results in a Realm database file.
+
 ##### Transporter State Machine
 
-
+Denis Telezhkin's Transporter library {DenHeadlessTranspor:2016ta} offers a straight-forward state machine implemented in Swift, available under the MIT licence. LandgateAPITest relies upon Transporter state machines for the TestManager class and the TestUploader class.
 
 ##### Reachability
 
-Ashley Mill's Reachability library queries the device to determine whether and how it is connected to a network {ashleymillsReachabi:2015to}. LandgateAPITest depends upon Reachability's response in two areas. Firstly, having a network connection is a prerequisite to starting a test, either through wifi or 2G, 3G or 4G mobile network. Secondly, the iOS standard telephony libraries report a mobile network connection regardless of whether there may be an overriding wifi network connection. LandgateAPITest checks Reachability beforehand for a wifi connection and takes it for preference.
+Ashley Mill's Reachability library queries the device to determine whether and how it is connected to a network {ashleymillsReachabi:2015to}. LandgateAPITest depends upon Reachability's response in two areas. Firstly, having a network connection is a prerequisite to starting a test, either through wifi or 2G, 3G or 4G mobile network. Secondly, the iOS standard telephony libraries report a mobile network connection regardless of whether there may be an overriding wifi network connection. LandgateAPITest checks Reachability beforehand for a wifi connection.
 
 ##### KDCircularProgress
 
@@ -268,7 +277,7 @@ Kaan Dedeoglu's KDCircularProgress library initiates a progress indicator that f
 
 #### Hardware
 
-All tests were performed on an Apple iPhone 6S, model A1688, with 64GB of storage. The standard device comes with a range of mobile radios across a number of bands; LTE, HSDPA, CDMA, GSM, EDGE, wifi radios a/b/g/n/ac and GPS and GLONASS location radios {Anonymous:uf}.
+All tests were performed on an Apple iPhone 6S, model A1688, with 64GB of storage. The standard device comes with a range of mobile radios across a number of bands; LTE, HSDPA, CDMA, GSM, EDGE, wifi radios a/b/g/n/ac and GPS and GLONASS receivers {Anonymous:uf}.
 
 ### Google Apps Engine Web Service
 
@@ -280,11 +289,27 @@ All tests were performed on an Apple iPhone 6S, model A1688, with 64GB of storag
 
 ##### Matplotlib
 
-
+Well known in academia, Matplotlib is an open source Python library capable of producing detailed graphs from complex datasets {matplotlibmatplotli:2016vd}. LandgateAPITest's web app leveraged Matplotlib to build graphs of up to the minute Vector object data queried from Google's Cloud Store. Programmatically building the figures in this report allows them to be recreated on demand with the latest information from testers.
 
 ### Other Applications Deployed
 
+Besides code incorporated directly into the product applications, there were several other applications instrumental to development.
+
+#### Paw
+
+Keeping track of 46 ReST requests, each with minor variations from its neighbours, required more than simply keeping a list. Paw (version 2.3.3) {Anonymous:tn} is a Macintosh application designed for testing ReST requests. It simplifies the process of composing the request and its query components. Its most helpful feature is its Swift NSURLSession code output, suitable for directly pasting into an iOS application repository. The code in LandgateAPITest's EndpointTester class where it fires a request to the Landgate server is derived from Paw's example code.
+
+#### Atom
+
+Atom (version 1.7.2) {atomio:vz} is Github Inc's open source text editor used primarily for Python development. The Github community has built a plethora of extensions expanding the application's capabilities far beyond the average plain text editor. This entire report was drafted in MarkDown styled plain text in Atom.
+
+#### Xcode
+
+Apple Inc's Xcode Integrated Development Environment (IDE) {Anonymous:3QN3N1hm} is the orthodox application for developing applications for Apple machines. LandgateAPITest's iOS app was entirely built in Xcode version 7.3.
+
 ## Results
+
+
 
 ## Discussion
 
@@ -297,6 +322,8 @@ Briefly outlineeach alternative solution and then evaluate it in terms of its ad
 disadvantages
 No need to refer to theory orcoursework here.>
 
+
+
 ## Recommendations
 
 >• Choose which of the alternative solutions should be adopted
@@ -306,11 +333,11 @@ No need to refer to theory orcoursework here.>
 
 ## Future Work
 
-Android app
+[ ] Android app
 
-Other jurisdictions (NSW LPI for instance) allows the various data providers to learn from each other and improve.
+[ ] Other jurisdictions (NSW LPI for instance) allows the various data providers to learn from each other and improve.
 
-Compare errors to Landgate’s server logs for more insight into error causes.
+[ ] Compare errors to Landgate’s server logs for more insight into error causes.
 
 ## Conclusions
 
