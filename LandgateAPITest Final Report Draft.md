@@ -17,6 +17,7 @@
 	- [Introduction](#introduction)
 		- [Landgate](#landgate)
 		- [Web Services](#web-services)
+		- [Spatial Web Services](#spatial-web-services)
 			- [Open Geospatial Consortium Web Map Service](#open-geospatial-consortium-web-map-service)
 			- [Open Geospatial Consortium Web Feature Service](#open-geospatial-consortium-web-feature-service)
 			- [Google Maps Engine](#google-maps-engine)
@@ -29,6 +30,7 @@
 	- [Materials and Methods](#materials-and-methods)
 		- [Generalised Workflow](#generalised-workflow)
 		- [Data Model and Structures](#data-model-and-structures)
+			- [TestCampaign](#testcampaign)
 			- [TestMaster](#testmaster)
 				- [TestEndpoint](#testendpoint)
 				- [LocationTest](#locationtest)
@@ -36,6 +38,7 @@
 				- [PingTest](#pingtest)
 			- [ReferenceObject](#referenceobject)
 			- [Vector](#vector)
+			- [CampaignStats](#campaignstats)
 		- [iOS Mobile Application](#ios-mobile-application)
 			- [Mobile Application Design Principles](#mobile-application-design-principles)
 			- [iOS Application Architecture](#ios-application-architecture)
@@ -51,6 +54,9 @@
 			- [Python Open Source Packages](#python-open-source-packages)
 				- [Matplotlib](#matplotlib)
 		- [Other Applications Deployed](#other-applications-deployed)
+			- [Paw](#paw)
+			- [Atom](#atom)
+			- [Xcode](#xcode)
 	- [Results](#results)
 	- [Discussion](#discussion)
 	- [Recommendations](#recommendations)
@@ -228,21 +234,87 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 [ ] Flowchart (similar to Miao, Shi and Cao, 2011)
 
+
+
+
+If the response received by the iOS app is identical to the reference response stored in the web app then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC services will respond with a 200 code but include an exception in the response data. The reference check uncovers these test failures. Should a test type return 0% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely.
+
 ### Data Model and Structures
+
+#### TestCampaign
+
+A unique and human-readable string identifier which groups many TestMasters into a single campaign. Theoretically representing a unit of work for a single client.
+
+The TestCampaign class in the web application has no properties other than its name. It serves as the ancestor key for all TestMaster, Vector and CampaignStats objects, simplifying their retrieval from the datastore. In the case of this work the test database used "test_campaign" and the production database used "production_campaign" as the test campaign names.
 
 #### TestMaster
 
+
+
+All TestMasters and their children inherit from the ResultObject superclass in both the web iOS applications. In this manner they inherit the same properties of datetime,  testID, parentTestID and so forth. This is for the sake of convenience and avoiding repeating code.
+
 ##### TestEndpoint
+
+The main focus of the study, TestEndpoints request a set response from the Landgate server.
+
+
+
+Each TestMaster will record dozens of TestEndpoints.
 
 ##### LocationTest
 
+
+
+The LadgateAPITest iOS app requests a 10 metre accuracy for location fixes. This is not guaranteed, should the device be unable to locate with the desired precision it will report what it can after timing out. As with all GPS devices the environment affects location accuracy, particularly when testing indoors. Selecting a looser accuracy saves battery power.
+
+
 ##### NetworkTest
+
+The iOS device reports its mobile network connection type through the Telephony framework.
+
+
 
 ##### PingTest
 
+
+
 #### ReferenceObject
 
+ReferenceObjects hold the true version of the Landgate servers' response to each request. Properties of server, returnType and so forth identify ReferenceObjects from each other and allow comparison to a TestEndpoint. The reference property holds the text response, either XML, JSON or images converted to base64 text.
+
+These exemplar responses were requested and stored on the 5th of April, 2016. This is past GME's replacement date, references for GME requests were stored in April 2016 from the first test responses in December 2015. Dynamic parts of responses were excluded from the final ReferenceObject, for example any date or time value that changes between requests.
+
+The administrator uploads text files containing ReferenceObject references to the web application's code repository. A request to the \StoreReferences endpoint enqueues a task to add new and replace old ReferenceObjects with the text file contents.
+
 #### Vector
+
+The web application's Analyse function parses each TestEndpoint object and attempts to generate a new Vector object. Vectors encapsulate the LocationTest, NetworkTest and PingTest immediately preceding the TestEndpoint along with those immediately following it, retaining pointers to these objects. The function determines the change in Location, Network conditions and Ping response time and takes them as a proxy for the mobile device's changing connectivity environment through the endpoint test.
+
+The logic to retrieve the six related subtests from the datastore is as follows;
+
+1. Query only those records specific to the subtest type (LocationTests, NetworkTests or PingTests)
+2. Retrieve only results with the same TestMaster key as the TestEndpoint
+3. Filter results to only those with a datetime property less than the TestEndpoint's datetime for the three preceding subtests (or greater than for the three following tests)
+4. Sort the results by their datetime, descending for preceding subtests and ascending for following subtests
+5. Return only the first result, that being the closest in time to the TestEndpoint
+
+If any one of the six subtests are absent the Vector object can not be reliably created and the process is aborted. The TestEndpoint is marked IMPOSSIBLE to prevent any further automated attempts at analysis. Such objects are not considered any further in this study. Situations like this may arise where the test was cancelled partway through and not all three following subtests were completed.
+
+The Haversine distance formula gives a great circle distance travelled between two LocationTests (essentially a straight line at these scales). Dividing this result by the time difference gives an average speed in metres per second.
+
+The generation of mobile network is here taken as a proxy for connection speed. For example LTE is a fourth generation network and here assigned 4.0 for a networkClass property, where HSDPA would be assigned 3.5, CDMA 2.5 and so on. We assume that wifi is generation 5.0 due to its higher potential connection speed. Subtracting the following networkClass from the preceding one gives a networkChange value, positive reflecting improving network and negative degrading network connectivity.
+
+The change in response time for a HEAD request to google.com.au before and after an EndpointTest is another proxy for change in network connection speed. Subtracting the following response time from the preceding response time gives a positive pingChange value for improving network speed and a negative one for degrading speed.
+
+The Analyse function also performs the reference check. It assigns the Vector's referenceCheckSuccess property a True value if the TestEndpoint's response data contains the ReferenceObject's reference text or False otherwise.
+
+Vector objects are the basis for all further analysis in this study. All graphs in this work show the Vector rather than the original TestEndpoint or its subtests.
+
+#### CampaignStats
+
+The CampaignStats class stores counts of TestEndpoints and other subtests, enabling calculation of descriptive statistics for a specific TestCampaign. CampaignStats updates when the iOS application uploads a new TestMaster to the database, adding new counts onto existing values. Also when the Analyse function creates a new Vector object it also updates the CampaignStats properties for reference check success.
+
+The overwhelming majority of CampaignStats properties concern the percentage of successful reference object checks. 0% reference check success rates will exclude the entire test type from further consideration.
 
 ### iOS Mobile Application
 
@@ -297,7 +369,7 @@ Besides code incorporated directly into the product applications, there were sev
 
 #### Paw
 
-Keeping track of 46 ReST requests, each with minor variations from its neighbours, required more than simply keeping a list. Paw (version 2.3.3) {Anonymous:tn} is a Macintosh application designed for testing ReST requests. It simplifies the process of composing the request and its query components. Its most helpful feature is its Swift NSURLSession code output, suitable for directly pasting into an iOS application repository. The code in LandgateAPITest's EndpointTester class where it fires a request to the Landgate server is derived from Paw's example code.
+Keeping track of 46 ReST requests, each with minor variations from its neighbours, required more than a handwritten list. Paw (version 2.3.3) {Anonymous:tn} is a Mac application designed for testing ReST requests. It simplifies the process of composing the request and its query components. Its most helpful feature is its Swift NSURLSession code output, suitable for directly pasting into an iOS application repository. The code in LandgateAPITest's EndpointTester class where it fires a request to the Landgate server is derived from Paw's example code.
 
 #### Atom
 
@@ -308,6 +380,10 @@ Atom (version 1.7.2) {atomio:vz} is Github Inc's open source text editor used pr
 Apple Inc's Xcode Integrated Development Environment (IDE) {Anonymous:3QN3N1hm} is the orthodox application for developing applications for Apple machines. LandgateAPITest's iOS app was entirely built in Xcode version 7.3.
 
 ## Results
+
+
+
+Location tests do not have perfect accuracy. This lead to some aberations in distance and speed calculations, most notably a test with a speed over 120m/s (over 430Km/h).
 
 
 
