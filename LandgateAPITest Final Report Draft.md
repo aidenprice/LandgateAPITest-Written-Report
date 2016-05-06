@@ -124,7 +124,7 @@ The open source and standards driven approach meant that WMS was widely adopted 
 
 A Web Feature Service (WFS) returns geographic vector data in GML (Geographic Markup Language, a derivative of XML) in response to a URL request. It is a more complex and capable service than WMS. If fully deployed, WFS allows external users full create, read, update and delete (CRUD) access to a geographic database {Vretanos:2005ut}.
 
-The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries but was not widely adopted in the years after its release.
+The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries but was not widely adopted in the years after its release. [ ] Justify
 
 #### Google Maps Engine
 
@@ -237,7 +237,7 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 
 
-If the response received by the iOS app is identical to the reference response stored in the web app then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC services will respond with a 200 code but include an exception in the response data. The reference check uncovers these test failures. Should a test type return 0% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely.
+If the response received by the iOS app is identical to the reference response stored in the web app then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC servers will respond with a 200 code but send exception text in place of the response data. The reference check uncovers these test failures. Should a test type return 0% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely.
 
 ### Data Model and Structures
 
@@ -363,6 +363,12 @@ All tests were performed on an Apple iPhone 6S, model A1688, with 64GB of storag
 
 Well known in academia, Matplotlib is an open source Python library capable of producing detailed graphs from complex datasets {matplotlibmatplotli:2016vd}. LandgateAPITest's web app leveraged Matplotlib to build graphs of up to the minute Vector object data queried from Google's Cloud Store. Programmatically building the figures in this report allows them to be recreated on demand with the latest information from testers.
 
+##### Leaflet
+
+The LandgateAPITest web application offers a heatmap of test locations. More precisely, the map shows each Vector object's LocationTest prior to the EndpointTest. Leaflet {Agafonkin:2016wz} is a lightweight JavaScript mapping library, it is ideal for a simple application such as this.
+
+Visualising 16,000 test locations as generic markers would result in a confusing map. The Leaflet.heat {Agafonkin:2015ww} library generalises multiple points into a single heat map layer. Closely clustered tests are represented by warmer colours, dispersed ones by cooler colours. OpenStreetMap tiles comprise the basemap, available under a CC BY-SA open licence and built by the community of OpenStreetMap contributors.
+
 ### Other Applications Deployed
 
 Besides code incorporated directly into the product applications, there were several other applications instrumental to development.
@@ -381,7 +387,7 @@ Apple Inc's Xcode Integrated Development Environment (IDE) {Anonymous:3QN3N1hm} 
 
 ## Results
 
-
+[ ] Talk about disregarded test types
 
 Location tests do not have perfect accuracy. This lead to some aberations in distance and speed calculations, most notably a test with a speed over 120m/s (over 430Km/h).
 
@@ -414,6 +420,8 @@ No need to refer to theory orcoursework here.>
 [ ] Other jurisdictions (NSW LPI for instance) allows the various data providers to learn from each other and improve.
 
 [ ] Compare errors to Landgate’s server logs for more insight into error causes.
+
+[ ] Consider HTTPS methods as another dimension.
 
 ## Conclusions
 
