@@ -232,12 +232,32 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 ### Generalised Workflow
 
-[ ] Flowchart (similar to Miao, Shi and Cao, 2011)
+
+![Generalised Workflow Flowchart](Graphics/Generalised Workflow Chart.png)
+
+[ ] User initiated test
+
+[ ] preconditions
+
+[ ] sequence
+
+The client / server interaction has a number of failure points, it is important for this work to record failed requests as these affect a service's suitability for mobile network traffic. The device may be unable to reach the endpoint at all due to a total lack of connectivity (recorded as response code "0") or if a TestEndpoint is interrupted before conclusion. The request may be rejected by the server, these are the 400 series response codes (for example the common 404 code for a missing resource or 403 for failed authorisation). A server-side fault that prevents a proper response is assigned a 500 series response code (such as the very general 503 Server Error code). Should the device fail to reach the server, or the server respond with a 400 or 500 code the iOS LandgateAPITest app records the TestEndpoint as a failure. These are referred to as "On Device Failures".
+
+Note that 300 series response codes, the resource moved or redirect codes, are not considered failures. The test continues to the redirected resource where it will eventually earn a 200 success code or one of the failure codes.
+
+[ ] Store on device
+
+[ ] User initiated upload
+
+[ ] web app record, queue
+
+[ ] Analyse
 
 
 
+If the response received by the iOS app is identical to the reference response stored in the web app then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC servers will respond with a 200 code but send exception text in place of the response data. Tests that fail at this stage are referred to as "Reference Check Failures" and have an appropriate flag set on the record on the web application database.
 
-If the response received by the iOS app is identical to the reference response stored in the web app then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC servers will respond with a 200 code but send exception text in place of the response data. The reference check uncovers these test failures. Should a test type return 0% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely.
+During execution of the Analyse function the web app records the percentage of reference check tests successful for each test type. Should a test type return less than 5% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely. Such tests are flagged False for their "ReferenceCheckValid" property to allow them to be filtered out.
 
 ### Data Model and Structures
 
@@ -261,22 +281,27 @@ The main focus of the study, TestEndpoints request a set response from the Landg
 
 Each TestMaster will record dozens of TestEndpoints.
 
+TestEndpoints are stored in the iOS application database as EndpointResults. For the sake of differentiating them in the web application Python code they retain the TestEndpoint nomenclature.
+
 ##### LocationTest
 
 
 
 The LadgateAPITest iOS app requests a 10 metre accuracy for location fixes. This is not guaranteed, should the device be unable to locate with the desired precision it will report what it can after timing out. As with all GPS devices the environment affects location accuracy, particularly when testing indoors. Selecting a looser accuracy saves battery power.
 
+The web application and iOS application databases store each LocationTest's outcome as a LocationResult.
 
 ##### NetworkTest
 
 The iOS device reports its mobile network connection type through the Telephony framework.
 
-
+The result object for a NetworkTest is a NetworkResult.
 
 ##### PingTest
 
 
+
+The result object stored in the database for a PingTest is a PingResult.
 
 #### ReferenceObject
 
@@ -300,7 +325,7 @@ The logic to retrieve the six related subtests from the datastore is as follows;
 
 If any one of the six subtests are absent the Vector object can not be reliably created and the process is aborted. The TestEndpoint is marked IMPOSSIBLE to prevent any further automated attempts at analysis. Such objects are not considered any further in this study. Situations like this may arise where the test was cancelled partway through and not all three following subtests were completed.
 
-The Haversine distance formula gives a great circle distance travelled between two LocationTests (essentially a straight line at these scales). Dividing this result by the time difference gives an average speed in metres per second.
+The Haversine distance formula gives a great circle distance travelled between two LocationTests (essentially a straight line at these scales). Dividing this result by the time difference gives an average speed in metres per second. The time between two LocationTests is not the same as the TestEndpoint's total elapsed time. The interval is greater as it allows for NetworkTests, PingTests and the duration of the LocationTests themselves.
 
 The generation of mobile network is here taken as a proxy for connection speed. For example LTE is a fourth generation network and here assigned 4.0 for a networkClass property, where HSDPA would be assigned 3.5, CDMA 2.5 and so on. We assume that wifi is generation 5.0 due to its higher potential connection speed. Subtracting the following networkClass from the preceding one gives a networkChange value, positive reflecting improving network and negative degrading network connectivity.
 
@@ -326,6 +351,8 @@ The overwhelming majority of CampaignStats properties concern the percentage of 
 
 Firing requests at Landgate's endpoints concurrently, rather than synchronously, would give unreliable response time results. Analysis would not be able to determine what proportion of response time was a factor of the device resolving multiple threads of computation. To avoid this complication LandgateAPITest's iOS app uses a state machine architecture.
 
+[ ] State machine UML diagram
+
 
 #### Swift Open Source Packages
 
@@ -349,7 +376,15 @@ Kaan Dedeoglu's KDCircularProgress library initiates a progress indicator that f
 
 #### Hardware
 
-All tests were performed on an Apple iPhone 6S, model A1688, with 64GB of storage. The standard device comes with a range of mobile radios across a number of bands; LTE, HSDPA, CDMA, GSM, EDGE, wifi radios a/b/g/n/ac and GPS and GLONASS receivers {Anonymous:uf}.
+All tests were performed on an Apple iPhone 6S, model A1688 (a.k.a. iPhone8,1), with 64GB of storage. The standard device comes with a range of mobile radios across a number of bands; LTE, HSDPA, CDMA, GSM, EDGE, wifi radios a/b/g/n/ac and GPS and GLONASS receivers {Anonymous:uf}.
+
+|	|	|
+|-------------------------------------	|--------------	|
+| Campaign Name    | production_campaign         |
+| All Device Types | iPhone8,1                   |
+| All iOS Versions | 9.1, 9.2, 9.2.1, 9.3, 9.3.1 |
+
+The operating system changed through the campaign as Apple Inc. updated their software. The first tests launched LandgateAPITest on iOS 9.1, later tests on 9.2, 9.2.1 and later still on 9.3 and 9.3.1.
 
 ### Google Apps Engine Web Service
 
@@ -387,9 +422,105 @@ Apple Inc's Xcode Integrated Development Environment (IDE) {Anonymous:3QN3N1hm} 
 
 ## Results
 
-[ ] Talk about disregarded test types
+### Test Regime
+
+The "production_campaign" featured two main pushes of testing. The first in December 2015 through to January 2016 tested Google Maps Engine endpoints before their shutdown. The campaign's main thrust took place in March 2016 where the majority of tests queried the old OGC endpoints and the new Esri endpoints.
+
+The user initiated 284 TestMasters resulting in 16,144 TestEndpoints with similar numbers of LocationTests, NetworkTests and PingTests.
+
+| Test            	| Count 	|
+|------------------------	|------:	|
+| Count Test Masters     	|   284 	|
+| Count Test Endpoints   	| 16144 	|
+| Count Location Results 	| 16391 	|
+| Count Network Results  	| 16391 	|
+| Count Ping Results     	| 16345 	|
+
+There were three theatres of action in the campaign. Each test is mapped in a Leaflet web map using the location of its Vector's PreTestLocation (the LocationTest completed before the TestEndpoint began). Visualising 16,000 points would result in an ineffective map, so here closely clustered points are generalised into a heat map. A beneficial side effect of generalisation is to obfuscate precise locations.
+
+The majority of tests took place in Sydney, NSW and its environs. In particular the regular commute over the harbour to the Central Business District, and the roads and freeways to neighbouring cities.
+
+![Sydney Test Heat Map, basemap tiles copyright OpenStreetMap Contributors](Graphics/Maps/Sydney.png)
+
+Several discrete bursts of tests took place in Bathurst, NSW and the highway back and forth to Sydney, NSW.
+
+![Bathurst Test Heat Map, basemap tiles copyright OpenStreetMap Contributors](Graphics/Maps/Bathurst.png)
+
+Townsville, QLD was the theatre with the least number of tests, but some interesting mobile situations involving ferry crossings and steep terrain on Magnetic Island.
+
+![Townsville Test Heat Map, basemap tiles copyright OpenStreetMap Contributors](Graphics/Maps/Townsville.png)
+
+### TestEndpoint Successes and Failures
+
+Of the 16,144 TestEndpoints 97.06% were successful on device. They were able to complete their test and received a 200 response code from the Landgate server. The 2.94% of on device failures either could not reach the server (response code 0) or received a server error response (code 500 and above).
+
+![TestEndpoints Successful and Failed On Device](Graphics/Charts/On Device Failures Pie Chart.png)
+
+
+| Test Name                                           | Percent Successful |
+|-----------------------------------------------------|-------------------:|
+| GME - BusStops - IntersectFilter - GET - JSON       |             90.63% |
+| GME - BusStops - Big - GET - JSON                   |                 0% |
+| OGC - BusStops - Small - GET - JSON                 |             98.81% |
+| OGC - AerialPhoto - GetTileRestful - GET - Image    |             98.36% |
+| OGC - BusStops - Big - GET - XML                    |               100% |
+| OGC - BusStops - Big - POST - JSON                  |               100% |
+| ESRI - BusStops - Small - GET - JSON                |             96.98% |
+| GME - AerialPhoto - GetTileKVP3 - GET - Image       |             90.63% |
+| OGC - BusStops - Big - GET - JSON                   |               100% |
+| GME - AerialPhoto - Small - GET - Image             |             86.36% |
+| ESRI - BusStops - GetCapabilities - GET - JSON      |             97.64% |
+| OGC - BusStops - FeatureByID - POST - JSON          |               100% |
+| ESRI - BusStops - Small - POST - JSON               |             97.89% |
+| OGC - BusStops - GetCapabilities - GET - XML        |              2.88% |
+| GME - AerialPhoto - GetTileKVP - GET - Image        |             95.65% |
+| ESRI - BusStops - FeatureByID - POST - JSON         |             98.76% |
+| OGC - BusStops - Big - POST - XML                   |               100% |
+| ESRI - BusStops - GetCapabilities - POST - JSON     |             98.99% |
+| OGC - BusStops - Small - GET - XML                  |               100% |
+| OGC - AerialPhoto - GetTileKVP - GET - Image        |             98.85% |
+| OGC - BusStops - FeatureByID - GET - XML            |             98.85% |
+| GME - AerialPhoto - WMTSGetCapabilities - GET - XML |                 0% |
+| OGC - BusStops - IntersectFilter - POST - JSON      |             99.46% |
+| OGC - BusStops - Small - POST - JSON                |             99.76% |
+| GME - AerialPhoto - GetTileKVP2 - GET - Image       |             93.75% |
+| ESRI - BusStops - AttributeFilter - POST - JSON     |             98.20% |
+| OGC - BusStops - AttributeFilter - POST - XML       |             99.45% |
+| ESRI - Topo - Small - POST - Image                  |               100% |
+| ESRI - BusStops - FeatureByID - GET - JSON          |             99.00% |
+| ESRI - BusStops - Big - POST - JSON                 |            101.03% |
+| OGC - BusStops - AttributeFilter - GET - XML        |             99.72% |
+| ESRI - BusStops - AttributeFilter - GET - JSON      |             98.79% |
+| GME - AerialPhoto - WMSGetCapabilities - GET - XML  |                 0% |
+| OGC - BusStops - FeatureByID - GET - JSON           |             99.30% |
+| GME - AerialPhoto - GetTileKVP4 - GET - Image       |             90.91% |
+| OGC - BusStops - IntersectFilter - POST - XML       |               100% |
+| GME - BusStops - FeatureByID - GET - JSON           |             96.55% |
+| OGC - BusStops - Small - POST - XML                 |             98.83% |
+| ESRI - Topo - Small - GET - Image                   |             99.32% |
+| ESRI - BusStops - IntersectFilter - GET - JSON      |             97.31% |
+| GME - BusStops - Small - GET - JSON                 |                 0% |
+| ESRI - BusStops - Big - GET - JSON                  |            101.06% |
+| OGC - BusStops - IntersectFilter - GET - XML        |             99.46% |
+| GME - AerialPhoto - Big - GET - Image               |             96.97% |
+| ESRI - Topo - Big - POST - Image                    |             99.45% |
+| GME - BusStops - AttributeFilter - GET - JSON       |             83.87% |
+| GME - BusStops - DistanceFilter - GET - JSON        |             93.75% |
+| OGC - BusStops - AttributeFilter - GET - JSON       |              0.83% |
+| OGC - BusStops - GetCapabilities - POST - XML       |              1.26% |
+| OGC - Topo - Big - GET - Image                      |              3.63% |
+| OGC - BusStops - IntersectFilter - GET - JSON       |             99.73% |
+| ESRI - BusStops - IntersectFilter - POST - JSON     |             98.21% |
+| OGC - Topo - Small - GET - Image                    |              3.48% |
+| OGC - BusStops - AttributeFilter - POST - JSON      |             98.63% |
+| OGC - BusStops - FeatureByID - POST - XML           |             99.54% |
+
 
 Location tests do not have perfect accuracy. This lead to some aberations in distance and speed calculations, most notably a test with a speed over 120m/s (over 430Km/h).
+
+### Test Characteristics
+
+[ ] Talk about the types of tests after the filtering
 
 
 
@@ -402,9 +533,9 @@ Identifyalternative solutions to this/these major problem/s (there is likely to 
 solution per problem)
 Briefly outlineeach alternative solution and then evaluate it in terms of its advantages and
 disadvantages
-No need to refer to theory orcoursework here.>
+No need to refer to theory or coursework here.>
 
-
+[ ] Not a navigation server so higher time outs, longer response times (which are more a consequence of mobile networks and their hiccoughs generally) are not a major hinderance.
 
 ## Recommendations
 
