@@ -452,71 +452,74 @@ Townsville, QLD was the theatre with the least number of tests, but some interes
 
 ### TestEndpoint Successes and Failures
 
-Of the 16,144 TestEndpoints 97.06% were successful on device. They were able to complete their test and received a 200 response code from the Landgate server. The 2.94% of on device failures either could not reach the server (response code 0) or received a server error response (code 500 and above).
+Of the 16,144 TestEndpoints 15,670 were successful on device (97.06%). These were able to complete the test and received a 200 response code from the Landgate server. The 2.94% of on device failures either could not reach the server (response code 0) or received a server error response (code 500 and above).
 
 ![TestEndpoints Successful and Failed On Device](Graphics/Charts/On Device Failures Pie Chart.png)
 
+LandgateAPITest's Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them matched, setting their referenceCheckSuccess flag to True.
+
+Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). These test types were excluded en masse from further analysis on the assumption that there was a systematic issue with their reference data. Interestingly, the GetCapabilities tests rarely passed reference checks, possibly due to timestamps buried in the XML response and reference conflicting.
+
 
 | Test Name                                           | Percent Successful |
-|-----------------------------------------------------|-------------------:|
-| GME - BusStops - IntersectFilter - GET - JSON       |             90.63% |
-| GME - BusStops - Big - GET - JSON                   |                 0% |
-| OGC - BusStops - Small - GET - JSON                 |             98.81% |
-| OGC - AerialPhoto - GetTileRestful - GET - Image    |             98.36% |
-| OGC - BusStops - Big - GET - XML                    |               100% |
-| OGC - BusStops - Big - POST - JSON                  |               100% |
-| ESRI - BusStops - Small - GET - JSON                |             96.98% |
-| GME - AerialPhoto - GetTileKVP3 - GET - Image       |             90.63% |
-| OGC - BusStops - Big - GET - JSON                   |               100% |
-| GME - AerialPhoto - Small - GET - Image             |             86.36% |
-| ESRI - BusStops - GetCapabilities - GET - JSON      |             97.64% |
-| OGC - BusStops - FeatureByID - POST - JSON          |               100% |
-| ESRI - BusStops - Small - POST - JSON               |             97.89% |
-| OGC - BusStops - GetCapabilities - GET - XML        |              2.88% |
-| GME - AerialPhoto - GetTileKVP - GET - Image        |             95.65% |
-| ESRI - BusStops - FeatureByID - POST - JSON         |             98.76% |
-| OGC - BusStops - Big - POST - XML                   |               100% |
-| ESRI - BusStops - GetCapabilities - POST - JSON     |             98.99% |
-| OGC - BusStops - Small - GET - XML                  |               100% |
-| OGC - AerialPhoto - GetTileKVP - GET - Image        |             98.85% |
-| OGC - BusStops - FeatureByID - GET - XML            |             98.85% |
-| GME - AerialPhoto - WMTSGetCapabilities - GET - XML |                 0% |
-| OGC - BusStops - IntersectFilter - POST - JSON      |             99.46% |
-| OGC - BusStops - Small - POST - JSON                |             99.76% |
-| GME - AerialPhoto - GetTileKVP2 - GET - Image       |             93.75% |
-| ESRI - BusStops - AttributeFilter - POST - JSON     |             98.20% |
-| OGC - BusStops - AttributeFilter - POST - XML       |             99.45% |
-| ESRI - Topo - Small - POST - Image                  |               100% |
-| ESRI - BusStops - FeatureByID - GET - JSON          |             99.00% |
-| ESRI - BusStops - Big - POST - JSON                 |            101.03% |
-| OGC - BusStops - AttributeFilter - GET - XML        |             99.72% |
-| ESRI - BusStops - AttributeFilter - GET - JSON      |             98.79% |
-| GME - AerialPhoto - WMSGetCapabilities - GET - XML  |                 0% |
-| OGC - BusStops - FeatureByID - GET - JSON           |             99.30% |
-| GME - AerialPhoto - GetTileKVP4 - GET - Image       |             90.91% |
-| OGC - BusStops - IntersectFilter - POST - XML       |               100% |
-| GME - BusStops - FeatureByID - GET - JSON           |             96.55% |
-| OGC - BusStops - Small - POST - XML                 |             98.83% |
-| ESRI - Topo - Small - GET - Image                   |             99.32% |
-| ESRI - BusStops - IntersectFilter - GET - JSON      |             97.31% |
-| GME - BusStops - Small - GET - JSON                 |                 0% |
-| ESRI - BusStops - Big - GET - JSON                  |            101.06% |
-| OGC - BusStops - IntersectFilter - GET - XML        |             99.46% |
-| GME - AerialPhoto - Big - GET - Image               |             96.97% |
-| ESRI - Topo - Big - POST - Image                    |             99.45% |
-| GME - BusStops - AttributeFilter - GET - JSON       |             83.87% |
-| GME - BusStops - DistanceFilter - GET - JSON        |             93.75% |
-| OGC - BusStops - AttributeFilter - GET - JSON       |              0.83% |
-| OGC - BusStops - GetCapabilities - POST - XML       |              1.26% |
-| OGC - Topo - Big - GET - Image                      |              3.63% |
-| OGC - BusStops - IntersectFilter - GET - JSON       |             99.73% |
-| ESRI - BusStops - IntersectFilter - POST - JSON     |             98.21% |
-| OGC - Topo - Small - GET - Image                    |              3.48% |
-| OGC - BusStops - AttributeFilter - POST - JSON      |             98.63% |
-| OGC - BusStops - FeatureByID - POST - XML           |             99.54% |
+|-----------------------------------------------------|--------------------:|
+| ESRI - BusStops - AttributeFilter - GET - JSON      | 98.79%             |
+| ESRI - BusStops - AttributeFilter - POST - JSON     | 98.20%             |
+| ESRI - BusStops - Big - GET - JSON                  | 101.06%            |
+| ESRI - BusStops - Big - POST - JSON                 | 101.03%            |
+| ESRI - BusStops - FeatureByID - GET - JSON          | 99.00%             |
+| ESRI - BusStops - FeatureByID - POST - JSON         | 98.76%             |
+| ESRI - BusStops - GetCapabilities - GET - JSON      | 97.64%             |
+| ESRI - BusStops - GetCapabilities - POST - JSON     | 98.99%             |
+| ESRI - BusStops - IntersectFilter - GET - JSON      | 97.31%             |
+| ESRI - BusStops - IntersectFilter - POST - JSON     | 98.21%             |
+| ESRI - BusStops - Small - GET - JSON                | 96.98%             |
+| ESRI - BusStops - Small - POST - JSON               | 97.89%             |
+| ESRI - Topo - Big - POST - Image                    | 99.45%             |
+| ESRI - Topo - Small - GET - Image                   | 99.32%             |
+| ESRI - Topo - Small - POST - Image                  | 100%               |
+| GME - AerialPhoto - Big - GET - Image               | 96.97%             |
+| GME - AerialPhoto - GetTileKVP - GET - Image        | 95.65%             |
+| GME - AerialPhoto - GetTileKVP2 - GET - Image       | 93.75%             |
+| GME - AerialPhoto - GetTileKVP3 - GET - Image       | 90.63%             |
+| GME - AerialPhoto - GetTileKVP4 - GET - Image       | 90.91%             |
+| GME - AerialPhoto - Small - GET - Image             | 86.36%             |
+| GME - AerialPhoto - WMSGetCapabilities - GET - XML  | 0%                 |
+| GME - AerialPhoto - WMTSGetCapabilities - GET - XML | 0%                 |
+| GME - BusStops - AttributeFilter - GET - JSON       | 83.87%             |
+| GME - BusStops - Big - GET - JSON                   | 0%                 |
+| GME - BusStops - DistanceFilter - GET - JSON        | 93.75%             |
+| GME - BusStops - FeatureByID - GET - JSON           | 96.55%             |
+| GME - BusStops - IntersectFilter - GET - JSON       | 90.63%             |
+| GME - BusStops - Small - GET - JSON                 | 0%                 |
+| OGC - AerialPhoto - GetTileKVP - GET - Image        | 98.85%             |
+| OGC - AerialPhoto - GetTileRestful - GET - Image    | 98.36%             |
+| OGC - BusStops - AttributeFilter - GET - JSON       | 0.83%              |
+| OGC - BusStops - AttributeFilter - GET - XML        | 99.72%             |
+| OGC - BusStops - AttributeFilter - POST - JSON      | 98.63%             |
+| OGC - BusStops - AttributeFilter - POST - XML       | 99.45%             |
+| OGC - BusStops - Big - GET - JSON                   | 100%               |
+| OGC - BusStops - Big - GET - XML                    | 100%               |
+| OGC - BusStops - Big - POST - JSON                  | 100%               |
+| OGC - BusStops - Big - POST - XML                   | 100%               |
+| OGC - BusStops - FeatureByID - GET - JSON           | 99.30%             |
+| OGC - BusStops - FeatureByID - GET - XML            | 98.85%             |
+| OGC - BusStops - FeatureByID - POST - JSON          | 100%               |
+| OGC - BusStops - FeatureByID - POST - XML           | 99.54%             |
+| OGC - BusStops - GetCapabilities - GET - XML        | 2.88%              |
+| OGC - BusStops - GetCapabilities - POST - XML       | 1.26%              |
+| OGC - BusStops - IntersectFilter - GET - JSON       | 99.73%             |
+| OGC - BusStops - IntersectFilter - GET - XML        | 99.46%             |
+| OGC - BusStops - IntersectFilter - POST - JSON      | 99.46%             |
+| OGC - BusStops - IntersectFilter - POST - XML       | 100%               |
+| OGC - BusStops - Small - GET - JSON                 | 98.81%             |
+| OGC - BusStops - Small - GET - XML                  | 100%               |
+| OGC - BusStops - Small - POST - JSON                | 99.76%             |
+| OGC - BusStops - Small - POST - XML                 | 98.83%             |
+| OGC - Topo - Big - GET - Image                      | 3.63%              |
+| OGC - Topo - Small - GET - Image                    | 3.48%              |
 
 
-Location tests do not have perfect accuracy. This lead to some aberations in distance and speed calculations, most notably a test with a speed over 120m/s (over 430Km/h).
 
 ### Test Characteristics
 
