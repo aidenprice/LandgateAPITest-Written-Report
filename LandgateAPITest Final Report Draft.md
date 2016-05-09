@@ -124,7 +124,9 @@ The open source and standards driven approach meant that WMS was widely adopted 
 
 A Web Feature Service (WFS) returns geographic vector data in GML (Geographic Markup Language, a derivative of XML) in response to a URL request. It is a more complex and capable service than WMS. If fully deployed, WFS allows external users full create, read, update and delete (CRUD) access to a geographic database {Vretanos:2005ut}.
 
-The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries but was not widely adopted in the years after its release. [ ] Justify
+The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries but was not widely adopted in the years after its release.
+
+[ ] Justify
 
 #### Google Maps Engine
 
@@ -345,6 +347,14 @@ The overwhelming majority of CampaignStats properties concern the percentage of 
 
 #### Mobile Application Design Principles
 
+
+
+LandgateAPITest is not a privacy focussed app. The application collects data that many would consider intrusive, such as location or mobile network connection details. Without this information the application would not fulfil its objectives. The app's help text encourages users who find such invasiveness unacceptable to uninstall the application.
+
+The application is also a heavy user of the device's battery and mobile network downloads. These are similarly unavoidable, being core to the application's function. The help text highlights that users may upload a test while on a wifi network to avoid data charges for uploading a TestEndpoint's response data.
+
+Given these two points users could be justly concerned that the application would be a noticeable drain on their battery and data plan. We address this issue by only testing when the application is in the device's foreground, that is on the screen while the device is awake. Should the application be sent to the background it immediately enters an abort state, cancelling active tests and storing what results it has to the database. This can be triggered by  the user selecting a different app, clicking the Home button, or by an interrupting phone call.
+
 #### iOS Application Architecture
 
 
@@ -353,6 +363,11 @@ Firing requests at Landgate's endpoints concurrently, rather than synchronously,
 
 [ ] State machine UML diagram
 
+Functions are completed sequentially, the completion of a test fires an event function causing the application to change state and thence perform different functions.
+
+When the user initiates a test the SingletonTestManager class switches to its prepareForTest state where it checks  preconditions and creates a TestMaster object. From there the SingletonTestManager enters a loop; testing location, network, ping to google.com.au and then testing a Landgate endpoint (a TestEndpoint) and back to location. The loop continues until the TestMaster's queue of TestEndpoints is exhausted, whereupon the TestMaster and all its subtests are written to the device's database. Each state performs distinct actions and does not interfere with tests preceding or following as none may start until the earlier test has successfully finished.
+
+At any time the state machine may abort the loop if the preconditions are not met, the app leaves the foreground, or the battery is exhausted. It immediately skips to the post-test state and attempts to save the test results gathered to the device database. Notably, any test (endpoint, location, network or ping) cancelled part-way through is aborted and marked as "Failed On Device."
 
 #### Swift Open Source Packages
 
@@ -390,13 +405,27 @@ The operating system changed through the campaign as Apple Inc. updated their so
 
 #### Web Service Design Principles
 
+The ideal for any web service is to present the latest available data to requesters. LandgateAPITest presents statistics, maps and analysis on objects in the datastore at request time. End users need not await final reports but can check on the status of a testing campaign whenever they wish.
+
+The iOS testing app can produce a large set of testing data quickly. The web application should analyse TestEndpoint results and not just represent them, generating actionable information from pure data.
+
+Cloud computing power is capable of scaling to accommodate excess load, but at a cost. The web application acts to smooth out high load by deferring computationally intensive tasks to avoid peak load and hence minimise cost.
+
 #### Python Application Architecture
+
+Google App Engine Python applications derive their basic functionality from the webapp2 open source library {Welcometowebapp:2011vk}. Developers define web app endpoints and map them to Python classes, so landgateapitest.appspot.com/database maps to the Database class in Python code. Then the HTTP method maps to functions within that class. A POST request to the /database endpoint fires the Database class's post() function adding the request body to the databse. A GET request calls the get() function and downloads a TestMaster record to the requester.
+
+Functions may call for a task to be enqueued, whereupon the GAE system will fire the specified request at a later time, ideally when processor load is minimal. A successful POST request to the /database endpoint queues an /analyse endpoint GET request as one of its last tasks. Similar tasks which are anticipated to consume more than trivial resources are deferred as queued tasks in LandgateAPITest, such as importing reference text files to the datastore or updating model schema.
+
+Google App Engine applications may use any of Google Inc.'s several cloud data storage solutions. LandgateAPITest uses Google Cloud Datastore, a NoSQL database quite distinct from relational databases in that it does not store all records as atomic rows in tables, rather as schema-less objects in distributed documents.
 
 #### Python Open Source Packages
 
 ##### Matplotlib
 
 Well known in academia, Matplotlib is an open source Python library capable of producing detailed graphs from complex datasets {matplotlibmatplotli:2016vd}. LandgateAPITest's web app leveraged Matplotlib to build graphs of up to the minute Vector object data queried from Google's Cloud Store. Programmatically building the figures in this report allows them to be recreated on demand with the latest information from testers.
+
+Matplotlib's analytical power is enhanced when paired with Numpy {NumPyNumpy:2016vy}. A mathematically focussed library, most useful in LandgateAPITest for its arrays, which are much more analytically oriented than generic Python list collections.
 
 ##### Leaflet
 
@@ -456,10 +485,9 @@ Of the 16,144 TestEndpoints 15,670 were successful on device (97.06%). These wer
 
 ![TestEndpoints Successful and Failed On Device](Graphics/Charts/On Device Failures Pie Chart.png)
 
-LandgateAPITest's Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them matched, setting their referenceCheckSuccess flag to True.
+LandgateAPITest's Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them matched, setting the resultant Vector's referenceCheckSuccess flag to True.
 
-Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). These test types were excluded en masse from further analysis on the assumption that there was a systematic issue with their reference data. Interestingly, the GetCapabilities tests rarely passed reference checks, possibly due to timestamps buried in the XML response and reference conflicting.
-
+Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). All such Vectors had their ReferenceCheckValid flag set to False to exclude them en masse from further analysis on the assumption that there was a systematic issue with their reference data. Interestingly, the GetCapabilities tests rarely passed reference checks, possibly due to timestamps buried in the XML response and reference conflicting.
 
 | Test Name                                           | Percent Successful |
 |-----------------------------------------------------|--------------------:|
@@ -519,11 +547,18 @@ Closer examination of referenceCheckSuccess by test type showed 9 test types tha
 | OGC - Topo - Big - GET - Image                      | 3.63%              |
 | OGC - Topo - Small - GET - Image                    | 3.48%              |
 
+Of the remaining  tests only 79 (0.6%) failed a reference check.
 
+![Percentage of Vectors With Reference Check Failed](Graphics/Charts/Reference Check Failures Pie Chart.png)
 
 ### Test Characteristics
 
 [ ] Talk about the types of tests after the filtering
+
+
+[ ] Availability
+[ ] Accessability
+[ ] Successability
 
 
 
@@ -537,6 +572,10 @@ solution per problem)
 Briefly outlineeach alternative solution and then evaluate it in terms of its advantages and
 disadvantages
 No need to refer to theory or coursework here.>
+
+[ ] The fact that we need a logarithmic axis for response time to show the interquartile range at all indicates that the servers are suitable for a range of mobile situations. (regardless of whether OGC or Esri, XML JSON or image)
+
+[ ] Incorrect data is delivered only 0.6% of the time, there are few mobile situations where this would be a critical hinderance. (support this somewhere)
 
 [ ] Not a navigation server so higher time outs, longer response times (which are more a consequence of mobile networks and their hiccoughs generally) are not a major hinderance.
 
@@ -554,6 +593,10 @@ No need to refer to theory or coursework here.>
 [ ] Other jurisdictions (NSW LPI for instance) allows the various data providers to learn from each other and improve.
 
 [ ] Compare errors to Landgate’s server logs for more insight into error causes.
+
+[ ] Three types of latency from Oasis standard;
+
+> Kim, E., Lee, Y., Kim, Y., Park, H., Kim, J., Moon, B., et al. (2012). Web Services Quality Factors Version 1.0 (pp. 1–29). Retrieved from http://docs.oasis-open.org/wsqm/WS-Quality-Factors/v1.0/cos01/WS-Quality-Factors-v1.0- cos01.html
 
 [ ] Consider HTTPS methods as another dimension.
 
