@@ -1,0 +1,337 @@
+GET https://imagery.slip.wa.gov.au/service?service=WMTS&version=1.0.0&request=GetTile&layer=Locate&style=default&format=image%2Fpng&tilematrixset=wa&tilematrix=19&tilerow=311390&tilecol=430928
+
+GET https://www2.landgate.wa.gov.au/ows/wmspublic?service=WMS&version=1.3.0&request=GetMap&layers=LGATE-010%2CLGATE-052%2CLGATE-053%2CLGATE-054&srs=EPSG%3A4283&bbox=110%2C-35.5%2C132%2C-13.5&width=500&height=500&format=image%2Fpng&transparent=true
+
+Authorization: Basic YXAxNzg5ODY2MTpTSzJhWFBMRmpJenV0NDc=
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&outputFormat=json&maxFeatures=1&sortBy=&filter=%3Cwfs%3AGetFeature%20xmlns%3Awfs%3D%22http%3A%2F%2Fwww.opengis.net%2Fwfs%22%20xmlns%3Aogc%3D%22http%3A%2F%2Fwww.opengis.net%2Fogc%22%20xmlns%3Agml%3D%22http%3A%2F%2Fwww.opengis.net%2Fgml%22%20xmlns%3Acgf%3D%22http%3A%2F%2Fwww.opengis.net%2Fcite%2Fgeometry%22%20outputFormat%3D%22json%22%20version%3D%221.1.0%22%20service%3D%22wfs%22%3E%3Cwfs%3AQuery%20typeName%3D%22slip%3APTA-008%22%3E%3Cogc%3AFilter%3E%3Cogc%3ABBOX%3E%3Cogc%3APropertyName%3Ethe_geom%3C%2Fogc%3APropertyName%3E%3Cgml%3ABox%20srsName%3D%22EPSG%3A4326%22%3E%3Cgml%3Acoordinates%3E115.8860718954193%2C-32.01350664629256%20115.9009673001542%2C-31.99754322345886%3C%2Fgml%3Acoordinates%3E%3C%2Fgml%3ABox%3E%3C%2Fogc%3ABBOX%3E%3C%2Fogc%3AFilter%3E%3C%2Fwfs%3AQuery%3E%3C%2Fwfs%3AGetFeature%3E
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+GET https://www.googleapis.com/mapsengine/v1/tables/09372590152434720789-08620406515972909896/features?version=published&maxResults=500&key=
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wms/?service=wms&version=1.1.1&request=GetMap&srs=EPSG%3A4326&format=image%2Fpng&height=50&width=50&bbox=115.894855%2C-32.007438%2C115.895456%2C-32.006877&layers=09372590152434720789-02344374277596842979-4&styles=&key=
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" version="1.1.0" service="wfs" maxFeatures="25">
+	<wfs:Query typeName="slip:PTA-008">
+		<wfs:PropertyName>stopid</wfs:PropertyName>
+		<wfs:PropertyName>status</wfs:PropertyName>
+		<wfs:PropertyName>stopname</wfs:PropertyName>
+		<wfs:PropertyName>stoptype</wfs:PropertyName>
+		<wfs:PropertyName>the_geom</wfs:PropertyName>
+		<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>status</ogc:PropertyName>
+				<ogc:Literal>Active</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+GET https://www.googleapis.com/mapsengine/v1/tables/09372590152434720789-08620406515972909896/features?version=published&select=STOPID%2CSTOPNAME%2CSTOPTYPE%2CSTATUS%2CLOCATION%2CSUBURB%2Cgeometry%2CST_Distance%28geometry%2CST_POINT%28115.895095%2C-32.007143%29%29%20as%20distance&orderBy=distance&limit=1&where=STATUS%20CONTAINS%20%27Active%27&key=
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&outputFormat=json&maxFeatures=500&filter=%3Cwfs%3AGetFeature%20xmlns%3Awfs%3D%22http%3A%2F%2Fwww.opengis.net%2Fwfs%22%20xmlns%3Aogc%3D%22http%3A%2F%2Fwww.opengis.net%2Fogc%22%20xmlns%3Agml%3D%22http%3A%2F%2Fwww.opengis.net%2Fgml%22%20xmlns%3Acgf%3D%22http%3A%2F%2Fwww.opengis.net%2Fcite%2Fgeometry%22%20outputFormat%3D%22json%22%20version%3D%221.1.0%22%20service%3D%22wfs%22%3E%3Cwfs%3AQuery%20typeName%3D%22slip%3APTA-008%22%3E%3Cogc%3AFilter%3E%3Cogc%3ABBOX%3E%3Cogc%3APropertyName%3Ethe_geom%3C%2Fogc%3APropertyName%3E%3Cgml%3ABox%20srsName%3D%22EPSG%3A4326%22%3E%3Cgml%3Acoordinates%3E115.8860718954193%2C-32.01350664629256%20115.9009673001542%2C-31.99754322345886%3C%2Fgml%3Acoordinates%3E%3C%2Fgml%3ABox%3E%3C%2Fogc%3ABBOX%3E%3C%2Fogc%3AFilter%3E%3C%2Fwfs%3AQuery%3E%3C%2Fwfs%3AGetFeature%3E
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query?where=status%3D%27Active%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=%2A&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=500&f=json
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Services/Medium_Scale_Topo_Public_Services/MapServer/export?bbox=115%2C-35.5%2C127%2C-13.5&bboxSR=4283&layers=show%3A0%2C1%2C2%2C3&layerDefs=&size=50%2C50&imageSR=4283&format=png&transparent=true&dpi=&time=&layerTimeOptions=&dynamicLayers=&gdbVersion=&mapScale=&f=image
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wmts/?service=wmts&version=1.0.0&request=GetTile&exceptions=XML&layer=09372590152434720789-02344374277596842979-4&style=default&format=image%2Fpng&tilematrixset=EPSG%3A900913&tilematrix=EPSG%3A900913%3A19&tilerow=311390&tilecol=430928&key=
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&outputFormat=json&maxFeatures=25&filter=%3CFilter%3E%3CPropertyIsLike%20wildCard%3D%27%2A%27%20singleChar%3D%27.%27%20escape%3D%27%21%27%3E%3CPropertyName%3Elocation%3C%2FPropertyName%3E%3CLiteral%3ECurtin%2A%3C%2FLiteral%3E%3C%2FPropertyIsLike%3E%3C%2FFilter%3E
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query
+
+where=status%3D%27Active%27&text=&objectIds=&time=&geometry=115.8860718954193%2C-32.01350664629256%2C115.9009673001542%2C-31.99754322345886&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstopname%2Cstoptype%2Cstatus%2Clocation%2Csuburb&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=75&f=json
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wmts/?service=wmts&version=1.0.0&request=GetCapabilities&exceptions=XML&key=
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&maxFeatures=25&filter=%3CFilter%3E%3CPropertyIsLike%20wildCard%3D%27%2A%27%20singleChar%3D%27.%27%20escape%3D%27%21%27%3E%3CPropertyName%3Elocation%3C%2FPropertyName%3E%3CLiteral%3ECurtin%2A%3C%2FLiteral%3E%3C%2FPropertyIsLike%3E%3C%2FFilter%3E
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wms/?service=wms&version=1.3.0&request=GetCapabilities&exceptions=XML&key=
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query?where=status%3D%27Active%27&text=&objectIds=&time=&geometry=115.8860718954193%2C-32.01350664629256%2C115.9009673001542%2C-31.99754322345886&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstopname%2Cstoptype%2Cstatus%2Clocation%2Csuburb&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=stopname&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=75&f=json
+
+GET https://www.googleapis.com/mapsengine/v1/tables/09372590152434720789-08620406515972909896/features?version=published&maxResults=25&select=STOPID%2CSTOPNAME%2CSTOPTYPE%2Cgeometry&key=
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query
+
+where=status%3D%27Active%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstatus%2Cstopname%2Cstoptype&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=25&f=json
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&propertyName=stopid%2Cstatus%2Cstopname%2Cstoptype%2Cthe_geom&maxFeatures=25&outputFormat=json&filter=%3CFilter%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Estatus%3C%2FPropertyName%3E%3CLiteral%3EActive%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&maxFeatures=500&filter=%3Cwfs%3AGetFeature%20xmlns%3Awfs%3D%22http%3A%2F%2Fwww.opengis.net%2Fwfs%22%20xmlns%3Aogc%3D%22http%3A%2F%2Fwww.opengis.net%2Fogc%22%20xmlns%3Agml%3D%22http%3A%2F%2Fwww.opengis.net%2Fgml%22%20xmlns%3Acgf%3D%22http%3A%2F%2Fwww.opengis.net%2Fcite%2Fgeometry%22%20outputFormat%3D%22json%22%20version%3D%221.1.0%22%20service%3D%22wfs%22%3E%3Cwfs%3AQuery%20typeName%3D%22slip%3APTA-008%22%3E%3Cogc%3AFilter%3E%3Cogc%3ABBOX%3E%3Cogc%3APropertyName%3Ethe_geom%3C%2Fogc%3APropertyName%3E%3Cgml%3ABox%20srsName%3D%22EPSG%3A4326%22%3E%3Cgml%3Acoordinates%3E115.8860718954193%2C-32.01350664629256%20115.9009673001542%2C-31.99754322345886%3C%2Fgml%3Acoordinates%3E%3C%2Fgml%3ABox%3E%3C%2Fogc%3ABBOX%3E%3C%2Fogc%3AFilter%3E%3C%2Fwfs%3AQuery%3E%3C%2Fwfs%3AGetFeature%3E
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wmts/?service=wmts&version=1.0.0&request=GetTile&exceptions=XML&layer=09372590152434720789-02344374277596842979-4&style=default&format=image%2Fpng&tilematrixset=EPSG%3A900913&tilematrix=EPSG%3A900913%3A19&tilerow=311388&tilecol=430931&key=
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" outputFormat="json" version="1.1.0" service="wfs">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:BBOX>
+				<ogc:PropertyName>the_geom</ogc:PropertyName>
+				<gml:Box srsName="EPSG:4326">
+					<gml:coordinates>115.8860718954193,-32.01350664629256 115.9009673001542,-31.99754322345886</gml:coordinates>
+				</gml:Box>
+			</ogc:BBOX>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" outputFormat="json" version="1.1.0" service="wfs">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:And>
+				<ogc:PropertyIsEqualTo>
+					<ogc:PropertyName>status</ogc:PropertyName>
+					<ogc:Literal>Active</ogc:Literal>
+				</ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo>
+					<ogc:PropertyName>suburb</ogc:PropertyName>
+					<ogc:Literal>BENTLEY</ogc:Literal>
+				</ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsLike wildCard='*' singleChar='.' escape='!'>
+					<ogc:PropertyName>location</ogc:PropertyName>
+					<ogc:Literal>*Curtin*</ogc:Literal>
+				</ogc:PropertyIsLike>
+			</ogc:And>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&maxFeatures=25&outputFormat=json&filter=%3CFilter%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Egid%3C%2FPropertyName%3E%3CLiteral%3E1540%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E
+
+POST https://www2.landgate.wa.gov.au/ows/wmspublic
+
+Authorization: Basic YXAxNzg5ODY2MTpTSzJhWFBMRmpJenV0NDc=
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Services/Medium_Scale_Topo_Public_Services/MapServer/export
+
+bbox=115%2C-35.5%2C127%2C-13.5&bboxSR=4283&layers=show%3A0%2C1%2C2%2C3&size=500%2C500&imageSR=4283&format=png&transparent=true&f=image
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" version="1.1.0" service="wfs">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:BBOX>
+				<ogc:PropertyName>the_geom</ogc:PropertyName>
+				<gml:Box srsName="EPSG:4326">
+					<gml:coordinates>115.8860718954193,-32.01350664629256 115.9009673001542,-31.99754322345886</gml:coordinates>
+				</gml:Box>
+			</ogc:BBOX>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query
+
+where=status%3D%27Active%27&text=&objectIds=1540&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=%2A&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=25&f=json
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wms/?service=wms&version=1.1.1&request=GetMap&srs=EPSG%3A4326&format=image%2Fpng&height=500&width=500&bbox=115.894855%2C-32.007438%2C115.895456%2C-32.006877&layers=09372590152434720789-02344374277596842979-4&styles=&key=
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&maxFeatures=500&filter=%3CFilter%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Estatus%3C%2FPropertyName%3E%3CLiteral%3EActive%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query?where=status%3D%27Active%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstatus%2Cstopname%2Cstoptype&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=25&f=json
+
+GET https://imagery.slip.wa.gov.au/wmts/Locate/wa/19/430928/311390.png
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query?where=status%3D%27Active%27&text=&objectIds=1540&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=%2A&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=25&f=json
+
+GET https://www.googleapis.com/mapsengine/v1/tables/09372590152434720789-08620406515972909896/features?version=published&where=LOCATION%20CONTAINS%20%27Curtin%27%20AND%20SUBURB%20CONTAINS%20%27BENTLEY%27%20AND%20STATUS%20CONTAINS%20%27Active%27&key=
+
+POST https://www2.landgate.wa.gov.au/ows/wmspublic
+
+Authorization: Basic YXAxNzg5ODY2MTpTSzJhWFBMRmpJenV0NDc=
+
+<?xml version="1.0" encoding="UTF-8"?>
+<wms:GetMap version="1.3.0" service="WMS" xmlns:wms="http://www.opengis.net/ows" xmlns:gml="http://www.opengis.net/gml" xmlns:sld="http://www.opengis.net/sld">
+	<sld:StyledLayerDescriptor version="1.0.0">
+		<sld:NamedLayer>
+			<sld:Name>LGATE-010</sld:Name>
+			<sld:NamedStyle>
+				<sld:Name>default</sld:Name>
+			</sld:NamedStyle>
+		</sld:NamedLayer>
+	</sld:StyledLayerDescriptor>
+	<sld:StyledLayerDescriptor version="1.0.0">
+		<sld:NamedLayer>
+			<sld:Name>LGATE-052</sld:Name>
+			<sld:NamedStyle>
+				<sld:Name>default</sld:Name>
+			</sld:NamedStyle>
+		</sld:NamedLayer>
+	</sld:StyledLayerDescriptor>
+	<sld:StyledLayerDescriptor version="1.0.0">
+		<sld:NamedLayer>
+			<sld:Name>LGATE-053</sld:Name>
+			<sld:NamedStyle>
+				<sld:Name>default</sld:Name>
+			</sld:NamedStyle>
+		</sld:NamedLayer>
+	</sld:StyledLayerDescriptor>
+	<sld:StyledLayerDescriptor version="1.0.0">
+		<sld:NamedLayer>
+			<sld:Name>LGATE-054</sld:Name>
+			<sld:NamedStyle>
+				<sld:Name>default</sld:Name>
+			</sld:NamedStyle>
+		</sld:NamedLayer>
+	</sld:StyledLayerDescriptor>
+	<wms:BoundingBox crsName="EPSG#4283">
+		<gml:coord>
+			<gml:X>110</gml:X>
+			<gml:Y>-35.5</gml:Y>
+		</gml:coord>
+		<gml:coord>
+			<gml:X>132</gml:X>
+			<gml:Y>-13.5</gml:Y>
+		</gml:coord>
+	</wms:BoundingBox>
+	<wms:Output>
+		<wms:Format>image/png</wms:Format>
+		<wms:Size>
+			<wms:Width>500</wms:Width>
+			<wms:Height>500</wms:Height>
+		</wms:Size>
+	</wms:Output>
+	<wms:Exceptions>application/vnd.ogc.se+xml</wms:Exceptions>
+</wms:GetMap>
+
+GET https://www.googleapis.com/mapsengine/v1/tables/09372590152434720789-08620406515972909896/features?version=published&select=STOPID%2CSTOPNAME%2CSTOPTYPE%2CSTATUS%2CLOCATION%2CSUBURB%2Cgeometry&orderBy=STOPNAME&where=STATUS%20CONTAINS%20%27Active%27&intersects=POLYGON%28%28115.8861773031899%20-31.99754322345886%2C%20115.8880417106566%20-32.00575228301201%2C%20115.8860718954193%20-32.01293450013328%2C%20115.894379415096%20-32.01350664629256%2C%20115.8939605952021%20-32.0119340941473%2C%20115.8934324720389%20-32.01154462279226%2C%20115.8937844220442%20-32.01021176821627%2C%20115.897005592728%20-32.0078328487639%2C%20115.8998850276332%20-32.00893175550439%2C%20115.9009673001542%20-32.00825477399166%2C%20115.8971881688856%20-32.00516242141832%2C%20115.8963344811994%20-32.0038082005204%2C%20115.8954071313707%20-32.0013269008619%2C%20115.8934248136717%20-31.99897245405646%2C%20115.890330338636%20-31.99790449476763%2C%20115.8861773031899%20-31.99754322345886%29%29&limit=75&key=
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Services/Medium_Scale_Topo_Public_Services/MapServer/export
+
+bbox=115%2C-35.5%2C127%2C-13.5&bboxSR=4283&layers=show%3A0%2C1%2C2%2C3&size=50%2C50&imageSR=4283&format=png&transparent=true&f=image
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&maxFeatures=500&outputFormat=json&filter=%3CFilter%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Estatus%3C%2FPropertyName%3E%3CLiteral%3EActive%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Services/Medium_Scale_Topo_Public_Services/MapServer/export?bbox=115%2C-35.5%2C127%2C-13.5&bboxSR=4283&layers=show%3A0%2C1%2C2%2C3&layerDefs=&size=500%2C500&imageSR=4283&format=png&transparent=true&dpi=&time=&layerTimeOptions=&dynamicLayers=&gdbVersion=&mapScale=&f=image
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1
+
+f=json
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1?f=json
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wmts/?service=wmts&version=1.0.0&request=GetTile&exceptions=XML&layer=09372590152434720789-02344374277596842979-4&style=default&format=image%2Fpng&tilematrixset=EPSG%3A900913&tilematrix=EPSG%3A900913%3A19&tilerow=311388&tilecol=430930&key=
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<GetCapabilities service="WFS"
+ xmlns="http://www.opengis.net/wfs"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.opengis.net/wfs
+ http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"/>
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query?where=location%20LIKE%20%27%25Curtin%25%27%20AND%20status%3D%27Active%27%20AND%20suburb%3D%27BENTLEY%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstopnumber%2Cstatus%2Cstopname%2Clocation%2Cstoptype%2Csuburb%2Cbay%2Cshelter%2Casset%2Cweekpam%2Cweekppm%2Cweekoff%2Cweekrem%2Csatpam%2Csatppm%2Csatoff%2Csatrem%2Csunphpam%2Csunphppm%2Csunphoff%2Csunphrem%2Coid&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=999&f=json
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" outputFormat="json" version="1.1.0" service="wfs" maxFeatures="25">
+	<wfs:Query typeName="slip:PTA-008">
+		<wfs:PropertyName>stopid</wfs:PropertyName>
+		<wfs:PropertyName>status</wfs:PropertyName>
+		<wfs:PropertyName>stopname</wfs:PropertyName>
+		<wfs:PropertyName>stoptype</wfs:PropertyName>
+		<wfs:PropertyName>the_geom</wfs:PropertyName>
+		<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>status</ogc:PropertyName>
+				<ogc:Literal>Active</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query
+
+where=status%3D%27Active%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=%2A&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=500&f=json
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" version="1.1.0" service="wfs" maxFeatures="25">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>gid</ogc:PropertyName>
+				<ogc:Literal>1540</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+POST https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query
+
+where=location+LIKE+%27%25Curtin%25%27+AND+status%3D%27Active%27+AND+suburb%3D%27BENTLEY%27&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstopnumber%2Cstatus%2Cstopname%2Clocation%2Cstoptype%2Csuburb%2Cbay%2Cshelter%2Casset%2Cweekpam%2Cweekppm%2Cweekoff%2Cweekrem%2Csatpam%2Csatppm%2Csatoff%2Csatrem%2Csunphpam%2Csunphppm%2Csunphoff%2Csunphrem%2Coid&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=999&f=json
+
+GET https://imagery.slip.wa.gov.au/wmts/1.0.0/WMTSCapabilities.xml
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&maxFeatures=25&filter=%3CFilter%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Egid%3C%2FPropertyName%3E%3CLiteral%3E1540%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E
+
+GET https://services.slip.wa.gov.au/public/rest/services/Landgate_Public_Maps/Cultural_and_Society/MapServer/1/query?where=status%3D%27Active%27&text=&objectIds=&time=&geometry=115.895095%2C-32.007143&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=stopid%2Cstopname%2Cstoptype%2Cstatus%2Clocation%2Csuburb&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=999&f=json&distance=1
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetCapabilities
+
+POST https://www2.landgate.wa.gov.au/ows/wmspublic?
+
+Authorization: Basic YXAxNzg5ODY2MTpTSzJhWFBMRmpJenV0NDc=
+
+<wms:GetCapabilities version="1.3.0" service="WMS" xmlns:wms="http://www.opengis.net/ows" xmlns:gml="http://www.opengis.net/gml">
+	<Exceptions>application/vnd.ogc.se+xml</Exceptions>
+</wms:GetCapabilities>
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" outputFormat="json" version="1.1.0" service="wfs" maxFeatures="25">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>gid</ogc:PropertyName>
+				<ogc:Literal>1540</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+GET https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=slip%3APTA-008&propertyName=stopid%2Cstatus%2Cstopname%2Cstoptype%2Cthe_geom&maxFeatures=25&filter=%3CFilter%3E%3CPropertyIsEqualTo%3E%3CPropertyName%3Estatus%3C%2FPropertyName%3E%3CLiteral%3EActive%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" version="1.1.0" service="wfs" maxFeatures="500">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>status</ogc:PropertyName>
+				<ogc:Literal>Active</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
+GET https://www.googleapis.com/mapsengine/v1/tables/09372590152434720789-08620406515972909896/features/1847?version=published&maxResults=25&key=
+
+GET https://www2.landgate.wa.gov.au/ows/wmspublic?service=WMS&version=1.3.0&request=GetMap&layers=LGATE-010%2CLGATE-052%2CLGATE-053%2CLGATE-054&srs=EPSG%3A4283&bbox=110%2C-35.5%2C132%2C-13.5&width=50&height=50&format=image%2Fpng&transparent=true
+
+Authorization: Basic YXAxNzg5ODY2MTpTSzJhWFBMRmpJenV0NDc=
+
+GET https://mapsengine.google.com/09372590152434720789-03311849775732631692-4/wmts/?service=wmts&version=1.0.0&request=GetTile&exceptions=XML&layer=09372590152434720789-02344374277596842979-4&style=default&format=image%2Fpng&tilematrixset=EPSG%3A900913&tilematrix=EPSG%3A900913%3A19&tilerow=311389&tilecol=430929&key=
+
+POST https://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs
+
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:cgf="http://www.opengis.net/cite/geometry" outputFormat="json" version="1.1.0" service="wfs" maxFeatures="500">
+	<wfs:Query typeName="slip:PTA-008">
+		<ogc:Filter>
+			<ogc:PropertyIsEqualTo>
+				<ogc:PropertyName>status</ogc:PropertyName>
+				<ogc:Literal>Active</ogc:Literal>
+			</ogc:PropertyIsEqualTo>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>
+
