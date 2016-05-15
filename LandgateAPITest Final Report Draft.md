@@ -159,9 +159,9 @@ Davis, Kimo and Duarte-Figueiredo {\*Davis:2009hf} focus on OGC Web Map Service 
 
 Their experiment implemented the proposed service and interacted with it from a custom application deployed on a Nokia N95. Given the focus on minimising data sent and received from the device, the results vindicated their hypothesis. Unfortunately, the team declined to study response time results due to "severe fluctuations" that they attributed to an overcrowded network. They conclude, by extension not experiment, that smaller volumes of transmitted data would result in faster map interaction overall.
 
-Fowler and Peterson {\*Fowler:2012bn} built a custom iPhone application to test the performance of SOAP and ReST versions of a public transportation web service in Hamburg over a typical working day. They measured response time, data serialisation/deserialisation time and response size on the device itself and returned the results to their own web service. Simple and detailed messages of significantly different response size control whether response time is dependent upon message size. The results, as is common, are given as mean and standard deviation, descriptive statistics without discussion of error responses.
+Fowler, Hameseder and Peterson {\*Fowler:2012bn} built a custom iPhone application to test the performance of SOAP and ReST versions of a public transportation web service in Hamburg over a typical working day. They measured response time, data serialisation/deserialisation time and response size on the device itself and returned the results to their own web service. Simple and detailed messages of significantly different response size control whether response time is dependent upon message size. The results, as is common, are given as mean and standard deviation, descriptive statistics without discussion of error responses.
 
-Fowler and Peterson's methodology called for the mobile user to remain "fixed" while requesting and receiving the response, which we interpret as stationary. This is contrary behaviour for mobile device use. There are countless situations in which a mobile user would be active and moving while concurrently requesting data from a web service.
+Fowler, Hameseder and Peterson's methodology called for the mobile user to remain "fixed" while requesting and receiving the response, which we interpret as stationary. This is contrary behaviour for mobile device use. There are countless situations in which a mobile user would be active and moving while concurrently requesting data from a web service.
 
 Provisioning web services from a mobile device faces similar network and device limitations as consuming a service from a mobile device. Nguyen, Jørstad and van Thanh {\*Nguyen:2008jt} explored web service performance on an emulated mobile device. While investigating the influence of varied simulated mobile network speeds, they concluded that testing on an actual device would provide ideal settings for their network simulation. Indeed, the subsequent experiment showed considerable differences between emulated and real network speed influence on web service performance. Even after modifying their simulated network speed to approximate real world network speed the difference is significant.
 
@@ -242,9 +242,12 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 [ ] sequence
 
+
 The client/server interaction has a number of failure points. It is important for this work to record failed requests as these affect a service's suitability for mobile network traffic. The device may be unable to reach the endpoint at all due to a total lack of connectivity (recorded as response code "0") or if a TestEndpoint is interrupted before its conclusion. The server may reject the request; these are the 400 series response codes (for example the oft seen 404 code for a missing resource or 403 for failed authorisation). A server-side fault that prevents a proper response is assigned a 500 series response code (such as the catch all 500 Internal Server Error code). Should the device fail to reach the server, or the server respond with a 400 or 500 code, the iOS LandgateAPITest app records the TestEndpoint as a failure. These are referred to as "On Device Failures".
 
 Note that 300 series response codes, the resource moved or redirect codes, are not considered failures. The test continues to the redirected resource where it will eventually earn a 200 success code or one of the failure codes.
+
+Immediately upon the test commencing the device records the current date and time as a Unix time value, the number of seconds since 00:00 on the first of January 1970. Similarly, when the test concludes (successfully or otherwise) the device records the current date and time again. The total response time is the difference between these two time values.
 
 [ ] Store on device
 
@@ -264,7 +267,7 @@ During execution of the Analyse function, the web app records the percentage of 
 
 #### TestCampaign
 
-A unique and human-readable string identifier which groups many TestMasters into a single campaign. This class combines tests into a unit of work for an individual client.
+A unique and human-readable string identifier which groups many TestMasters into a single campaign, potentially from multiple devices. This class combines tests into a unit of work for an individual client.
 
 The TestCampaign class in the web application has no properties other than its name. It serves as the ancestor key for all TestMaster, Vector and CampaignStats objects, simplifying their retrieval from the datastore. In the case of this work the test database used "test_campaign" and the production database used "production_campaign" as the test campaign names.
 
@@ -490,9 +493,11 @@ Of the 16,144 TestEndpoints 15,670 were successful on device (97.06%). These wer
 
 LandgateAPITest's Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them match, setting the resultant Vector's referenceCheckSuccess flag to True.
 
-Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). All such Vectors had their ReferenceCheckValid flag set to False to exclude them en masse from further analysis on the assumption that there was a systematic issue with their reference data. Interestingly, the GetCapabilities tests rarely passed reference checks, possibly due to timestamps buried in the XML response and reference conflicting.
+Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). All such Vectors had their ReferenceCheckValid flag set to False to exclude them en masse from further analysis on the assumption that there was a systematic issue with their reference data.
 
-| Test Name                                           | Percent Successful |
+Notably, the GetCapabilities tests rarely passed reference checks. Likely causes include changes to services offered during the test campaign or possibly timestamps buried in the XML response and reference conflicting.
+
+| Test Name                                           | Percent Reference Check Successful |
 |-----------------------------------------------------|--------------------:|
 | ESRI - BusStops - AttributeFilter - GET - JSON      | 98.79%             |
 | ESRI - BusStops - AttributeFilter - POST - JSON     | 98.20%             |
@@ -552,39 +557,101 @@ Closer examination of referenceCheckSuccess by test type showed 9 test types tha
 
 See Appendices A and B for a list of URLs for each request.
 
-Of the remaining  tests only 79 (0.6%) failed a reference check.
+Of the remaining tests only 79 (0.6%) failed a reference check. And 2.9% of the referenceCheckValid tests failed on the device itself.
 
 ![Percentage of Vectors With Reference Check Failed](Graphics/Charts/Reference Check Failures Pie Chart.png)
 
-### Test Characteristics
+![Percentage of Vectors which failed on device (i.e. received a response code other than 200)](Graphics/Charts/On Device Failures Pie Chart.png)
 
-[ ] Talk about the types of tests after the filtering
+### Test Results by Response Time
 
+The LandgateAPITest web application produces charts of current data on request to the /graph endpoint. All charts in this text are saved versions of these as they stood on the 7th of May, 2016. Links are provided in the text to the endpoint for each chart displayed so that the reader may receive the latest information.
 
-[ ] Availability
-[ ] Accessability
-[ ] Successability
+The various requests are subcategorised by their test name, a general description denoting near identical requests across the three server types. A FeatureByID request returns the same data from all three servers, though it may not be in the same format (GML, Esri JSON, GeoJSON for example). [This pie chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph3) was modified to exclude some of the smallest percentage test types to aid reading clarity.
+![Percentage of Vectors by test type](Graphics/Charts/Test Name Pie Chart.png)
 
-[ ] JSON responses faster and smaller than GML.
+Aligned with Fowler, Hameseder and Peterson's {\*Fowler:2012bn} experimental control showing that response data size affects response time, LandgateAPITest requests "Small" and "Big" responses. Small requests are either for a very few features in GML or JSON or an image only a few tens of pixels in dimension. Big requests ask for 100 vector features or images 500 pixels in dimension.
+
+The distribution of their response times are shown in a box and whiskers chart, available at this [link](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph25). Box and whiskers charts show the interquartile range of a distribution. The dataset is divided into four equal parts around the median value, shown as a red line. The first quartile (Q1) to the third quartile (Q3) are contained within the blue box and contain 50% of the points in the dataset. The "whiskers" above and below the box show the range of the data and in a normal distribution would contain over 99% of the data points. Skewed distributions end up excluding the outliers from the interquartile range, shown here as blue crosses.
+
+The "Big" requests have a similar Q1 to Q3 (interquartile range) to "Small" ones. The lowest values in the whiskers are significantly slower to arrive. Both have a significant number of outliers above the maximum response time whisker.
+
+![A subset of test types where the request calls for either a small sized response or a larger one comparing their response times](Graphics/Charts/Response Data Size Category Boxplot.png)
+
+Geographic servers can filter results either by a function of the attributes of each feature, returning features from any location meeting a certain criteria of their properties. Features may instead be filtered by a spatial function, returning features from a specific location of any attribute value. The response time frequency distributions for four test types which call upon the server to filter results are shown in the [box and whiskers chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph26). Feature by ID calls for a single feature with an exactly matching ID, an Attribute Filter test requests features with a text "location" property containing the word "Curtin". Spatial intersect requests provide an envelope (minX, min Y, max X and max Y) covering the Curtin University Bentley campus and request only features intersecting the envelope. The Distance Filter was only requested from GME servers, returning only the closest feature to a point within Curtin University's Bentley campus.
+
+The two attribute filters generally show a distribution of response times shorter than the two spatial filters. The confidence in this result is not great. Firstly, all have a significant number of high outliers denoting skewed distributions. The spatial filter medians are only 2 to 3 tenths of a second slower than the two attribute filters. The much smaller Distance Filter sample size makes it less worthy of consideration.
+
+![A subset of test types which call upon the server to limit results by a function comparing the distribution of their response times](Graphics/Charts/Server-side Operation Boxplot.png)
+
+JSON response data dominated the requests, being the only format available across all three server types. XML's geographic subset, GML, is only routinely served by OGC endpoints. Images were not requested as often, there being fewer server-side filtering functions available. Users may request the latest pie chart from the LandgateAPITest web app at this [link](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph4).
+
+![Percentage of Vectors by response data type](Graphics/Charts/Response Data Type Pie Chart.png)
+
+The [box and whisker chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph24) shows
+the response time distribution for XML responses is tighter and higher overall than the similar JSON and image request response time distributions. All three have a significant number of outliers in their upper ranges, showing clearly skewed distributions with most requests acheived in short time frames.
+
+![Response time distribution by response data type](Graphics/Charts/Response Data Type Boxplot.png)
+
+The Esri and OGC part of the test campaign in March, 2016 was more vigourous than the earlier GME part in December, 2015. [This pie chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph1) shows how clearly the Esri and OGC tests overwhelm the fewer GME ones.
+
+![Percentage of Vector objects by server type](Graphics/Charts/Server Type Pie Chart.png)
+
+The [box and whiskers chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph22) appears to show a clear win for Esri servers in terms of performance over the OGC servers, having a much lower median and interquartile range. There is a significant consideration here that Esri servers do not supply heavier payload XML/GML responses where OGC ones do. As the response data type and response size charts show, on average larger responses have slower response times.
+
+The GME tests fill a broader interquartile range and have fewer outliers. A larger sample set of these requests could have increased the confidence in this result.
+
+![Response time distribution by server type](Graphics/Charts/Server Type Boxplot.png)
+
+[This pie chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph2) shows tests were almost evenly split between the two HTTP methods favoured by geographic servers; GET and POST. The greater proportion of GET requests are partly due to the lack of POST requests created for the GME server and the map tile requests mostly being GET's with key value coding or straight restful endpoints.
+
+![Percentage of Vectors by HTTP Method (GET and POST)](Graphics/Charts/HTTP Method Pie Chart.png)
+
+There was no distinct difference in response time between the two methods. The medians and boundaries of interquartile ranges are similar enough that differences could be rounding errors. The latest graph is available [here](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph23).
+
+![HTTP Method (GET and POST) response time distributions in box plot](Graphics/Charts/HTTP Method Boxplot.png)
+
+### Test Results by Distance Device Travelled
+
+The test device deployed could determine its location through GPS. The Vector object considers the distance between the LocationTest prior to an EndpointTest and the LocationTest afterwards. Comparing each Vector's distance property to its response time we produce a scatter plot. Then we categorise the points by the EndpointTest's success, on device failure or reference check failure. The live graph is available [here](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph12).
+
+![A scatterplot of distance device travelled (metres) versus response time (seconds) for each Vector object](Graphics/Charts/Distance Vs Response Time Scatter.png)
+
+The green successful tests show a loose trend of increasing response time in line with increasing distance travelled.
+
+The orange failed on device category exhibit three distinct horizontal bands of response times. The bottommost band are the shortest response times, notably so as they are at most 1/100th of a second. These are the cases where the device had no mobile network connection at all and aborted the request immediately without even an attempt to send it to the server.
+
+The middle band of on device failures are those with similar response times to many successful requests. These are the tests cancelled part-way through. They had an open link to the server but the test was interrupted by an incoming phone call or the app was otherwise switched to the background. In line with the application's design goals these tests are aborted, their response time recorded and marked as on device failures.
+
+The uppermost band form a clear line aorund 30 seconds in response time. This is the standard time-out length for a web service request on an iOS device. Requests without a response are aborted by the system. Interestingly, the majority of these failures occured when the device travelled more than 100m.
+
+The tests which failed their reference check appear to follow a similar trend to the successful tests. This is due to the fact that their web service requests were able to complete successfully from the device's point of view.
+
+The scatterplot shows enough noise to produce R squared values that are less than ideal. Each value of distance produces a range of response times due to several factors, most notably the response payload size varies by request type. Distance values are not perfect either as we must give consideration to the GPS receiver's desired and possible accuracy.
 
 ## Discussion
 
->Thissectionislikeashortessay – itisaconnectedseriesofsentencesthat
-explainandargueyourinterpretationoftheevidence.
-Summarise the major problem/s
-Identifyalternative solutions to this/these major problem/s (there is likely to be more than one
-solution per problem)
-Briefly outlineeach alternative solution and then evaluate it in terms of its advantages and
-disadvantages
-No need to refer to theory or coursework here.>
+[ ] As other studies showed JSON responses are lighter and faster, better suited to mobile devices where data caps and slower mobile networks are real limitations.
 
 [ ] The fact that we need a logarithmic axis for response time to show the interquartile range at all indicates that the servers are suitable for a range of mobile situations. (regardless of whether OGC or Esri, XML JSON or image)
 
+[ ] only 79 reference check failures is a small sample set from which to draw many conclusions.
+
 [ ] Incorrect data is delivered only 0.6% of the time, there are few mobile situations where this would be a critical hinderance. (support this somewhere)
 
-[ ] Not a navigation server so higher time outs, longer response times (which are more a consequence of mobile networks and their hiccoughs generally) are not a major hinderance.
+[ ] An increase of failures with increasing distance is not an issue with Landgate's servers, more like the mobile network.
 
-[ ] As other studies showed JSON responses are lighter and faster, better suited to mobile devices where data caps and slower mobile networks are real limitations.
+The OASIS web service quality standard {Kim:2012wm} calls for calculation of Availability, Accessability and Successability (among others). These are predicated on the assumption that the testing device is guaranteed access to the internet in order to perform its tests. In other words, the testing device is assumed to be infallible while the tested service is not. This is entirely possible to achieve in controlled conditions, the testing machine simply does not send a request when it is not certain of success, or ignores tests where certain preconditions of controlled experiment are not met. The output then is a percentage of tests where the tester was able to contact the service, the difference from 100% being entirely the fault of the service.
+
+LandgateAPITest's methodology does not assume as given nor control its connection to the internet. The application proceeds with a test so long as there is some connectivity, regardless of its reliability. A failed request which timed out (and hence received a "0" response code from the iOS application) could either be the fault of server downtime or lack of a mobile network connection on the device's part.
+
+As such LandgateAPITest is not able to reliably determine Accessibility or Availability. These are common testing metrics and future versions should address this shortcoming.
+
+Successability is similar in that LandgateAPITest can not reliably determine whether the lack of a response to a request is the fault of the server or the network. However, the Oasis standard assumes WSDL responses are "error-free". LandgateAPITest again does not make this assumption and interrogates the response data for errors.
+
+Overall LandgateAPITest is not an everyday testing suite.
+
+[ ] Not a navigation server so higher time outs, longer response times (which are more a consequence of mobile networks and their hiccoughs generally) are not a major hinderance.
 
 ## Recommendations
 
@@ -616,6 +683,8 @@ The OASIS Web Services Quality Factors {Kim:2012wm} identify three types of late
 Further development work could create a version of the LandgateAPITest mobile app suitable for Android OS devices. This would broaden the base of testers available and add another dimension to the result data. Investigation could show whether the different geographic server types offer better performance and reliability for iOS or Android devices.
 
 This study only compared OGC services provisioned by Landgate's older server infrastructure. It would be instructive to see whether Esri provisioned OGC services compared favourably with other OGC servers.
+
+Reference data can be considered in a more adaptable methodology than a straightforward equal/not equal test. The minor changes to GetCapabilities documents that caused their Reference Checks to fail wholesale could be averted through cleverer comparisons. Advanced string comparison techniques, such as longest common substring or edit distance, could be given a threshold similarity to assign success. For example strings that are 90% the same could pass.
 
 Success in collaborating with Western Australia's Landgate authority could be replicated with other Australian state cadastre authorities, such as NSW Land and Property Information. Given these organisations are not in competition, opportunities to learn from each other can lead to improved services for all Australian states.
 
