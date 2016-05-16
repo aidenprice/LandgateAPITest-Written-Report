@@ -2,7 +2,25 @@
 
 ## Abstract
 
+Landgate is Western Australia's premier spatial data provider, the lead organisation of the West Australian Land Information System (WALIS) and its Shared Land Information Platform (SLIP). Previously heavily dependant upon Google Map Engine spatial server infrastructure, Landgate and SLIP have had to rapidly pivot to Esri spatial servers to avoid loss of service due to GME's decommisioning.
+
+Spatial web service testing is a narrower field than the larger web service quality domain. Most academic writing on the topic naturally aims to test under controlled conditions, to eliminate variables of network connectivity or device speed. This work eschews controls in favour of collecting data on the test environment at test time.
+
+Further, academia tend to focus on response time as the main metric of service performance, this being a clearly objective measure. Few papers consider whether the data returned is correct. Mobile devices can easily have their download interrupted by lost signal.  
+
+The combination of environmental data with errors in responses gives a broader picture of Landgate's spatial servers' suitability for mobile devices.
+
+LandgateAPITest is a testing suite composed of an iOS application for frontline mobile device testing and a Google App Engine web application for storage, analysis and presentation of charted results.
+
+Deploying LandgateAPITest against Landgate's GME, OGC and Esri endpoints confirms the findings of earlier studies and finds that the mobile network is the biggest factor in performance and correctness of responses. 
+
 ## Acknowledgements
+
+First and foremost, I would like to acknowledge the support of my wife, Megan, and my family. This work would simply not have been possible without their aid.
+
+Dr David McMeekin has been a most encouraging supervisor. His enthusiasm for the subject is infectious.
+
+The iOS gurus at Curtin University, Tristan Reed and Jeremy Siao Him Fa, helped cut through some knotty problems with the iOS app.
 
 ## Table of Contents
 
