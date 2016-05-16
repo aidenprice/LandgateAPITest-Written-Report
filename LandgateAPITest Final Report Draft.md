@@ -75,14 +75,9 @@
 
 ## Introduction
 
->Anoverviewofthereport.
-Acleardescriptionofyouraimsand objectives,andthecontextoftheproblem or situation.
-Thescopeofyourinvestigationaswell asanylimitations.
-Ifneeded,abriefhistoricalbackground (withsubheadings)ofsignificantevents leading up to the present investigation.
-Iftheexplanationofthecontext istoolong,makeita separatesectionandcall it Background/Context/Definitions/Key Terms.
-Ifyouneedtoprovideananalysisof existingresearch,makeaseparatesection titled Literature Review.
-Usethepresenttensetooutlinethe problemandyouraims.
-Usepasttensetodescribeevents thathaveoccurredwhengivingbackground information or context.>
+[ ] Broadly introduce in a few paragraphs
+
+
 
 ### Landgate
 
@@ -109,12 +104,11 @@ Representational State Transfer (ReST) services are much easier to develop and c
 
 ### Spatial Web Services
 
-[ ] Introduce spatial web services
-> Deliver Spatial data over
-> What is spatial data
-> Who are the Geospatial Consortium
+Spatial data is a computer representation of any information with a location dimension {Huisman:2009uj}. It models the real world. Web services that deliver location data over a network or perform geospatial functions are spatial web services.
 
 #### Open Geospatial Consortium Web Map Service
+
+The Open Geospatial Consortium (OGC) is an international group of industry, government, academic and community representatives who aim to improve business processes through the integration of location data {Reed:2011kt}. Their main supporting efforts are directed towards the creation of location data and service standards and strategies.
 
 A Web Map Service (WMS) composes an image file from server stored vector and raster layers in response to a request in a URL. Despite their focus on returning an image file, WMS operations are still dependent upon XML, especially for GetCapabilities, GetFeatureInfo, error descriptions and layer style code.
 
@@ -230,18 +224,13 @@ Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptan
 
 ## Materials and Methods
 
-
-
 ### Generalised Workflow
 
+The mobile application's user chooses to initiate a test against the Landgate servers. There are several types of test, each offers a different combination of sub tests on a variety of Landgate endpoints. All subtests are enqueued and assuming that a few preconditions are met the testing begins.
+
+Testing proceeds in a cycle. First a LocationTest determines the device's latitude and longitude. A NetworkTest queries the device's connection to the mobile network. A PingTest checks the ping time to a well known endpoint other than Landgate. Then the device sends one of the pre-ordered requests to Landgate's servers and captures the response data in an EndpointTest. The cycle repeats until there are no more EndpointTests in the queue.
+
 ![Generalised Workflow Flowchart](Graphics/Generalised Workflow Chart.png)
-
-[ ] User initiated test
-
-[ ] preconditions
-
-[ ] sequence
-
 
 The client/server interaction has a number of failure points. It is important for this work to record failed requests as these affect a service's suitability for mobile network traffic. The device may be unable to reach the endpoint at all due to a total lack of connectivity (recorded as response code "0") or if a TestEndpoint is interrupted before its conclusion. The server may reject the request; these are the 400 series response codes (for example the oft seen 404 code for a missing resource or 403 for failed authorisation). A server-side fault that prevents a proper response is assigned a 500 series response code (such as the catch all 500 Internal Server Error code). Should the device fail to reach the server, or the server respond with a 400 or 500 code, the iOS LandgateAPITest app records the TestEndpoint as a failure. These are referred to as "On Device Failures".
 
@@ -249,21 +238,29 @@ Note that 300 series response codes, the resource moved or redirect codes, are n
 
 Immediately upon the test commencing the device records the current date and time as a Unix time value, the number of seconds since 00:00 on the first of January 1970. Similarly, when the test concludes (successfully or otherwise) the device records the current date and time again. The total response time is the difference between these two time values.
 
-[ ] Store on device
+After all tests in the queue are complete the device stores all tests, their details and response data to a local database. The mobile app can query this database to display results to the user.
 
-[ ] User initiated upload
+The user may choose to upload the results to the LandgateAPITest web app at a later time, ideally when the device is connected to Wifi. It is not desirous to immediately upload the result as it could double the data usage on the user's mobile data plan. Should an upload fail, the user may retry as many times as they wish.
 
-[ ] web app record, queue
+LandgateAPITest's web application conducts the analysis on all results for each campaign of testing. When each test is successfully stored in the web app's database it adds a task to the app's task queue. When the app has spare processing capacity the queued task fires a request to the app to analyse the result.
 
-[ ] Analyse
+In the analysis the web app attempts to create a new Vector object to contain the results of the analysis. It requires the LocationTest, NetworkTest and PingTest results from directly before and the same from directly after each EndpointTest. Given the sequence of location, network, ping and endpoint tests each Vector shares its following three results with the next EndpointTest.
 
+A gateway decision requires all six tests be present. Should one be missing the analysis is aborted and the result disregarded.
 
+Otherwise the web app proceeds to check the EndpointTest's response data against a set of reference data. These are exemplar responses to each request which we assume to be the "true" data.
 
-If the response received by the iOS app is identical to the reference response stored in the web app, then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC servers will respond with a 200 code but send exception text in place of the response data. Tests that fail at this stage are referred to as "Reference Check Failures" and have an appropriate flag set on the record on the web application database.
+If the response received by the iOS app is identical to the reference response, then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC servers will respond with a 200 code but send exception text in place of the response data. Tests that fail at this stage are referred to as "Reference Check Failures" and have an appropriate flag set on the record on the web application database.
 
-During execution of the Analyse function, the web app records the percentage of reference check tests successful for each test type. Should a test type return less than 5% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely. Such tests are flagged False for their "ReferenceCheckValid" property to allow them to be filtered out.
+During execution of the /Analyse function, the web app records the percentage of reference check tests successful for each test type. Should a test type return less than 5% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely. Such tests are flagged False for their "ReferenceCheckValid" property to allow them to be filtered out.
+
+The resultant Vector objects are the basis for all analysis and graphical representation. The web application produces pie charts of the various test categories and graphs of response time or distance travelled by category. Each graph is available from the /graph endpoint and responds with the latest information in the database.
 
 ### Data Model and Structures
+
+The application code draws a distinction between a Test object and a Result object. The Tests are templates and the action of performing a test. Where Results are concrete records of enacted tests, stored in a database and the subject of analysis.
+
+So a LocationTest would be the template and the act of determining the device's location. A LocationResult is the latitude and longitude output stored on the device and uploaded to the web application.
 
 #### TestCampaign
 
@@ -273,51 +270,61 @@ The TestCampaign class in the web application has no properties other than its n
 
 #### TestMaster
 
+A TestMaster encapsulates all tests undertaken in a single user initiated test. The LocationTests, NetworkTests, PingTests and EndpointTests performed from a given user test have the same TestMaster as their parent object. This allows all the various subtests to be queried with their fellows in the /Analyse function.
 
+TestMasters also group subtests according to the user's perception of the manner in which the tests were done. Thus, allowing the user to review a TestMaster and its children as a single unit of test work in the iOS app interface.
 
 All TestMasters and their children inherit from the ResultObject superclass in both the web and iOS applications. In this manner, they inherit the same properties of datetime,  testID, parentTestID and so forth. This is for the sake of convenience and avoiding repeated code.
 
+TestMasters have a properties relating to the test device itself which can not change through the cycle of subtests. The record includes the device type, the version of its operating system and a unique identifer for the device. The device ID is Apple Inc.'s "ID for vendor" a key unique to both the device and the application vendor. This key can not be traced to a particular device without the application's signed certificate.
+
+The database record corresponding to a TestMaster is a TestMasterResult object.
+
 ##### TestEndpoint
 
-The primary focus of the study, TestEndpoints request a set response from the Landgate server.
+The primary focus of the study, TestEndpoints request a set response from the Landgate server. The TestEndpoint records the details of the template (server type, HTTP method, the URL and so forth), the test's outcome (successful or failed on the device), the start and finish time and date, and the data received in the endpoint's response.
 
-
-
-Each TestMaster will record dozens of TestEndpoints.
-
-TestEndpoints are stored in the iOS application database as EndpointResult objects. For the sake of differentiating them in the web application Python code, they retain the TestEndpoint nomenclature.
+TestEndpoints are stored in the iOS application database as EndpointResult objects. Each TestMaster will enact dozens of TestEndpoints. Consequentially, each TestMasterResult will be the parent to dozens of EndpointResults.
 
 ##### LocationTest
 
+Acquiring the mobile device's position throughout testing is key to LandgateAPITest's methodology. From this information we can derive information on the environment in which a given test was undertaken, such as device travel distance and speed.
 
+A LocationTest acquires a latitude and longitude value in the WGS84 coordinate reference system common to GPS devices.
 
-The LadgateAPITest iOS app requests a 10-metre accuracy for location fixes. This accuracy is not guaranteed, should the device be unable to locate with the desired accuracy it will report what it can after timing out. As with all GPS devices, the environment affects location accuracy, particularly when testing indoors. Looser GPS accuracy saves the device's battery power which otherwise would be wasted in trying to acquire a more accurate location fix.
+The LandgateAPITest iOS app requests a 10-metre accuracy for location fixes. This accuracy is not guaranteed, should the device be unable to locate with the desired accuracy it will report what it can after timing out. As with all GPS devices, the environment affects location accuracy, particularly when testing indoors. Looser GPS accuracy saves the device's battery power which otherwise would be wasted in trying to acquire a more accurate location fix.
 
 The web application and iOS application databases store each LocationTest's outcome as a LocationResult.
 
 ##### NetworkTest
 
-The iOS device reports its mobile network connection type through the Telephony framework.
+The mobile network connection varies depending on the cell tower, its capabilities and obstacles in the intervening space.
+
+A NetworkTest queries the iOS device for the properties of its network connection. Each NetworkTest records the mobile network provider (called carrier in mobile device parlance) and the class of the mobile network (for example, EDGE, HSDPA, LTE).
+
+LandgateAPITest tests specifically for a Wifi connection before testing for a mobile network connection.
+
+NetworkTest's have a property to hold a unique identifier for a cell tower. In its current form LandgateAPITest does not record anything in this property. The iOS device reports details of its mobile network connection through Apple's Core Telephony framework. Intended for the use of mobile communication providers much of Core Telephony's functionality is private. Apps utilising such functions submitted to Apple Inc.'s App Store for review will be summarily rejected. The code LandgateAPITest uses should not be condemned under the current regime. Recording the cell tower id would be cause for rejection however, so it is excluded.
 
 The result object for a NetworkTest is a NetworkResult.
 
 ##### PingTest
 
-
+As LandgateAPITest can not directly test network connection speed we take a proxy in its place. A PingTest sends a HEAD request to www.google.com.au and measures the time until it receives a response. HEAD requests do not demand any data in the response body, so any intervening time is a factor of the mobile connection and processing time on the Google web server. These two factors are unfortunately inseparable given the app's limitations.
 
 The result object stored in the database for a PingTest is a PingResult.
 
 #### ReferenceObject
 
-ReferenceObjects hold the correct response data from the Landgate servers for each request.  Server, returnType and other properties identify ReferenceObjects from one another and allow comparison to a TestEndpoint. The reference property holds the text response, either XML, JSON or images converted to base64 text.
+ReferenceObjects hold the correct response data from the Landgate servers for each request.  Server, returnType and other test template properties identify ReferenceObjects from one another and allow comparison to a TestEndpointResult. The reference property holds the response data in text, either XML, JSON or images converted to base64 text.
 
 These exemplar responses were requested and stored on the 5th of April, 2016. This postdates GME's replacement. References for GME requests were stored in April 2016 from the first test responses in December 2015. Dynamic parts of responses were excluded from the final ReferenceObject, for example, any date or time value that changes between requests.
 
-The administrator uploads text files containing ReferenceObject references to the web application's code repository. A request to the \StoreReferences endpoint enqueues a task to add new and replace old ReferenceObjects with the text file contents.
+The administrator uploads text files containing ReferenceObject references to the web application's code repository. A request to the /StoreReferences endpoint enqueues a task to add new and replace old ReferenceObjects with the text file contents.
 
 #### Vector
 
-The web application's Analyse function parses each TestEndpoint object and attempts to generate a new Vector object. Vectors encapsulate the LocationTest, NetworkTest and PingTest immediately preceding the TestEndpoint along with those immediately following it, retaining pointers to these objects. The function determines the change in Location, Network conditions and Ping response time and takes them as a proxy for the mobile device's changing connectivity environment through the endpoint test.
+The web application's /Analyse function parses each TestEndpoint object and attempts to generate a new Vector object. Vectors encapsulate the LocationTest, NetworkTest and PingTest immediately preceding the TestEndpoint along with those immediately following it, retaining pointers to these objects. The function determines the change in Location, Network conditions and Ping response time and takes them as a proxy for the mobile device's changing connectivity environment through the EndpointTest.
 
 The logic to retrieve the six related subtests from the datastore is as follows;
 
@@ -335,15 +342,15 @@ The generation of the mobile network is here taken as a proxy for connection spe
 
 The change in response time for a HEAD request to google.com.au before and after an EndpointTest is another proxy for change in network connection speed. Subtracting the following test's response time from the preceding test's response time gives a positive pingChange value for improving network speed and a negative one for degrading speed.
 
-The Analyse function also performs the reference check. It assigns the Vector's referenceCheckSuccess property a True value if the TestEndpoint's response data contains the ReferenceObject's reference text or False otherwise.
+The /Analyse function also performs the reference check. It assigns the Vector's referenceCheckSuccess property a True value if the TestEndpoint's response data contains the ReferenceObject's reference text or False otherwise.
 
 Vector objects are the basis for all further analysis in this study. All graphs in this work show the Vector rather than the original TestEndpoint or its subtests.
 
 #### CampaignStats
 
-The CampaignStats class stores counts of TestEndpoints and other subtests, enabling calculation of descriptive statistics for a particular TestCampaign. CampaignStats updates when the iOS application uploads a new TestMaster to the database, adding new counts onto existing values. Also, when the Analyse function creates a new Vector object it also updates the CampaignStats properties for reference check success.
+The CampaignStats class stores counts of TestEndpoints and other subtests, enabling calculation of descriptive statistics for a particular TestCampaign. CampaignStats updates when the iOS application uploads a new TestMaster to the database, adding new counts onto existing values. Also, when the /Analyse function creates a new Vector object it updates the CampaignStats properties for reference check success.
 
-The overwhelming majority of CampaignStats properties concern the percentage of successful reference object checks. 0% reference check success rates will exclude the entire test type from further consideration.
+The overwhelming majority of CampaignStats properties concern the percentage of successful reference object checks. 0% reference check success rates will exclude the entire test type from further consideration. See the Results section.
 
 ### iOS Mobile Application
 
@@ -395,18 +402,6 @@ Ashley Mill's Reachability library queries the device to determine whether and h
 
 Kaan Dedeoglu's KDCircularProgress library initiates a progress indicator that fulfils a circular ring as the task approaches completion {kaandedeogluKDCircu:2015vt}. LandgateAPITest uses KDCircularProgress to show the percent completion of a test, updating the indicator each time a sub-test calls its completion delegate method. The library was chosen as it aligned with the design aesthetic of recent iOS releases.
 
-#### Hardware
-
-All tests were performed on an Apple iPhone 6S, model A1688 (a.k.a. iPhone8,1), with 64GB of storage. The standard device comes with a range of mobile radios across many bands; LTE, HSDPA, CDMA, GSM, EDGE, Wifi radios a/b/g/n/ac and GPS and GLONASS receivers {Anonymous:uf}.
-
-|    |    |
-|-------------------------------------    |--------------    |
-| Campaign Name    | production_campaign         |
-| All Device Types | iPhone8,1                   |
-| All iOS Versions | 9.1, 9.2, 9.2.1, 9.3, 9.3.1 |
-
-The operating system changed through the campaign as Apple Inc. updated their software. The first tests launched LandgateAPITest on iOS 9.1, later tests on 9.2, 9.2.1 and later still on 9.3 and 9.3.1.
-
 ### Google Apps Engine Web Service
 
 #### Web Service Design Principles
@@ -421,7 +416,7 @@ The web application should analyse TestEndpoint results and not just represent t
 
 Google App Engine (GAE) Python applications derive their basic functionality from the webapp2 open source library {Welcometowebapp:2011vk}. Developers define web app endpoints and map them to Python classes, so landgateapitest.appspot.com/database maps to the Database class in Python code. Then the HTTP method maps to functions within that class. A POST request to the /database endpoint fires the Database class's post() function adding the request body to the database. A GET request calls the get() function and downloads a TestMaster record to the requester.
 
-Python functions may call for a task to be enqueued. The GAE system will fire the specified request at a later time, ideally when processor load is minimal. A successful POST request to the /database endpoint queues an /analyse endpoint GET request as one of its last tasks. Similar tasks which are anticipated to consume more than trivial resources are deferred as queued tasks in LandgateAPITest, such as importing reference text files to the datastore or updating model schema.
+Python functions may call for a task to be enqueued. The GAE system will fire the specified request at a later time, ideally when processor load is minimal. A successful POST request to the /database endpoint queues an /Analyse endpoint GET request as one of its last tasks. Similar tasks which are anticipated to consume more than trivial resources are deferred as queued tasks in LandgateAPITest, such as importing reference text files to the datastore or updating model schema.
 
 Google App Engine applications may use any of Google Inc.'s several cloud data storage solutions. LandgateAPITest uses Google Cloud Datastore, a NoSQL database quite distinct from relational databases in that it does not store all records as atomic rows in tables, rather as schema-less objects in distributed documents.
 
@@ -441,7 +436,7 @@ Visualising 16,000 test locations as generic markers would result in a confusing
 
 ### Other Applications Deployed
 
-Besides code incorporated directly into the product applications, there were several other applications instrumental to development.
+Besides code incorporated directly into the product applications, several other applications were instrumental to app development.
 
 #### Paw
 
@@ -485,13 +480,25 @@ Townsville, QLD was the theatre with the least number of tests, but some interes
 
 ![Townsville Test Heat Map, basemap tiles copyright OpenStreetMap Contributors](Graphics/Maps/Townsville.png)
 
+### Test Device Hardware
+
+All tests were performed on an Apple iPhone 6S, model A1688 (a.k.a. iPhone8,1), with 64GB of storage. The standard device comes with a range of mobile radios across many bands; LTE, HSDPA, CDMA, GSM, EDGE, Wifi radios a/b/g/n/ac and GPS and GLONASS receivers {Anonymous:uf}.
+
+|    |    |
+|-------------------------------------    |--------------    |
+| Campaign Name    | production_campaign         |
+| All Device Types | iPhone8,1                   |
+| All iOS Versions | 9.1, 9.2, 9.2.1, 9.3, 9.3.1 |
+
+The operating system changed through the campaign as Apple Inc. updated their software. The first tests launched LandgateAPITest on iOS 9.1, later tests on 9.2, 9.2.1 and later still on 9.3 and 9.3.1.
+
 ### TestEndpoint Successes and Failures
 
 Of the 16,144 TestEndpoints 15,670 were successful on device (97.06%). These were able to complete the test and received a 200 response code from the Landgate server. The 2.94% of on device failures either could not reach the server (response code 0) or received a server error response (code 500 and above).
 
 ![TestEndpoints Successful and Failed On Device](Graphics/Charts/On Device Failures Pie Chart.png)
 
-LandgateAPITest's Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them match, setting the resultant Vector's referenceCheckSuccess flag to True.
+LandgateAPITest's /Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them match, setting the resultant Vector's referenceCheckSuccess flag to True.
 
 Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). All such Vectors had their ReferenceCheckValid flag set to False to exclude them en masse from further analysis on the assumption that there was a systematic issue with their reference data.
 
@@ -631,15 +638,15 @@ The scatterplot shows enough noise to produce R squared values that are less tha
 
 ## Discussion
 
-[ ] As other studies showed JSON responses are lighter and faster, better suited to mobile devices where data caps and slower mobile networks are real limitations.
+As other studies showed, JSON responses are lighter and faster to download. They are thus better suited to mobile devices where data caps and slower mobile networks are real limitations. XML and GML suit situations where strict adherence to schema is critical to process success.
 
-[ ] The fact that we need a logarithmic axis for response time to show the interquartile range at all indicates that the servers are suitable for a range of mobile situations. (regardless of whether OGC or Esri, XML JSON or image)
+The frequency distributions of response times are heavily skewed towards shorter timeframes. Regardless of the dimension studied (for instance OGC versus Esri, XML versus JSON versus image data) the bulk of response times fell within the same order of magnitude. The fact that our charts need a logarithmic axis for response time to show the interquartile range indicates that Landgate's servers are suitable for the range of mobile situations investigated.
 
-[ ] only 79 reference check failures is a small sample set from which to draw many conclusions.
+LandgateAPITest discovered only 79 reference check failures. This is, admittedly, a small sample set from which to draw conclusions on whether geographic servers return incorrect or incomplete data in specific circumstances. A few orders of magnitude more such errors could substantiate conclusions. Unfortunately this would require more time and data download limit than this study has resources to allow.
 
-[ ] Incorrect data is delivered only 0.6% of the time, there are few mobile situations where this would be a critical hinderance. (support this somewhere)
+The finding that failures are more frequent with increasing distance travelled is not an issue with Landgate's servers. Longer distances travelled during tests are an outcome of highway speed travel where the device is more likely to encounter signal interruptions or inferior signal strength.
 
-[ ] An increase of failures with increasing distance is not an issue with Landgate's servers, more like the mobile network.
+According to this work, incorrect data is delivered only 0.6% of the time. If we extend from this finding, we can assume that there are few situations where this would be a critical hinderance for a mobile device.
 
 The OASIS web service quality standard {Kim:2012wm} calls for calculation of Availability, Accessability and Successability (among others). These are predicated on the assumption that the testing device is guaranteed access to the internet in order to perform its tests. In other words, the testing device is assumed to be infallible while the tested service is not. This is entirely possible to achieve in controlled conditions, the testing machine simply does not send a request when it is not certain of success, or ignores tests where certain preconditions of controlled experiment are not met. The output then is a percentage of tests where the tester was able to contact the service, the difference from 100% being entirely the fault of the service.
 
@@ -649,26 +656,13 @@ As such LandgateAPITest is not able to reliably determine Accessibility or Avail
 
 Successability is similar in that LandgateAPITest can not reliably determine whether the lack of a response to a request is the fault of the server or the network. However, the Oasis standard assumes WSDL responses are "error-free". LandgateAPITest again does not make this assumption and interrogates the response data for errors.
 
-Overall LandgateAPITest is not an everyday testing suite.
-
-[ ] Not a navigation server so higher time outs, longer response times (which are more a consequence of mobile networks and their hiccoughs generally) are not a major hinderance.
+Overall LandgateAPITest is not an everyday testing suite. There are many suitable applications, as shown in the literature review, capable of determining such oft required statistics. This app more closely tests the mobile device user's experience with the data served by a geographic web service. Environmental factors of network connectivity, constrained device processing power and others have a larger affect on whether the service will successfully deliver data to meet the user's needs.
 
 ## Recommendations
 
->• Choose which of the alternative solutions should be adopted
-• Briefly justify your choice explaining how it will solve the major problem/s
-• This should be written in a forceful style as this section is intended to be persuasive
-• Here integration of theory and coursework is appropriate>
-
-[ ] Expect a greater proportion of access to come from mobile devices [ ] Reference
-
-[ ] continue moving away from offering full datasets for download aimed at specialists, concentrate on building new data services where applications request only those parts of specific and current interest. Landgate are to be commended for leading the way in this regard.
-
 Esri ArcGIS Servers can provision OGC and KML web services alongside their own Esri Rest services. Landgate have enabled WMS services for their Public ArcGIS MapServers, but not WFS or KML. Doing so would improve interoperability for open source apps such as QGIS at little incremental cost. Older infrastructure could then be decommissioned without reduced service to the community.
 
-Esri JSON is not the same format as the open standard (note, not an OGC standard) GeoJSON, the OGC JSON response format. The JSON output from Esri endpoints represents the same data as a response from an OGC endpoint but is laid out differently and must be parsed into an in-memory geometry object before the two can be directly compared. We applaud offering both formats for the sake of broader compatibility. But should older OGC servers be decommissioned we would recommend that Landgate offer WFS services from ArcGIS servers so that at least open standard GML would be available. Landgate could also, adventurously, offer GeoJSON from ArcGIS for Server with third party extensions.
-
-[ ] The public will find interesting applications for datasets, even seemingly low value data. Again Landgate's support of hackathons supports
+Esri JSON is not the same format as the open standard GeoJSON (note, this is not an OGC standard {Reed:2011kt}), the OGC JSON response format. The JSON output from Esri endpoints represents the same data as a response from an OGC endpoint but is laid out differently and must be parsed into an in-memory geometry object before the two can be directly compared. We applaud offering both formats for the sake of broader compatibility. But should older OGC servers be decommissioned we would recommend that Landgate offer WFS services from ArcGIS servers so that at least open standard GML would be available. Landgate could also, adventurously, offer GeoJSON from ArcGIS for Server with third party extensions.
 
 ## Future Work
 
