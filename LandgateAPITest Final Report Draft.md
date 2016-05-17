@@ -2,25 +2,25 @@
 
 ## Abstract
 
-Landgate is Western Australia's premier spatial data provider, the lead organisation of the West Australian Land Information System (WALIS) and its Shared Land Information Platform (SLIP). Previously heavily dependant upon Google Map Engine spatial server infrastructure, Landgate and SLIP have had to rapidly pivot to Esri spatial servers to avoid loss of service due to GME's decommisioning.
+Landgate is Western Australia's premier spatial data provider, the lead organisation of the West Australian Land Information System (WALIS) and its Shared Land Information Platform (SLIP). Previously dependant upon Google Map Engine spatial server infrastructure, Landgate and SLIP had to rapidly pivot to Esri spatial servers to avoid loss of service due to GME's decommissioning.
 
-Spatial web service testing is a narrower field than the larger web service quality domain. Most academic writing on the topic naturally aims to test under controlled conditions, to eliminate variables of network connectivity or device speed. This work eschews controls in favour of collecting data on the test environment at test time.
+Spatial web service testing is a narrower field than the larger web service quality domain. Academic writing on the topic naturally aims to test under controlled conditions, to eliminate variables of network connectivity or device speed. This work eschews controls in favour of collecting data on the test environment at test time.
 
-Further, academia tend to focus on response time as the main metric of service performance, this being a clearly objective measure. Few papers consider whether the data returned is correct. Mobile devices can easily have their download interrupted by lost signal.  
+Further, academia tend to focus on response time as the main metric of service performance, an objective measure. Few papers consider whether the data returned is correct. Mobile downloads can be interrupted by lost signal.
 
-The combination of environmental data with errors in responses gives a broader picture of Landgate's spatial servers' suitability for mobile devices.
+The combination of environmental data with errors in responses grants a broader picture of Landgate's servers' suitability for mobile devices.
 
 LandgateAPITest is a testing suite composed of an iOS application for frontline mobile device testing and a Google App Engine web application for storage, analysis and presentation of charted results.
 
-Deploying LandgateAPITest against Landgate's GME, OGC and Esri endpoints confirms the findings of earlier studies and finds that the mobile network is the biggest factor in performance and correctness of responses. 
+Deploying LandgateAPITest against Landgate's GME, OGC and Esri endpoints confirms the findings of earlier studies and finds that the mobile network is the biggest factor in performance and correctness of responses.
 
 ## Acknowledgements
 
-First and foremost, I would like to acknowledge the support of my wife, Megan, and my family. This work would simply not have been possible without their aid.
+First and foremost, the author acknowledges the unfailing support of his wife and family. This work would not have been possible, or as thorough, without their aid.
 
 Dr David McMeekin has been a most encouraging supervisor. His enthusiasm for the subject is infectious.
 
-The iOS gurus at Curtin University, Tristan Reed and Jeremy Siao Him Fa, helped cut through some knotty problems with the iOS app.
+The iOS gurus at Curtin University, Tristan Reed and Jeremy Siao Him Fa, helped cut through knotty iOS and Swift problems.
 
 ## Table of Contents
 
@@ -97,18 +97,6 @@ The iOS gurus at Curtin University, Tristan Reed and Jeremy Siao Him Fa, helped 
 
 
 
-### Landgate
-
-Landgate is the trading name of the Western Australian Land Information Authority, the statutory authority given charge of maintaining the state's land and property information system {Anonymous:2004tv}. The organisation is the inheritor of the mandate of various incarnations of the Department of Lands and Surveys, dating back to the original Survey Office in the 19th Century.
-
-Landgate's role incorporates managing property ownership and transfer records, as well as property valuations to government agencies {Anonymous:x1iQOCOB}. Vital to society in the connected age, Landgate is Western Australia's leading spatial data agency. Landgate has successfully commercialised spatial data creation and access. Their cumulative efforts considerably lessened their dependence on funding from the state government. The success of this strategy has lead to a projected 5% increase in the number of datasets served through the 2015/16 financial year {Anonymous:2015va}.
-
-[ ] Diagram organisation of Landgate, WALIS etc.
-
-The Western Australian Land Information System (WALIS) is a partnership between government agencies, the private sector and the community. Their aim is to improve access to location information for the betterment of the Western Australian community {LocationInformationStrategyProgramCoordinationTeam:2012te}. The Shared Location Information Platform (SLIP) is WALIS's spatial data portal, the Western Australian government's Spatial Data Infrastructure (SDI), managed by Landgate. The portal presents datasets owned and maintained by authoritative agencies, standardises data formats and simplifies access.
-SLIP Future is WALIS's programme to revamp the original SLIP Enabler portal and infrastructure {Anonymous:2014ww}. The custom built and open-source based infrastructure was deemed incapable of handling projected usage and implementing new features. WALIS built a new platform around Google's Software as a Service (SaaS) Google Maps Engine (GME). The new environment offered significant advantages in reliability, scalability and feature set {Anonymous:2014ww}.
-
-In January 2015, Google announced the deprecation of Google Maps Engine {SLIPFuture:2015uc}. Further, they planned to shutter the service entirely by the end of January 2016 {Anonymous:2015tg}. Landgate and WALIS were left in search of a new provider for the SLIP Future programme. ESRI aggressively sought the business of GME refugee organisations {Anonymous:7YAzB1Ym} offering free software replacements and membership to business partnership programs. In July 2015, Landgate selected Esri's ArcGIS Server and Portal as the replacement for GME {Anonymous:2015uc}. Web services offering datasets in Esri's ArcGIS REST APIs will replace GME's API through a transition period through the end of 2015 and beginning of 2016.
 
 ### Web Services
 
@@ -118,54 +106,64 @@ The development of powerful and flexible web services was the foundation that al
 
 Service Oriented Architectures (SOA) is a standard governing software design that aims to compose a software product from loosely coupled, and hence replaceable, components {Endo:2010wf}. Designers commonly employ this pattern as a method for distributed computing {Palacios:2011eo}. A set of descriptive XML documents, such as Web Services Description Language (WSDL), enable service builders to publish to service registries and then consumers to find and bind to services suited to their needs. Communication is carried out with XML-based messages based on the Simple Object Access Protocol (SOAP), another highly capable standard.
 
-Representational State Transfer (ReST) services are much easier to develop and consume {Castillo:2011ve}. The adoption of ReSTful services has led to an explosion of data available on the web, particularly with mobile applications in mind as the end consumers.
+Representational State Transfer (ReST) services are easier to develop and consume {Castillo:2011ve}. The adoption of ReSTful services has led to an explosion of data available on the web, particularly with mobile applications in mind as end consumers.
 
 ### Spatial Web Services
 
-Spatial data is a computer representation of any information with a location dimension {Huisman:2009uj}. It models the real world. Web services that deliver location data over a network or perform geospatial functions are spatial web services.
+Spatial data is a computer representation of any information with a location dimension {Huisman:2009uj}. It digitally models the real world. Web services that deliver location data over a network or perform geospatial functions are spatial web services.
 
 #### Open Geospatial Consortium Web Map Service
 
 The Open Geospatial Consortium (OGC) is an international group of industry, government, academic and community representatives who aim to improve business processes through the integration of location data {Reed:2011kt}. Their main supporting efforts are directed towards the creation of location data and service standards and strategies.
 
-A Web Map Service (WMS) composes an image file from server stored vector and raster layers in response to a request in a URL. Despite their focus on returning an image file, WMS operations are still dependent upon XML, especially for GetCapabilities, GetFeatureInfo, error descriptions and layer style code.
-
-The open source and standards driven approach meant that WMS was widely adopted and became a cornerstone web mapping technology. The standard is now quite old; it was last updated to version 1.3.0 in 2006 {delaBeaujardiere:2006vq}.
+A Web Map Service (WMS) composes an image file from server stored vector and raster layers in response to a request in a URL. The open source and standards driven approach meant that WMS was widely adopted and became a cornerstone web mapping technology. The standard is now quite old; it was last updated to version 1.3.0 in 2006 {delaBeaujardiere:2006vq}.
 
 #### Open Geospatial Consortium Web Feature Service
 
 A Web Feature Service (WFS) returns geographic vector data in GML (Geographic Markup Language, a derivative of XML) in response to a URL request. It is a more complex and capable service than WMS. If fully deployed, WFS allows external users full create, read, update and delete (CRUD) access to a geographic database {Vretanos:2005ut}.
 
-The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries but was not widely adopted in the years after its release.
-
-[ ] Justify
+The WFS standard is of a similar age to WMS. Version 1.1.0 is most commonly deployed, dating from 2005 {Vretanos:2005ut}. Version 2.0 from 2010 gained capability and complexity from GML3 and somewhat simpler use from stored queries.
 
 #### Google Maps Engine
 
 Google Inc.'s Google Maps Engine (GME) service enabled the creation of more sophisticated web mapping services on top of the Google Maps interface. Whereas the familiar Google Maps application only allowed one or two additional map layers to be displayed, Google Maps Engine could host many hundreds of datasets in the cloud and perform multi-layer geographic analysis {Anonymous:s3eShq99}. The full version was a true enterprise application and cloud service, with off-the-shelf or bespoke solutions created to suit a client's needs. The scalability and reliability of Google's service were a significant attractor to geospatial providers, such as Landgate.
 
-From the 22nd of November 2014, Google redirected GME website bound traffic to their Google Maps for Work service {Anonymous:A\_DLJUOY}, a more streamlined approach to providing enterprise mapping solutions than the previous five separate products.
+From the 22nd of November 2014, Google redirected GME website bound traffic to their Google Maps for Work service {Anonymous:A\_DLJUOY}, a more streamlined approach to providing enterprise mapping solutions.
 
 In a commercial decision, Google Inc. announced the deprecation of the GME API on the 29th of January 2015 {Anonymous:2015tg}. Google shuttered the service on the 29th of January 2016.
 
 #### Esri ArcGIS for Server and ArcGIS ReST API
 
-ArcGIS for Server is Esri's enterprise level product for intra/internet GIS and provisioning web services {Anonymous:BHtz-GD9}. ArcGIS for Server has a long development history and has been an established (or entrenched rather) product in geospatial enterprises for many years.
+ArcGIS for Server is Esri's enterprise level product for intra/internet GIS and provisioning web services {Anonymous:BHtz-GD9}.
 
-The ArcGIS REST API exposes ArcGIS for Server data and functions as web services. This modern API has been fully developed since 2010 {Anonymous:hoTu0aor}. ArcGIS for Server's age means it is also fully capable of supporting older web service standards such as SOAP.
+The ArcGIS REST API exposes ArcGIS for Server data and functions as web services. This modern API has been fully developed since 2010 {Anonymous:hoTu0aor}. ArcGIS for Server's age means it is also capable of supporting older web service standards such as SOAP.
+
+### Landgate
+
+Landgate is the trading name of the Western Australian Land Information Authority, the statutory authority given charge of maintaining the state's land and property information system {Anonymous:2004tv}. The organisation is the inheritor of the mandate of various incarnations of the Department of Lands and Surveys, dating back to the original Survey Office in the 19th Century.
+
+Landgate's role incorporates managing property ownership and transfer records, as well as property valuations to government agencies {Anonymous:x1iQOCOB}. Vital to society in the connected age, Landgate is Western Australia's leading spatial data agency. Landgate has successfully commercialised spatial data creation and access. Their cumulative efforts considerably lessened their dependence on funding from the state government. The success of this strategy has lead to a projected 5% increase in the number of datasets served through the 2015/16 financial year {Anonymous:2015va}.
+
+[ ] Diagram organisation of Landgate, WALIS etc.
+
+The Western Australian Land Information System (WALIS) is a partnership between government agencies, the private sector and the community. Their aim is to improve access to location information for the betterment of the Western Australian community {LocationInformationStrategyProgramCoordinationTeam:2012te}. The Shared Location Information Platform (SLIP) is WALIS's spatial data portal, the Western Australian government's Spatial Data Infrastructure (SDI), managed by Landgate. The portal presents datasets owned and maintained by authoritative agencies, standardises data formats and simplifies access.
+
+SLIP Future is WALIS's programme to revamp the original SLIP Enabler portal and infrastructure {Anonymous:2014ww}. The older infrastructure was deemed incapable of handling projected usage and implementing new features. WALIS built a new platform around Google's Software as a Service (SaaS) Google Maps Engine (GME). The new environment offered significant advantages in reliability, scalability and feature set {Anonymous:2014ww}.
+
+In January 2015, Google announced the deprecation of Google Maps Engine {SLIPFuture:2015uc}. Further, they planned to shutter the service entirely by the end of January 2016 {Anonymous:2015tg}. Landgate and WALIS were left in search of a new provider for the SLIP Future programme. ESRI aggressively sought the business of GME refugee organisations {Anonymous:7YAzB1Ym} offering free software replacements and membership to business partnership programs. In July 2015, Landgate selected Esri's ArcGIS Server and Portal as the replacement for GME {Anonymous:2015uc}. Web services offering datasets in Esri's ArcGIS REST APIs will replace GME's API through a transition period through the end of 2015 and beginning of 2016.
 
 ## Literature Review
 
-### Similar Work
+### Related Work
 
 Web services are widely studied. However, the scope of applications for web services is broad. There are, therefore, few studies that examine the intersection of geographic web service performance, mobile device context and an individual, state-level spatial data infrastructure. Following are a cross-section of papers with aims partially aligned to those of this work.
 
 Hamas, Saad and Abed {\*Hamad:2010tr} compare the performance of SOAP and ReST APIs on mobile devices. The measured criteria are response time and transmission size which predictably favour ReST interfaces.
-Their experiment design emulates a mobile device on a desktop computer; further they restrict the simulated mobile network speed. These are useful controls in an experiment designed with a very clear aim of finding which service is faster. But real world complications such as heavy network traffic or poor signal are not addressed as a factor in the outcome. As an example, SOAP's WS-ReliableMessaging protocol may reduce overall transfer time in areas with weak signal by minimising the number of failed message attempts.
+Their experiment design emulates a mobile device on a desktop computer; further they restrict the simulated mobile network speed. These are useful controls in an experiment designed with a very clear aim of finding which service is faster. Real world complications such as heavy network traffic or poor signal are not addressed as a factor in the outcome. As an example, SOAP's WS-ReliableMessaging protocol may reduce overall transfer time in areas with weak signal by minimising the number of failed message attempts.
 
 Tian et al. {\*Tian:2004cb} design a server-client system that can optionally compress responses to save the client's download limit or skip compression when the server is under heavy load to minimise timed out requests.
 
-Working in the pre-smartphone era the team simulated an iPAQ Pocket PC, emulating the device on a Pentium III laptop. The laptop emulating the client is connected to the server via Wifi, Bluetooth or a simulated mobile network. To simulate the increased latency and slower connection speed of a GPRS network, they introduce another server that throttles network speed by artificially delaying messages.
+Working in the pre-smartphone era the team simulated an iPAQ Pocket PC, emulating the device on a Pentium III laptop. The laptop emulating the client is connected to the server via Wifi, Bluetooth or a simulated mobile network. To simulate the increased latency and slower connection speed of a GPRS network, they introduced another server that throttled network speed by artificially delaying messages.
 
 Davis, Kimo and Duarte-Figueiredo {\*Davis:2009hf} focus on OGC Web Map Service (WMS) optimisation for mobile devices. They elaborate a service that combines the multi-layer composition of WMS with the mobile device response speed of AJAX-based web maps such as Google Maps.
 
@@ -173,7 +171,7 @@ Their experiment implemented the proposed service and interacted with it from a 
 
 Fowler, Hameseder and Peterson {\*Fowler:2012bn} built a custom iPhone application to test the performance of SOAP and ReST versions of a public transportation web service in Hamburg over a typical working day. They measured response time, data serialisation/deserialisation time and response size on the device itself and returned the results to their own web service. Simple and detailed messages of significantly different response size control whether response time is dependent upon message size. The results, as is common, are given as mean and standard deviation, descriptive statistics without discussion of error responses.
 
-Fowler, Hameseder and Peterson's methodology called for the mobile user to remain "fixed" while requesting and receiving the response, which we interpret as stationary. This is contrary behaviour for mobile device use. There are countless situations in which a mobile user would be active and moving while concurrently requesting data from a web service.
+Fowler, Hameseder and Peterson's {\*Fowler:2012bn} methodology called for the mobile user to remain "fixed" while requesting and receiving the response, which we interpret as stationary. This is contrary behaviour for mobile device use. There are countless situations in which a mobile user would be active and moving while concurrently requesting data from a web service.
 
 Provisioning web services from a mobile device faces similar network and device limitations as consuming a service from a mobile device. Nguyen, Jørstad and van Thanh {\*Nguyen:2008jt} explored web service performance on an emulated mobile device. While investigating the influence of varied simulated mobile network speeds, they concluded that testing on an actual device would provide ideal settings for their network simulation. Indeed, the subsequent experiment showed considerable differences between emulated and real network speed influence on web service performance. Even after modifying their simulated network speed to approximate real world network speed the difference is significant.
 
@@ -182,6 +180,10 @@ Hussain, Wang and Toure {\*Hussain:2014ce} test the response time and throughput
 Hussain, Wang and Toure discuss some tests with unusually long response times and speculate that it may be due to other web traffic. The specific time or other conditions of these particular tests are not elucidated. In fact, the methodology is not sufficiently detailed to provide all the parameters used in web service requests. Repeating their experiments will likely produce different results.
 
 Yang, Cao and Evans {\*Yang:2013ff} demonstrate that WMS servers struggle with heavy loads of simultaneous requests. They recorded response times to 1, 5, 10. 30, 50 and 100 concurrent requests to six important WMS servers. They found that response times increased with the number of requests until many servers either blocked all incoming requests to handle the load or simply timed out. They make several recommendations, particularly regarding parallel requests and processing. Most helpfully to this study, a simple progress bar to indicate to a user that their request is still being processed.
+
+Recent work by Cannata, Antonovic and Molinari {\*Cannata:2014dp} load tested the HELIDEM project's OGC web services. They measured response time as they programmatically overloaded the GeoServer system using the Locust open source Python testing library.
+
+Tantalisingly, Cannata, Antonovic and Molinari's {\*Cannata:2014dp} paper mentions that Locust is capable of reporting testing tasks as failed even if the server returns a 200 "Success" response code with an exception in the response data. Unfortunately they do not go on to explain this capability, nor does their testing uncover any exceptions which Locust could have revealled to them.
 
 The emergence of ReSTful web services engendered many studies comparing performance to entrenched SOAP services. Few experimental designs take advantage of SOAP's inherent advantages, i.e. a message layer and orchestrated distributed computing, such a design would allow SOAP APIs to be compared more favourably with ReST APIs.
 
