@@ -1,0 +1,1006 @@
+<creately-doc revision="15" id="iogjptev5" projectid="root" sync="false" updated-user="Aiden Price" format-version="1.0" owner-name="Aiden Price">
+  <viewHash></viewHash>
+  <app-version></app-version>
+  <kodefs/>
+  <comments/>
+  <libraries>
+    <lib-ID>
+      <id>uml-statechart</id>
+    </lib-ID>
+  </libraries>
+  <inSync>false</inSync>
+  <canvas-height>2000</canvas-height>
+  <canvas-width>2000</canvas-width>
+  <creator></creator>
+  <embedHash>bboDt3wkUMs1EZF4ch7Jtf6BROM=</embedHash>
+  <date-updated>Sun May 22 2016 05:01:11 PM</date-updated>
+  <connectors>
+    <connector id="Connector-ioi5hzdb-ko256" end-point-one-x="662.7" end-point-one-y="1331.838095238095" end-point-two-y="1265.5619047619048" show-obj-one-img="false" show-obj-two-img="false" zorder="9" model-type="CONNECTOR" end-point-two-x="595" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf184" location="0.5" position="" isPrimary="true">
+          <text>didFinishPing</text>
+          <text-formats>
+            <text-format leading="2" end-index="13" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Choice-ioi5hzdb-ko258</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko252</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content>didFinishPinging</content>
+        <text-formats>
+          <text-format leading="2" end-index="13" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_2</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_4</anchPntIDObjOne>
+      <anchor-points>
+        <point x="595" index="0" y="1331.838095238095"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko272" end-point-one-x="737.7" end-point-one-y="940" end-point-two-y="600.0999999999999" show-obj-one-img="false" show-obj-two-img="false" zorder="19" model-type="CONNECTOR" end-point-two-x="805" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf195" location="0.5" position="" isPrimary="true">
+          <text>backToReady</text>
+          <text-formats>
+            <text-format leading="2" end-index="11" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="true" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>true</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko261</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko266</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="11" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="true" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_4</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_3</anchPntIDObjOne>
+      <anchor-points>
+        <point x="737.7" index="0" y="600.0999999999999"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko273" end-point-one-x="880.0999999999999" end-point-one-y="490.0999999999999" end-point-two-y="560.0999999999999" show-obj-one-img="false" show-obj-two-img="false" zorder="20" model-type="CONNECTOR" end-point-two-x="880" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf196" location="0.5" position="" isPrimary="true">
+          <text></text>
+          <text-formats>
+            <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko261</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Initial-ioi5hzdb-ko243</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_3</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne></anchPntIDObjOne>
+      <anchor-points>
+        <point x="880.0999999999999" index="0" y="525.0999999999999"/>
+        <point x="880" index="1" y="525.0999999999999"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko247" end-point-one-x="1070" end-point-one-y="875" end-point-two-y="945.0380952380953" show-obj-one-img="false" show-obj-two-img="false" zorder="3" model-type="CONNECTOR" end-point-two-x="1070.0380952380951" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf179" location="0.5" position="" isPrimary="true">
+          <text>hasConnectivity</text>
+          <text-formats>
+            <text-format leading="2" end-index="15" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Choice-ioi5hzdb-ko274</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko245</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content>Start</content>
+        <text-formats>
+          <text-format leading="2" end-index="15" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_3</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_2</anchPntIDObjOne>
+      <anchor-points>
+        <point x="1070" index="0" y="910.0190476190476"/>
+        <point x="1070.0380952380951" index="1" y="910.0190476190476"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko276" end-point-one-x="1035.0380952380951" end-point-one-y="980.0380952380953" end-point-two-y="980" show-obj-one-img="false" show-obj-two-img="false" zorder="23" model-type="CONNECTOR" end-point-two-x="812.7" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf198" location="0.5" position="" isPrimary="true">
+          <text>[No]</text>
+          <text-formats>
+            <text-format leading="2" end-index="4" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko266</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Choice-ioi5hzdb-ko274</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content>[No]</content>
+        <text-formats>
+          <text-format leading="2" end-index="4" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_1</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_4</anchPntIDObjOne>
+      <anchor-points>
+        <point x="923.8690476190476" index="0" y="980.0380952380953"/>
+        <point x="923.8690476190476" index="1" y="980"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko267" end-point-one-x="560" end-point-one-y="1235.5619047619048" end-point-two-y="980" show-obj-one-img="false" show-obj-two-img="false" zorder="17" model-type="CONNECTOR" end-point-two-x="662.7" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf190" location="0.5" position="" isPrimary="true">
+          <text>[queue.count = 0]</text>
+          <text-formats>
+            <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>true</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko266</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Choice-ioi5hzdb-ko258</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_4</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_4</anchPntIDObjOne>
+      <anchor-points>
+        <point x="525" index="0" y="1235.5619047619048"/>
+        <point x="525" index="1" y="980"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko271" end-point-one-x="595" end-point-one-y="1200.5619047619048" end-point-two-y="1125" show-obj-one-img="false" show-obj-two-img="false" zorder="18" model-type="CONNECTOR" end-point-two-x="665.2" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf194" location="0.5" position="" isPrimary="true">
+          <text>[queue.count &gt; 0]</text>
+          <text-formats>
+            <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="true" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko255</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Choice-ioi5hzdb-ko258</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="true" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_4</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_3</anchPntIDObjOne>
+      <anchor-points>
+        <point x="595" index="0" y="1125"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko262" end-point-one-x="955" end-point-one-y="600.0999999999999" end-point-two-y="665.0261904761904" show-obj-one-img="false" show-obj-two-img="false" zorder="12" model-type="CONNECTOR" end-point-two-x="1070.0380952380951" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf187" location="0.5" position="" isPrimary="true">
+          <text>testPlan.didSet()</text>
+          <text-formats>
+            <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Choice-ioi5hzdb-ko263</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko261</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content>testPlan.didSet()</content>
+        <text-formats>
+          <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_3</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne></anchPntIDObjOne>
+      <anchor-points>
+        <point x="1070.0380952380951" index="0" y="600.0999999999999"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko254" end-point-one-x="995" end-point-one-y="1331.838095238095" end-point-two-y="1331.838095238095" show-obj-one-img="false" show-obj-two-img="false" zorder="7" model-type="CONNECTOR" end-point-two-x="812.7" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf183" location="0.5" position="" isPrimary="true">
+          <text>didFinishNetworking</text>
+          <text-formats>
+            <text-format leading="2" end-index="19" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko252</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko250</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="19" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_1</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_4</anchPntIDObjOne>
+      <anchor-points/>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko264" end-point-one-x="1070.0380952380951" end-point-one-y="730.0261904761904" end-point-two-y="790" show-obj-one-img="false" show-obj-two-img="false" zorder="14" model-type="CONNECTOR" end-point-two-x="1070" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf188" location="0.5" position="" isPrimary="true">
+          <text>[queue.count &gt; 0]</text>
+          <text-formats>
+            <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko245</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Choice-ioi5hzdb-ko263</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_3</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_2</anchPntIDObjOne>
+      <anchor-points>
+        <point x="1070.0380952380951" index="0" y="760.0130952380953"/>
+        <point x="1070" index="1" y="760.0130952380953"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko251" end-point-one-x="1070.0333333333333" end-point-one-y="1170" end-point-two-y="1291.838095238095" show-obj-one-img="false" show-obj-two-img="false" zorder="5" model-type="CONNECTOR" end-point-two-x="1070" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf181" location="0.5" position="" isPrimary="true">
+          <text>didFinishLocating</text>
+          <text-formats>
+            <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko250</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko246</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_3</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_2</anchPntIDObjOne>
+      <anchor-points>
+        <point x="1070.0333333333333" index="0" y="1230.9190476190474"/>
+        <point x="1070" index="1" y="1230.9190476190474"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko265" end-point-one-x="1035.0380952380951" end-point-one-y="700.0261904761904" end-point-two-y="645.0999999999999" show-obj-one-img="false" show-obj-two-img="false" zorder="15" model-type="CONNECTOR" end-point-two-x="880" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf189" location="0.5" position="" isPrimary="true">
+          <text>[queue.count = 0]</text>
+          <text-formats>
+            <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko261</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Choice-ioi5hzdb-ko263</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="17" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_2</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_4</anchPntIDObjOne>
+      <anchor-points>
+        <point x="880" index="0" y="700.0261904761904"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko277" end-point-one-x="815.2" end-point-one-y="1125" end-point-two-y="1125" show-obj-one-img="false" show-obj-two-img="false" zorder="24" model-type="CONNECTOR" end-point-two-x="995.0333333333334" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf199" location="0.46363636363636335" position="" isPrimary="true">
+          <text>Location</text>
+          <text-formats>
+            <text-format leading="2" end-index="8" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko246</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Composite State-ioi5hzdb-ko255</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="8" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_4</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne></anchPntIDObjOne>
+      <anchor-points/>
+      <fromIconSource></fromIconSource>
+    </connector>
+    <connector id="Connector-ioi5hzdb-ko275" end-point-one-x="1070.0380952380951" end-point-one-y="1010.0380952380953" end-point-two-y="1085" show-obj-one-img="false" show-obj-two-img="false" zorder="22" model-type="CONNECTOR" end-point-two-x="1070.0333333333333" bi-directional="false">
+      <text-data-list>
+        <line-text id="ioi5hzdb-tf197" location="0.5" position="" isPrimary="true">
+          <text>[Yes]</text>
+          <text-formats>
+            <text-format leading="2" end-index="5" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+              <target></target>
+              <url></url>
+            </text-format>
+          </text-formats>
+        </line-text>
+      </text-data-list>
+      <anchorsCustomized>false</anchorsCustomized>
+      <isVisible>false</isVisible>
+      <group-id></group-id>
+      <comments/>
+      <connection-desc></connection-desc>
+      <connection-name></connection-name>
+      <ownerDiagID>iogjptev5</ownerDiagID>
+      <toIconSource>ArrowHead4</toIconSource>
+      <compatibleConnDefs>
+        <String>root/uml/conn/statechartConn</String>
+        <String>Just a line</String>
+      </compatibleConnDefs>
+      <connection-def-id>root/uml/conn/statechartConn</connection-def-id>
+      <object-two-id>Composite State-ioi5hzdb-ko246</object-two-id>
+      <isLocked>false</isLocked>
+      <object-one-id>Choice-ioi5hzdb-ko274</object-one-id>
+      <text text-rotation="NaN" position="" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="2" end-index="5" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <drawStyle>0</drawStyle>
+      <anchPntIDObjTwo>flowPort_3</anchPntIDObjTwo>
+      <style alpha="NaN" line-color="13421772" line-thickness="1.5" line-style=""/>
+      <anchPntIDObjOne>flowPort_2</anchPntIDObjOne>
+      <anchor-points>
+        <point x="1070.0380952380951" index="0" y="1047.5190476190476"/>
+        <point x="1070.0333333333333" index="1" y="1047.5190476190476"/>
+      </anchor-points>
+      <fromIconSource></fromIconSource>
+    </connector>
+  </connectors>
+  <objects>
+    <object locked="false" id="Composite State-ioi5hzdb-ko261" visible="true" type="NORMAL" model-type="CONTAINER" zorder="11" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>Ready(~!nl!~)--(~!nl!~)</content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="805" width="150" y="560.0999999999999" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="150" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="Ready(~!nl!~)--(~!nl!~)" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+    <object locked="false" id="Choice-ioi5hzdb-ko274" visible="true" type="NORMAL" model-type="NORMAL" zorder="21" name="">
+      <kobject-def-id>root/uml/choice?version=2&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="CENTRE" wrapping="true">
+        <content></content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="1" x="1035.0380952380951" width="65" y="945.0380952380953" angle="0" height="65" scale-x="1">
+        <matrix b="0" ty="0" c="0" tx="0" d="1" a="1"/>
+        <default-bounds x="0" width="65" y="0" height="65"/>
+      </dimension>
+      <data-items>
+        <data-item value="" type="" name="Name"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="15055215" fill="true" fill-color="16777215" line-thickness="2" line-style=""/>
+    </object>
+    <object locked="false" id="Composite State-ioi5hzdb-ko250" visible="true" type="NORMAL" model-type="CONTAINER" zorder="4" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>Networking(~!nl!~)--(~!nl!~)entry / network</content>
+        <text-formats>
+          <text-format leading="2" end-index="153" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="0" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="995" width="150" y="1291.838095238095" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="150" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="Networking(~!nl!~)--(~!nl!~)entry / network" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+    <object locked="false" id="Composite State-ioi5hzdb-ko252" visible="true" type="NORMAL" model-type="CONTAINER" zorder="6" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>Pinging(~!nl!~)--(~!nl!~)entry / ping</content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="662.7" width="150" y="1291.838095238095" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="150" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="Pinging(~!nl!~)--(~!nl!~)entry / ping" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+    <object locked="false" id="Composite State-ioi5hzdb-ko245" visible="true" type="NORMAL" model-type="CONTAINER" zorder="1" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>PreTest(~!nl!~)--(~!nl!~)entry / hasConnectivity</content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="990" width="159.3" y="790" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="159.3" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="PreTest(~!nl!~)--(~!nl!~)entry / hasConnectivity" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+    <object locked="false" id="Choice-ioi5hzdb-ko258" visible="true" type="NORMAL" model-type="NORMAL" zorder="10" name="">
+      <kobject-def-id>root/uml/choice?version=2&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="CENTRE" wrapping="true">
+        <content></content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="1" x="560" width="65" y="1200.5619047619048" angle="0" height="65" scale-x="1">
+        <matrix b="0" ty="0" c="0" tx="0" d="1" a="1"/>
+        <default-bounds x="0" width="65" y="0" height="65"/>
+      </dimension>
+      <data-items>
+        <data-item value="" type="" name="Name"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="15055215" fill="true" fill-color="16777215" line-thickness="2" line-style=""/>
+    </object>
+    <object locked="false" id="Composite State-ioi5hzdb-ko266" visible="true" type="NORMAL" model-type="CONTAINER" zorder="16" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>PostTest(~!nl!~)--(~!nl!~)entry / write</content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="662.7" width="150" y="940" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="150" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="PostTest(~!nl!~)--(~!nl!~)entry / write" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+    <object locked="false" id="Choice-ioi5hzdb-ko263" visible="true" type="NORMAL" model-type="NORMAL" zorder="13" name="">
+      <kobject-def-id>root/uml/choice?version=2&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="CENTRE" wrapping="true">
+        <content></content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="1" x="1035.0380952380951" width="65" y="665.0261904761904" angle="0" height="65" scale-x="1">
+        <matrix b="0" ty="0" c="0" tx="0" d="1" a="1"/>
+        <default-bounds x="0" width="65" y="0" height="65"/>
+      </dimension>
+      <data-items>
+        <data-item value="" type="" name="Name"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="15055215" fill="true" fill-color="16777215" line-thickness="2" line-style=""/>
+    </object>
+    <object locked="false" id="Composite State-ioi5hzdb-ko255" visible="true" type="NORMAL" model-type="CONTAINER" zorder="8" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>EndpointTesting(~!nl!~)--(~!nl!~)entry / test</content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="665.2" width="150" y="1085" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="150" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="EndpointTesting(~!nl!~)--(~!nl!~)entry / test" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+    <object locked="false" id="Initial-ioi5hzdb-ko243" visible="true" type="NORMAL" model-type="NORMAL" zorder="0" name="">
+      <kobject-def-id>root/uml/initial?version=1&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="SOUTH" wrapping="false">
+        <content></content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="center" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="1" x="865.0999999999999" width="30" y="460.0999999999999" angle="0" height="30" scale-x="1">
+        <matrix b="0" ty="0" c="0" tx="0" d="1" a="1"/>
+        <default-bounds x="0" width="30" y="0" height="30"/>
+      </dimension>
+      <data-items>
+        <data-item value="" type="" name="Name"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="4567709" fill="true" fill-color="4567709" line-thickness="2" line-style=""/>
+    </object>
+    <object locked="false" id="Composite State-ioi5hzdb-ko246" visible="true" type="NORMAL" model-type="CONTAINER" zorder="2" name="">
+      <kobject-def-id>root/uml/compositeState?version=3&amp;author=Cinergix</kobject-def-id>
+      <text text-rotation="NaN" position="COVER" wrapping="false">
+        <content>Locating(~!nl!~)--(~!nl!~)entry / locate</content>
+        <text-formats>
+          <text-format leading="0" end-index="-1" under-line="false" right-margin="0" block-indent="0" order="0" font="Lato" begin-index="-1" bullet="false" align="left" display="block" italic="false" size="14" bold="false" letter-spacing="0" left-margin="0" kerning="false" indent="0" color="4934475">
+            <target></target>
+            <url></url>
+          </text-format>
+        </text-formats>
+      </text>
+      <children/>
+      <group-id></group-id>
+      <comments/>
+      <container-id></container-id>
+      <libraries/>
+      <collapse collapsed-width="NaN" collapsed-height="NaN" expanded-y-pos="NaN" expanded-width="NaN" collapsed="false" collapsed-x-pos="NaN" collapsed-y-pos="NaN" expanded-x-pos="NaN" expanded-height="NaN"/>
+      <dimension scale-y="Infinity" x="995.0333333333334" width="150" y="1085" angle="0" height="85" scale-x="Infinity">
+        <matrix b="0" ty="0" c="0" tx="0" d="0.7083282470703125" a="1"/>
+        <default-bounds x="0" width="150" y="0" height="120"/>
+      </dimension>
+      <data-items>
+        <data-item value="Custom" type="" name="classStyle"/>
+        <data-item value="" type="" name="GenericConnection"/>
+        <data-item value="" type="" name="DiagramLinkURL"/>
+        <data-item value="Locating(~!nl!~)--(~!nl!~)entry / locate" type="" name="classData"/>
+      </data-items>
+      <style fill-gradient="GRADIENT_FILL_SOLID" alpha="1" line-color="13421772" fill="true" fill-color="16777215" line-thickness="2" line-style="LINESTYLE_NAME_SOLID"/>
+    </object>
+  </objects>
+  <koDefIDList>
+    <def-ID>root/uml/conn/statechartConn</def-ID>
+    <def-ID>root/uml/compositeState?version=3&amp;author=Cinergix</def-ID>
+    <def-ID>root/uml?version=1&amp;author=Cinergix</def-ID>
+    <def-ID>root/uml/choice?version=2&amp;author=Cinergix</def-ID>
+    <def-ID>root/uml/initial?version=1&amp;author=Cinergix</def-ID>
+  </koDefIDList>
+  <creatorUid>PHP1D835-D315-7ABC-328D-AD8291E1F5CB</creatorUid>
+  <source-tool></source-tool>
+  <tags>uml,statechart,tech,software,state,chart</tags>
+  <revisionUserId>PHP1D835-D315-7ABC-328D-AD8291E1F5CB</revisionUserId>
+  <resources/>
+  <save-type></save-type>
+  <save-comments></save-comments>
+  <published>false</published>
+  <notes></notes>
+  <diagramTypeId>state-chart</diagramTypeId>
+  <docname>LandgateAPITest Mobile Application State Diagram</docname>
+  <date-created>Sun May 22 2016 05:01:11 PM</date-created>
+  <revision-user>aiden.price@informed.com</revision-user>
+  <description></description>
+  <dtLastEdit>LAST_EDIT_CREATION</dtLastEdit>
+  <editHash></editHash>
+</creately-doc>
