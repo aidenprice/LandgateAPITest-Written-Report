@@ -20,7 +20,7 @@ First and foremost, the author acknowledges the unfailing support of his wife an
 
 Dr David McMeekin has been a most encouraging supervisor. His enthusiasm for the subject is infectious.
 
-The iOS gurus at Curtin University, Tristan Reed and Jeremy Siao Him Fa, helped cut through knotty iOS and Swift problems.
+The iOS brains trust at Curtin University, Tristan Reed and Jeremy Siao Him Fa, helped cut through knotty iOS and Swift problems.
 
 ## Table of Contents
 
@@ -153,7 +153,7 @@ Landgate's role incorporates managing property ownership and transfer records, a
 
 ![Organisation of Landgate and WALIS](Graphics\Landgate WALIS & SLIP Org Chart.png)
 
-The Western Australian Land Information System (WALIS) is a partnership between government agencies, the private sector and the community. Their aim is to improve access to location information for the betterment of the Western Australian community {LocationInformationStrategyProgramCoordinationTeam:2012te}. The Shared Location Information Platform (SLIP) is WALIS's spatial data portal, the Western Australian government's Spatial Data Infrastructure (SDI), managed by Landgate. The portal presents datasets owned and maintained by authoritative agencies, standardises data formats and simplifies access.
+The Western Australian Land Information System (WALIS) is a partnership between government agencies, the private sector, academia and the community. Their aim is to improve access to location information for the betterment of the Western Australian community {LocationInformationStrategyProgramCoordinationTeam:2012te}. The Shared Location Information Platform (SLIP) is WALIS's spatial data portal, the Western Australian government's Spatial Data Infrastructure (SDI), managed by Landgate. The portal presents datasets owned and maintained by authoritative agencies, standardises data formats and simplifies access.
 
 SLIP Future is WALIS's programme to revamp the original SLIP Enabler portal and infrastructure {Anonymous:2014ww}. The older infrastructure was deemed incapable of handling projected usage and implementing new features. WALIS built a new platform around Google's Software as a Service (SaaS) Google Maps Engine (GME). The new environment offered significant advantages in reliability, scalability and feature set {Anonymous:2014ww}.
 
@@ -185,7 +185,7 @@ Provisioning web services from a mobile device faces similar network and device 
 
 Hussain, Wang and Toure {\*Hussain:2014ce} test the response time and throughput of a variety of real world web services over DSL, Wi-Fi and LAN internet connections. Results are simplified to descriptive statistics, average, minimum and maximum response time.
 
-Hussain, Wang and Toure discuss some tests with unusually long response times and speculate that it may be due to other web traffic. The specific time or other conditions of these particular tests are not elucidated. In fact, the methodology is not sufficiently detailed to provide all the parameters used in web service requests. Repeating their experiments will likely produce different results.
+Hussain, Wang and Toure {\*Hussain:2014ce} discuss some tests with unusually long response times and speculate that it may be due to other web traffic. The specific time or other conditions of these particular tests are not elucidated. In fact, the methodology is not sufficiently detailed to provide all the parameters used in web service requests. Repeating their experiments will likely produce different results.
 
 Yang, Cao and Evans {\*Yang:2013ff} demonstrate that WMS servers struggle with heavy loads of simultaneous requests. They recorded response times to 1, 5, 10. 30, 50 and 100 concurrent requests to six important WMS servers. They found that response times increased with the number of requests until many servers either blocked all incoming requests to handle the load or simply timed out. They make several recommendations, particularly regarding parallel requests and processing. Most helpfully to this study, a simple progress bar to indicate to a user that their request is still being processed.
 
@@ -625,9 +625,14 @@ The "Big" requests have a similar Q1 to Q3 (interquartile range) to "Small" ones
 
 ![A subset of test types where the request calls for either a small sized response or a larger one comparing their response times](Graphics/Charts/Response Data Size Category Boxplot.png)
 
-Spatial servers can filter results either by a function of the attributes of each feature, returning features from any location meeting certain criteria of their properties. Features may instead be filtered by a spatial function, returning features from a specific location of any attribute value. The response time frequency distributions for four test types which call upon the server to filter results are shown in the [box and whiskers chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph26). Feature by ID calls for a single feature with an exactly matching ID, an Attribute Filter test requests features with a text "location" property containing the word "Curtin". Spatial intersect requests provide an envelope (minX, min Y, max X and max Y) covering the Curtin University Bentley campus and request only features intersecting the envelope. The Distance Filter was only requested from GME servers, returning only the closest feature to a point within Curtin University's Bentley campus.
+Spatial servers can filter results either by a function of the attributes of each feature, returning features from any location meeting certain criteria of their properties. Features may instead be filtered by a spatial function, returning features from a specific location of any attribute value. The response time frequency distributions for four test types which call upon the server to filter results are shown in the [box and whiskers chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph26).
 
-The two attribute filters generally show a distribution of response times shorter than the two spatial filters. The confidence in this result is not great. Firstly, all have a significant number of high outliers denoting skewed distributions. The spatial filter medians are only 2 to 3 tenths of a second slower than the two attribute filters. The much smaller Distance Filter sample size makes it less worthy of consideration.
+* Feature by ID calls for a single feature with an exactly matching ID
+* Attribute Filter test requests features with a text "location" property containing the word "Curtin"
+* Spatial intersect requests provide an envelope (minX, min Y, max X and max Y) covering the Curtin University Bentley campus and request only features intersecting the envelope
+* Distance Filter was only requested from GME servers, returning only the closest feature to a point within Curtin University's Bentley campus, the operation involved sorting the entire table by distance and selecting the closest
+
+The two attribute filters generally show a distribution of response times shorter than the two spatial filters. This should be expected of indexed data subjected to an equality operation. The confidence in this result is not great. Firstly, all have a significant number of high outliers denoting skewed distributions. The spatial filter medians are only 2 to 3 tenths of a second slower than the two attribute filters. The much smaller Distance Filter sample size makes it less worthy of consideration.
 
 ![A subset of test types which call upon the server to limit results by a function comparing the distribution of their response times](Graphics/Charts/Server-side Operation Boxplot.png)
 
@@ -658,6 +663,8 @@ There was no distinct difference in response time between the two methods. The m
 
 ![HTTP Method (GET and POST) response time distributions in box plot](Graphics/Charts/HTTP Method Boxplot.png)
 
+An important disparity to note, Esri POST requests required Form-URL-encoded bodies (i.e. content type = application/x-www-form-urlencoded), whereas OGC POST requests were all XML in plain text (content type = text/xml).
+
 ### Test Results by Distance Device Travelled
 
 The test device deployed could determine its location through GPS. The Vector object considers the distance between the LocationTest prior to an EndpointTest and the LocationTest afterwards. By comparing each Vector's distance property to its response time, we produce a scatter plot. Then we categorise the points by the EndpointTest's success, on device failure or reference check failure. The live graph is available [here](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph12).
@@ -678,7 +685,7 @@ The scatterplot shows enough noise to produce R-squared values that are less tha
 
 ## Discussion
 
-As other studies showed, JSON responses are lighter and faster to download. They are thus better suited to mobile devices where data caps and slower mobile networks are real limitations. XML and GML suit situations where strict adherence to a schema is critical to process success.
+As other studies showed, JSON responses are lighter and faster to download. They are thus better suited to mobile devices where data caps and slower mobile networks are real limitations. XML and GML suit situations where strict adherence to schema is critical to process success.
 
 The frequency distributions of response times are heavily skewed towards shorter timeframes. Regardless of the dimension studied (for instance OGC versus Esri, XML versus JSON versus image data) the bulk of response times fell within the same order of magnitude. The fact that our charts need a logarithmic axis for response time to show the interquartile range indicates that Landgate's servers are suitable for the range of mobile situations investigated.
 
@@ -702,7 +709,9 @@ Overall LandgateAPITest is not an everyday testing suite. There are many suitabl
 
 Esri ArcGIS Servers can provision OGC and KML web services alongside their Esri Rest services. Landgate has enabled WMS services for their Public ArcGIS MapServers, but not WFS or KML. Doing so would improve interoperability for open source apps such as QGIS at little incremental cost. Older infrastructure could then be decommissioned without reduced service to the community.
 
-Esri JSON is not the same format as the open standard GeoJSON (note, this is not an OGC standard {Reed:2011kt}), the OGC JSON response format. The JSON output from Esri endpoints represents the same data as a response from an OGC endpoint but is laid out differently and must be parsed into an in-memory geometry object before the two can be directly compared. We applaud offering both formats for the sake of broader compatibility. However, should older OGC servers be decommissioned we would recommend that Landgate offer WFS services from ArcGIS servers so that at least open standard GML would be available. Landgate could also, adventurously, offer GeoJSON from ArcGIS for Server with third party extensions.
+Esri JSON is not the same format as the open standard GeoJSON served by GME and OGC endpoints (note, this is not an OGC standard {Reed:2011kt}). The JSON output from Esri endpoints represents the same data as a response from an OGC or GME endpoint but is laid out differently and must be parsed into an in-memory geometry object before the two can be directly compared. Replacing GeoJSON with Esri JSON requires all applications which depend on these endpoints to adapt to the new format.
+
+Should older OGC servers be decommissioned we would recommend that Landgate offer WFS services from ArcGIS servers so that at least open standard GML would be available. Landgate could also, adventurously, offer GeoJSON from ArcGIS for Server with third party extensions.
 
 ## Future Work
 
@@ -735,6 +744,8 @@ Firstly, we test services from an actual mobile device in real-world mobile usag
 Secondly, we examine more aspects of the interaction between client and server than merely average response time. Examining error responses and the conditions that lead to them gives valuable insight into mobile-specific situations likely to result in errors.
 
 Lastly, our examination of a single service provider, Landgate and WALIS's SLIP service, should produce practical and actionable recommendations to improve its suitability for mobile users.
+
+[ ] This is not the first work to study each of these aspects, as is evident in the related work section. It is the intersection of these that makes this work unique.
 
 ## References
 
