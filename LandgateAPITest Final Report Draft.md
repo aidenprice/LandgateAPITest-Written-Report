@@ -6,7 +6,7 @@ Landgate is Western Australia's premier spatial data provider, the lead organisa
 
 Spatial web service testing is a narrower field than the larger web service quality domain. Academic writing on the topic naturally aims to test under controlled conditions, to eliminate variables of network connectivity or device speed. This work eschews controls, preferring gathering data on the test environment at test time.
 
-Further, academia tends to focus on response time as the main metric of service performance, an objective measure. Few papers consider whether the data returned is correct. Mobile downloads can be interrupted by lost signal.
+Further, academia tends to focus on response time as the main metric of service performance, an objective measure. Few papers consider whether the data returned are correct. Mobile downloads can be interrupted by lost signal.
 
 The combination of environmental data with errors in responses grants a broader picture of Landgate's servers' suitability for mobile devices.
 
@@ -39,7 +39,7 @@ The iOS brains trust at Curtin University, Tristan Reed and Jeremy Siao Him Fa, 
             - [Open Geospatial Consortium Web Map Service](#open-geospatial-consortium-web-map-service)
             - [Open Geospatial Consortium Web Feature Service](#open-geospatial-consortium-web-feature-service)
             - [Google Maps Engine](#google-maps-engine)
-            - [Esri ArcGIS for Server and ArcGIS ReST API](#esri-arcgis-for-server-and-arcgis-rest-api)
+            - [Esri ArcGIS for Server and ArcGIS REST API](#esri-arcgis-for-server-and-arcgis-rest-api)
     - [Literature Review](#literature-review)
         - [Similar Work](#similar-work)
         - [Web Service Quality and Discovery](#web-service-quality-and-discovery)
@@ -93,7 +93,7 @@ The iOS brains trust at Curtin University, Tristan Reed and Jeremy Siao Him Fa, 
 
 ## Introduction
 
-Landgate is Western Australia's cadastre authority and foremost spatial data agency. They are the leading organisation in the Western Australian Land Information System (WALIS) and its open data portal; the Shared Location Information Platform (SLIP). Google Inc.'s closure of their Google Maps Engine (GME) service has forced Landgate and SLIP into a period of rapid change. Esri ArcGIS for Server infrastructure has replaced GME as Landgate's production spatial servers.
+Landgate is Western Australia's cadastre authority and foremost spatial data agency. It is the leading organisation in the Western Australian Land Information System (WALIS) and its open data portal; the Shared Location Information Platform (SLIP). Google Inc.'s closure of their Google Maps Engine (GME) service has forced Landgate and SLIP into a period of rapid change. Esri ArcGIS for Server infrastructure has replaced GME as Landgate's production spatial servers.
 
 In this work, we built a testing suite consisting of a mobile application for front-line testing and a web service for analysis, named LandgateAPITest. We applied the suite to Landgate's spatial server infrastructure before and after the pivot away from GME.
 
@@ -113,11 +113,11 @@ The development of powerful and flexible web services was the foundation that al
 
 Service Oriented Architectures (SOA) is a standard governing software design that aims to compose a software product from loosely coupled, and hence replaceable, components {Endo:2010wf}. Designers commonly employ this pattern as a method for distributed computing {Palacios:2011eo}. A set of descriptive XML documents, such as Web Services Description Language (WSDL), enable service builders to publish to service registries and then consumers to find and bind to services suited to their needs. Communication is carried out with XML-based messages based on the Simple Object Access Protocol (SOAP), another highly capable standard.
 
-Representational State Transfer (ReST) services are easier to develop and consume {Castillo:2011ve}. The adoption of ReSTful services has led to an explosion of data available on the web, particularly with mobile applications in mind as end consumers.
+Representational State Transfer (REST) services are easier to develop and consume {Castillo:2011ve}. The adoption of RESTful services has led to an explosion of data available on the web, particularly with mobile applications in mind as end consumers.
 
 ### Spatial Web Services
 
-Spatial data is a computer representation of any information with a location dimension {Huisman:2009uj}. It digitally models the real world. Web services that deliver location data over a network or perform geospatial functions are spatial web services.
+Spatial data are a computer representation of any information with a location dimension {Huisman:2009uj}. It digitally models the real world. Web services that deliver location data over a network or perform geospatial functions are spatial web services.
 
 #### Open Geospatial Consortium Web Map Service
 
@@ -139,7 +139,7 @@ From the 22nd of November 2014, Google redirected GME web site bound traffic to 
 
 In a commercial decision, Google Inc. announced the deprecation of the GME API on the 29th of January 2015 {Anonymous:2015tg}. Google shuttered the service on the 29th of January 2016.
 
-#### Esri ArcGIS for Server and ArcGIS ReST API
+#### Esri ArcGIS for Server and ArcGIS REST API
 
 ArcGIS for Server is Esri's enterprise level product for intra/Internet GIS and provisioning web services {Anonymous:BHtz-GD9}.
 
@@ -165,7 +165,7 @@ In January 2015, Google announced the deprecation of Google Maps Engine {SLIPFut
 
 Web services are widely studied. However, the scope of applications for web services is broad. There are, therefore, few studies that examine the intersection of geographic web service performance, mobile device context and a single, state-level spatial data infrastructure. Following are a cross-section of papers with aims partially aligned to those of this work.
 
-Hamas, Saad and Abed {\*Hamad:2010tr} compare the performance of SOAP and ReST APIs on mobile devices. The measured criteria are response time and transmission size which predictably favour ReST interfaces.
+Hamas, Saad and Abed {\*Hamad:2010tr} compare the performance of SOAP and REST APIs on mobile devices. The measured criteria are response time and transmission size which predictably favour REST interfaces.
 
 Their experiment design emulates a mobile device on a desktop computer; further, they restrict the simulated mobile network speed. These are useful controls in an experiment designed with a very clear aim of finding which service is faster. Real world complications such as heavy network traffic or poor signal are not addressed as a factor in the outcome. As an example, SOAP's WS-ReliableMessaging protocol may reduce overall transfer time in areas with weak signal by minimising the number of failed message attempts.
 
@@ -177,7 +177,7 @@ Davis, Kimo and Duarte-Figueiredo {\*Davis:2009hf} focus on OGC Web Map Service 
 
 Their experiment implemented the proposed service and interacted with it from a custom application deployed on a Nokia N95. Given the focus on minimising data sent and received from the device, the results vindicated their hypothesis. Unfortunately, the team declined to study response time results due to "severe fluctuations" that they attributed to an overcrowded network. They conclude, by extension not experiment, that smaller volumes of transmitted data would result in faster map interaction overall.
 
-Fowler, Hameseder and Peterson {\*Fowler:2012bn} built a custom iPhone application to test the performance of SOAP and ReST versions of a public transportation web service in Hamburg over a typical working day. They measured response time, data serialisation/deserialisation time and response size on the device itself and returned the results to their own web service. Simple and detailed messages of significantly different response size control whether response time is dependent upon message size. The results, as is common, are given as mean and standard deviation, descriptive statistics without discussion of error responses.
+Fowler, Hameseder and Peterson {\*Fowler:2012bn} built a custom iPhone application to test the performance of SOAP and REST versions of a public transportation web service in Hamburg over a typical working day. They measured response time, data serialisation/deserialisation time and response size on the device itself and returned the results to their own web service. Simple and detailed messages of significantly different response size control whether response time is dependent upon message size. The results, as is common, are given as mean and standard deviation, descriptive statistics without discussion of error responses.
 
 Fowler, Hameseder and Peterson's {\*Fowler:2012bn} methodology called for the mobile user to remain "fixed" while requesting and receiving the response, which we interpret as stationary. This is contrary behaviour for mobile device use. There are countless situations in which a mobile user would be active and moving while concurrently requesting data from a web service.
 
@@ -193,13 +193,13 @@ Recent work by Cannata, Antonovic and Molinari {\*Cannata:2014dp} load tested th
 
 Tantalisingly, Cannata, Antonovic and Molinari's {\*Cannata:2014dp} paper mentions that Locust is capable of reporting testing tasks as failed even if the server returns a 200 "Success" response code with an exception in the response data. Unfortunately, they do not go on to explain this capability, nor does their testing uncover any exceptions which Locust could have revealed to them.
 
-The emergence of ReSTful web services engendered many studies comparing performance to entrenched SOAP services. Few experimental designs take advantage of SOAP's inherent advantages, i.e. a message layer and orchestrated distributed computing, such a design would allow SOAP APIs to be compared more favourably with ReST APIs.
+The emergence of RESTful web services engendered many studies comparing performance to entrenched SOAP services. Few experimental designs take advantage of SOAP's inherent advantages, i.e. a message layer and orchestrated distributed computing, such a design would allow SOAP APIs to be compared more favourably with REST APIs.
 
-Castillo et al. {\*Castillo:2011ve} compare ReST and SOAP service implementations as the intermediary messaging layer for a genetic algorithm and a fitness evaluator. They also present one of the few papers to elaborate the advantages of the older SOAP API standard against a ReST API, but their experiment does not build on this. Their proof of concept methodology introduces a useful control, requests via SOAP and ReST send strings of either 100 or 1,000 characters. The proportional time difference between large and small requests controls whether the response time depends upon the amount of data sent and received, illuminating how much response time overhead is due to the API employed.
+Castillo et al. {\*Castillo:2011ve} compare REST and SOAP service implementations as the intermediary messaging layer for a genetic algorithm and a fitness evaluator. They also present one of the few papers to elaborate the advantages of the older SOAP API standard against a REST API, but their experiment does not build on this. Their proof of concept methodology introduces a useful control, requests via SOAP and REST send strings of either 100 or 1,000 characters. The proportional time difference between large and small requests controls whether the response time depends upon the amount of data sent and received, illuminating how much response time overhead is due to the API employed.
 
 Like other researchers, Castillo et al. relate the results of their performance tests as average response time with a margin of error. They discuss accuracy, but this concerns their genetic algorithm's accuracy, not the error rate of the web service API.
 
-Kanagasundaram et al. {\*Kanagasundaram:2012wv} expose a student database as a resource and perform Create, Read, Update Delete operations over SOAP and ReST web services. The comparison of response time between different operations leads the team to propose a hybrid SOAP and ReST web service that incorporates the security and reliability aspects of SOAP with ReST APIs' ease of development.
+Kanagasundaram et al. {\*Kanagasundaram:2012wv} expose a student database as a resource and perform Create, Read, Update Delete operations over SOAP and REST web services. The comparison of response time between different operations leads the team to propose a hybrid SOAP and REST web service that incorporates the security and reliability aspects of SOAP with REST APIs' ease of development.
 
 The experiment design places the client and server processes on separate cores of a single processor. This works well as an experimental control but comes at the expense of measuring real world performance. Furthermore, the results obtained by Kanagasundaram et al. {\*Kanagasundaram:2012wv} are averaged response times from experiments repeated until they achieved a 95% confidence level. But not all are presented in the paper, only a select subset. Presumably messages resulting in errors were excluded from the averaged results.
 
@@ -254,7 +254,7 @@ We propose to track these factors through a series of frequent but irregularly t
 
 ### Acceptance
 
-Park and Ohm {\*Park:2014jp} used survey data to construct a technology acceptance model to investigate users' acceptance of mobile mapping applications. They found that acceptance and hence intention to use a mobile mapping service depended to a large degree upon two factors; perceived locational accuracy and processing speed. Park and Ohm defined perceived locational accuracy as how well users envision their location in the map, essentially the degree to which mapped features correspond with a user's mental model of the world and where they are in it.
+Park and Ohm {\*Park:2014jp} surveyed mobile map users to construct a technology acceptance model to investigate users' acceptance of mobile mapping applications. They found that acceptance and hence intention to use a mobile mapping service depended to a large degree upon two factors; perceived locational accuracy and processing speed. Park and Ohm defined perceived locational accuracy as how well users envision their location in the map, essentially the degree to which mapped features correspond with a user's mental model of the world and where they are in it.
 
 ## Materials and Methods
 
@@ -286,9 +286,9 @@ Otherwise, the web app proceeds to check the EndpointTest's response data agains
 
 If the response received by the iOS app is identical to the reference response, then we consider the entire test successful. The iOS application may assume a test is successful given it receives a 200 response code from the Landgate server. Often though OGC servers will respond with a 200 code but send exception text in place of the response data. Tests that fail at this stage are referred to as "Reference Check Failures" and have an appropriate flag set on the record on the web application database.
 
-During execution of the /Analyse function, the web app records the percentage of reference check tests successful for each test type. Should a test type return less than 5% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely. Such tests are flagged False for their "ReferenceCheckValid" property to allow them to be filtered out.
+During execution of the `/Analyse` function, the web app records the percentage of reference check tests successful for each test type. Should a test type return less than 5% successful reference checks we assume that there is a process error or an incorrect reference object and disregard the test type entirely. Such tests are flagged False for their "ReferenceCheckValid" property to allow them to be filtered out.
 
-The resultant Vector objects are the basis for all analysis and graphical representation. The web application produces pie charts of the various test categories and graphs of response time or distance travelled by category. Each graph is available from the /graph endpoint and responds with the latest information in the database.
+The resultant Vector objects are the basis for all analysis and graphical representation. The web application produces pie charts of the various test categories and graphs of response time or distance travelled by category. Each graph is available from the `/graph` endpoint and responds with the latest information in the database.
 
 ### Data Model and Structures
 
@@ -306,7 +306,7 @@ The TestCampaign class in the web application has no properties other than its n
 
 #### TestMaster
 
-A TestMaster encapsulates all tests undertaken in a single user-initiated test. The LocationTests, NetworkTests, PingTests and EndpointTests performed from a given user test have the same TestMaster as their parent object. This allows all the various subtests to be queried with their fellows in the /Analyse function.
+A TestMaster encapsulates all tests undertaken in a single user-initiated test. The LocationTests, NetworkTests, PingTests and EndpointTests performed from a given user test have the same TestMaster as their parent object. This allows all the various subtests to be queried with their fellows in the `/Analyse` function.
 
 TestMasters also group subtests according to the user's perception of the manner in which the tests were done. Thus, allowing the user to review a TestMaster and its children as a single unit of test work in the iOS app interface.
 
@@ -352,15 +352,15 @@ The result object stored in the database for a PingTest is a PingResult.
 
 #### ReferenceObject
 
-ReferenceObjects hold the correct response data from the Landgate servers for each request. Server, returnType and other test template properties identify ReferenceObjects from one another and allow comparison to a TestEndpointResult. The reference property holds the response data in text, either XML, JSON or images converted to base64 text.
+ReferenceObjects hold the correct response data from the Landgate server for each request. Server, returnType and other test template properties identify ReferenceObjects from one another and allow comparison to a TestEndpointResult. The reference property holds the response data in text, either XML, JSON or images converted to base64 text.
 
 These exemplar responses were requested and stored on the 5th of April, 2016. This postdates GME's replacement. References for GME requests were stored in April 2016 from the first test responses in December 2015. Dynamic parts of responses were excluded from the final ReferenceObject, for example, any date or time value that changes between requests.
 
-The administrator uploads text files containing ReferenceObject references to the web application's code repository. A request to the /StoreReferences endpoint enqueues a task to add new and replace old ReferenceObjects with the text file contents.
+The administrator uploads text files containing ReferenceObject references to the web application's code repository. A request to the `/StoreReferences` endpoint enqueues a task to add new and replace old ReferenceObjects with the text file contents.
 
 #### Vector
 
-The web application's /Analyse function parses each TestEndpoint object and attempts to generate a new Vector object. Vectors encapsulate the LocationTest, NetworkTest and PingTest immediately preceding the TestEndpoint along with those immediately following it, retaining pointers to these objects. The function determines the change in Location, Network conditions and Ping response time and takes them as a proxy for the mobile device's changing connectivity environment through the EndpointTest.
+The web application's `/Analyse` function parses each TestEndpoint object and attempts to generate a new Vector object. Vectors encapsulate the LocationTest, NetworkTest and PingTest immediately preceding the TestEndpoint along with those immediately following it, retaining pointers to these objects. The function determines the change in Location, Network conditions and Ping response time and takes them as a proxy for the mobile device's changing connectivity environment through the EndpointTest.
 
 The logic to retrieve the six related subtests from the datastore is as follows;
 
@@ -378,13 +378,13 @@ The generation of the mobile network is here taken as a proxy for connection spe
 
 The change in response time for a HEAD request to google.com.au before and after an EndpointTest is another proxy for change in network connection speed. Subtracting the following test's response time from the preceding test's response time gives a positive pingChange value for improving network speed and a negative one for degrading speed.
 
-The /Analyse function also performs the reference check. It assigns the Vector's referenceCheckSuccess property a True value if the TestEndpoint's response data contains the ReferenceObject's reference text or False otherwise.
+The `/Analyse` function also performs the reference check. It assigns the Vector's referenceCheckSuccess property a True value if the TestEndpoint's response data contains the ReferenceObject's reference text or False otherwise.
 
 Vector objects are the basis for all further analysis in this study. All graphs in this work show the Vector rather than the original TestEndpoint or its subtests.
 
 #### CampaignStats
 
-The CampaignStats class stores counts of TestEndpoints and other subtests, enabling calculation of descriptive statistics for a particular TestCampaign. CampaignStats updates when the iOS application uploads a new TestMaster to the database, adding new counts onto existing values. Also, when the /Analyse function creates a new Vector object it updates the CampaignStats properties for reference check success.
+The CampaignStats class stores counts of TestEndpoints and other subtests, enabling calculation of descriptive statistics for a particular TestCampaign. CampaignStats updates when the iOS application uploads a new TestMaster to the database, adding new counts onto existing values. Also, when the `/Analyse` function creates a new Vector object it updates the CampaignStats properties for reference check success.
 
 The overwhelming majority of CampaignStats properties concern the percentage of successful reference object checks. 0% reference check success rates will exclude the entire test type from further consideration. See the Results section.
 
@@ -454,9 +454,9 @@ The web application should analyse TestEndpoint results and not just represent t
 
 #### Python Application Architecture
 
-Google App Engine (GAE) Python applications derive their basic functionality from the webapp2 open source library {Welcometowebapp:2011vk}. Developers define web app endpoints and map them to Python classes, so landgateapitest.appspot.com/database maps to the Database class in Python code. Then the HTTP method maps to functions within that class. A POST request to the /database endpoint fires the Database class's post() function adding the request body to the database. A GET request calls the get() function and downloads a TestMaster record to the requester.
+Google App Engine (GAE) Python applications derive their basic functionality from the webapp2 open source library {Welcometowebapp:2011vk}. Developers define web app endpoints and map them to Python classes, so landgateapitest.appspot.com/database maps to the Database class in Python code. Then the HTTP method maps to functions within that class. A POST request to the `/database` endpoint fires the Database class's post() function adding the request body to the database. A GET request calls the get() function and downloads a TestMaster record to the requester.
 
-Python functions may call for a task to be enqueued. The GAE system will fire the specified request at a later time, ideally when processor load is minimal. A successful POST request to the /database endpoint queues an /Analyse endpoint GET request as one of its last tasks. Similar tasks which are anticipated to consume more than trivial resources are deferred as queued tasks in LandgateAPITest, such as importing reference text files to the datastore or updating the model schema.
+Python functions may call for a task to be enqueued. The GAE system will fire the specified request at a later time, ideally when processor load is minimal. A successful POST request to the `/database` endpoint queues an `/Analyse` endpoint GET request as one of its last tasks. Similar tasks which are anticipated to consume more than trivial resources are deferred as queued tasks in LandgateAPITest, such as importing reference text files to the datastore or updating the model schema.
 
 Google App Engine applications may use any of Google Inc.'s several cloud data storage solutions. LandgateAPITest uses Google Cloud Datastore, a NoSQL database quite distinct from relational databases in that it does not store all records as atomic rows in tables, rather as schema-less objects in distributed documents.
 
@@ -480,7 +480,7 @@ Besides code incorporated directly into the product applications, several other 
 
 #### Paw
 
-Keeping track of 46 ReST requests, each with minor variations from its neighbours, required more than a handwritten list. Paw (version 2.3.3) {Anonymous:tn} is a Mac application designed for testing ReST requests. It simplifies the process of composing the request and its query components. Its most helpful feature is its Swift NSURLSession code output, suitable for directly pasting into an iOS application repository. The code in LandgateAPITest's EndpointTester class where it fires a request to the Landgate server is derived from Paw's example code.
+Keeping track of 46 REST requests, each with minor variations from its neighbours, required more than a handwritten list. Paw (version 2.3.3) {Anonymous:tn} is a Mac application designed for testing REST requests. It simplifies the process of composing the request and its query components. Its most helpful feature is its Swift NSURLSession code output, suitable for directly pasting into an iOS application repository. The code in LandgateAPITest's EndpointTester class where it fires a request to the Landgate server is derived from Paw's example code.
 
 #### Atom
 
@@ -538,7 +538,7 @@ Of the 16,144 TestEndpoints 15,670 were successful on device (97.06%). These wer
 
 ![TestEndpoints Successful and Failed On Device](Graphics/Charts/On Device Failures Pie Chart.png)
 
-LandgateAPITest's /Analyse function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them match, setting the resultant Vector's referenceCheckSuccess flag to True.
+LandgateAPITest's `/Analyse` function compared each TestEndpoint's response data to the stored reference data and determined that 13,220 of them match, setting the resultant Vector's referenceCheckSuccess flag to True.
 
 Closer examination of referenceCheckSuccess by test type showed 9 test types that consistently failed their reference checks (less than 5% passed). All such Vectors had their ReferenceCheckValid flag set to False to exclude them en masse from further analysis on the assumption that there was a systematic issue with their reference data.
 
@@ -612,7 +612,7 @@ Of the remaining tests only 79 (0.6%) failed a reference check. And 2.9% of the 
 
 ### Test Results by Response Time
 
-The LandgateAPITest web application produces charts of current data on request to the /graph endpoint. All charts in this text are saved versions of these as they stood on the 7th of May, 2016. Links are provided in the text to the endpoint for each chart displayed so that the reader may receive the latest information.
+The LandgateAPITest web application produces charts of current data on request to the `/graph` endpoint. All charts in this text are saved versions of these as they stood on the 7th of May, 2016. Links are provided in the text to the endpoint for each chart displayed so that the reader may receive the latest information.
 
 The various requests are subcategorised by their test name, a general description denoting near identical requests across the three server types. A FeatureByID request returns the same data from all three servers, though it may not be in the same format (GML, Esri JSON, GeoJSON for example). [This pie chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph3) was modified to exclude some of the smallest percentage test types to aid reading clarity.
 ![Percentage of Vectors by test type](Graphics/Charts/Test Name Pie Chart.png)
@@ -651,11 +651,11 @@ The Esri and OGC portion of the test campaign in March 2016 was more vigorous th
 
 The [box and whiskers chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph22) appears to show a clear performance win for the Esri servers over the OGC servers, having a much lower median and interquartile range. There is a significant consideration here that Esri servers do not supply heavier payload XML/GML responses where OGC ones do. As the response data type and response size charts show, on average larger responses have slower response times.
 
-The GME tests fill a broader interquartile range and have fewer outliers. A larger sample set of these requests could have increased our confidence in this result.
+The GME tests fill a broader interquartile range and have fewer outliers. A larger sample set of these requests could have increased confidence in this result.
 
 ![Response time distribution by server type](Graphics/Charts/Server Type Boxplot.png)
 
-[This pie chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph2) shows tests were almost evenly split between the two HTTP methods favoured by spatial servers; GET and POST. The greater proportion of GET requests are partly due to the lack of POST requests created for the GME server and the map tile requests mostly being GET's with key value coding or straight restful endpoints.
+[This pie chart](https://landgateapitest.appspot.com/graphs?campaignName=production_campaign&graphName=graph2) shows tests were almost evenly split between the two HTTP methods favoured by spatial servers; GET and POST. The greater proportion of GET requests are partly due to the lack of POST requests created for the GME server and the map tile requests mostly being GET's with key value coding or straight RESTful endpoints.
 
 ![Percentage of Vectors by HTTP Method (GET and POST)](Graphics/Charts/HTTP Method Pie Chart.png)
 
@@ -685,15 +685,17 @@ The scatterplot shows enough noise to produce R-squared values that are less tha
 
 ## Discussion
 
+Each test type asked the same question of the three server types. The AttributeFilter test should have the same response from GME, OGC and Esri servers as the fundamental query is the same. Yet, each server type responds with differently formatted data, necessitating different referenceObjects for each. The lack of a common format makes developing applications to take advantage of services more complex. Moreso, the change from GeoJSON in OGC and GME endpoints to the incompatible Esri JSON requires external developers to rework their apps just to maintain existing functionality.
+
 As other studies showed, JSON responses are lighter and faster to download. They are thus better suited to mobile devices where data caps and slower mobile networks are real limitations. XML and GML suit situations where strict adherence to schema is critical to process success.
 
-The frequency distributions of response times are heavily skewed towards shorter timeframes. Regardless of the dimension studied (for instance OGC versus Esri, XML versus JSON versus image data) the bulk of response times fell within the same order of magnitude. The fact that our charts need a logarithmic axis for response time to show the interquartile range indicates that Landgate's servers are suitable for the range of mobile situations investigated.
+The frequency distributions of response times are heavily skewed towards shorter timeframes. Regardless of the dimension studied (for instance OGC versus Esri, XML versus JSON versus image data) the bulk of response times fell within the same order of magnitude. The fact that the result charts need a logarithmic axis for response time to show the interquartile range indicates that Landgate's servers are suitable for the range of mobile situations investigated.
 
 LandgateAPITest discovered only 79 reference check failures. This is, admittedly, a small sample set from which to draw conclusions on whether spatial servers return incorrect or incomplete data in specific circumstances. A few orders of magnitude more such errors could substantiate conclusions. Unfortunately, this would require more time and data download limit than this study has resources to allow.
 
 The finding that failures are more frequent with increasing distance travelled is not an issue with Landgate's servers. Longer distances travelled during tests are an outcome of highway speed travel where the device is more likely to encounter signal interruptions or inferior signal strength.
 
-According to this work, incorrect data is delivered only 0.6% of the time. If we extend from this finding, we can assume that there are few situations where this would be a critical hindrance for a mobile device.
+According to this work, incorrect data are delivered only 0.6% of the time. If we extend from this finding, we can assume that there are few situations where this would be a critical hindrance for a mobile device.
 
 The OASIS web service quality standard {Kim:2012wm} calls for calculation of Availability, Accessibility and Successability (among others). These are predicated on the assumption that the testing device is guaranteed access to the internet to perform its tests. In other words, the testing device is assumed to be infallible while the tested service is not. This is entirely possible to achieve in controlled conditions, the testing machine simply does not send a request when it is not certain of success, or ignores tests where certain preconditions of controlled experiment are not met. The output then is a percentage of tests where the tester was able to contact the service, the difference from 100% being entirely the fault of the service.
 
@@ -707,7 +709,7 @@ Overall LandgateAPITest is not an everyday testing suite. There are many suitabl
 
 ## Recommendations
 
-Esri ArcGIS Servers can provision OGC and KML web services alongside their Esri Rest services. Landgate has enabled WMS services for their Public ArcGIS MapServers, but not WFS or KML. Doing so would improve interoperability for open source apps such as QGIS at little incremental cost. Older infrastructure could then be decommissioned without reduced service to the community.
+Esri ArcGIS Servers can provision OGC and KML web services alongside their Esri REST services. Landgate has enabled WMS services for their Public ArcGIS MapServers, but not WFS or KML. Doing so would improve interoperability for open source apps such as QGIS at little incremental cost. Older infrastructure could then be decommissioned without reduced service to the community.
 
 Esri JSON is not the same format as the open standard GeoJSON served by GME and OGC endpoints (note, this is not an OGC standard {Reed:2011kt}). The JSON output from Esri endpoints represents the same data as a response from an OGC or GME endpoint but is laid out differently and must be parsed into an in-memory geometry object before the two can be directly compared. Replacing GeoJSON with Esri JSON requires all applications which depend on these endpoints to adapt to the new format.
 
@@ -733,7 +735,7 @@ Success in collaborating with Western Australia's Landgate authority could be re
 
 ## Conclusions
 
-Our study's contexts are in a state of nearly constant change. Web services have lost complexity due to the dominance of ReST APIs, but the number of services available has grown exponentially. Mobile devices have more processing power, larger batteries and faster connections to the internet. There are whole new categories of mobile devices, such as smartwatches, that change the mobile device landscape. Web service evaluation studies must be continually revisited just to keep pace with change.
+This study's contexts are in a state of nearly constant change. Web services have lost complexity due to the dominance of REST APIs, but the number of services available has grown exponentially. Mobile devices have more processing power, larger batteries and faster connections to the internet. There are whole new categories of mobile devices, such as smartwatches, that change the mobile device landscape. Web service evaluation studies must be continually revisited just to keep pace with change.
 
 Similarly, service providers must prepare for a changing landscape that may not even be partially realised yet. Landgate has evolved and changed direction since early in the decade to build the SLIP Future program. They must continue to adopt new technologies and processes so as to remain relevant to their customers.
 
@@ -743,9 +745,11 @@ Firstly, we test services from an actual mobile device in real-world mobile usag
 
 Secondly, we examine more aspects of the interaction between client and server than merely average response time. Examining error responses and the conditions that lead to them gives valuable insight into mobile-specific situations likely to result in errors.
 
-Lastly, our examination of a single service provider, Landgate and WALIS's SLIP service, should produce practical and actionable recommendations to improve its suitability for mobile users.
+Lastly, the examination of a single service provider, Landgate and WALIS's SLIP service, should produce practical and actionable recommendations to improve its suitability for mobile users.
 
-[ ] This is not the first work to study each of these aspects, as is evident in the related work section. It is the intersection of these that makes this work unique.
+[ ] This is not the first work to study each of these aspects, as is evident in the related work section. It is the intersection of these three aspects that grants LandgateAPITest the opportunity to produce actionable recommendations for Landgate.
+
+[ ] LandgateAPITest is a real-world testing suite, with real-world limitations. This does not diminish its utility to service providers.
 
 ## References
 
