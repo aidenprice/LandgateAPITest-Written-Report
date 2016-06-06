@@ -6,13 +6,15 @@ Landgate is Western Australia's premier spatial data provider, the lead organisa
 
 Academic writing on spatial web service testing naturally aims to test under controlled conditions, to eliminate variables of network connectivity or device speed. Controls tend to poorly reflect real world mobile device usage. This research eschews controls for the greater part, preferring to gather data on the test environment at test time.
 
-Further, academia tends to focus on response time as the main metric of service performance, an objective measure. Few papers consider whether the data returned are correct. Mobile downloads can be interrupted by lost signal, resulting in an incomplete response. Unreliable or incorrect response data decreases a user's desire to reuse and recommend a mapping application. Were such a situation to occur repeatedly fewer application developers would employ SLIP's services in their mobile applications and fewer end users would access Western Australia's spatial information.
+Further, academia tends to focus on response time as the main metric of service performance, an objective measure. Few papers consider whether the data returned are correct. Mobile downloads can be interrupted by lost signal, resulting in an incomplete response. Unreliable or inconsistent response data decreases a user's desire to reuse and recommend a mapping application. Were such a situation to occur repeatedly fewer application developers would employ SLIP's services in their mobile applications and fewer end users would access Western Australia's spatial information.
 
 LandgateAPITest is a testing suite composed of an iOS application for frontline mobile device testing and a Google App Engine web application for storage, analysis and presentation of charted results. The suite combines response time measurements with errors in responses to paint a broader picture of Landgate's servers' suitability for mobile devices.
 
-Deploying LandgateAPITest against SLIP's GME, OGC and Esri spatial web service endpoints confirms the findings of earlier studies and finds that the mobile network is the biggest factor in performance and correctness of responses.
+Deploying LandgateAPITest against SLIP's GME, OGC and Esri spatial web service endpoints confirms the findings of earlier studies and finds that the mobile network is the biggest factor in performance and quality of responses.
 
-The end result are metrics suitable for Landgate and WALIS to measure progress towards SLIP's goal of enabling access to location information.
+The end result is a set of mobile suitability metrics. The frequency distribution of response time across a number of web service request types demonstrates performance. The percentage of requests with inconsistent response data compared to a reference measures quality.
+
+Providing these metrics to the SLIP team will aid Landgate and WALIS in objectively measuring progress towards their goal of enabling access to location information.
 
 ## Acknowledgements
 
@@ -97,7 +99,9 @@ Landgate is Western Australia's cadastre authority and foremost spatial data age
 
 In this work, a testing suite was built consisting of a mobile application for front-line testing and a web service for analysis, named LandgateAPITest. The suite was applied to Landgate's spatial server infrastructure before and after the pivot away from GME.
 
-The use of a mobile device as a test platform and its deployment in real world conditions is a departure from much of the academic literature on spatial web service testing. Through this work, it is hoped to uncover practical and actionable recommendations which can aid Landgate in improving their service to the community.
+The use of a mobile device as a test platform and its deployment in real world conditions is a departure from much of the academic literature on spatial web service testing. LandgateAPITest eschews experimental controls as found in related works, such as mobile devices simulated on desktop computer hardware. Further, much academic writing reports results as a few descriptive statistics of web service request response time. LandgateAPITest aims to inspect response data for returns inconsistent with reference data sets.
+
+The testing suite provides a set of measurements as its outputs, frequency distributions of response time and a percentage of responses with inconsistent data, termed mobile suitability metrics. These are aligned with a technology acceptance model related in other works such that improvement in these scores should occasion greater user acceptance of SLIP's spatial web services. Through this work, it is hoped to uncover practical and actionable recommendations which can aid Landgate in improving their service to the community.
 
 This study exists in the context of real world limitations, constrained budget, mobile devices and time. The total funds available amounted to zero Australian Dollars. Only a single mobile device could be effectively deployed in the time frame. The pre-set mobile data usage allowance capped the amount of testing possible within a given month before excess usage charges began eroding the previously described funding.
 
@@ -254,11 +258,11 @@ This research proposes to track these factors through a series of frequent but i
 
 Park and Ohm {\*Park:2014jp} surveyed mobile map users to construct a technology acceptance model to investigate users' acceptance of mobile mapping applications. The research question sought to understand what factors influenced user's intention to use such mapping applications. They found two main determinants of users' attitude towards a mobile mapping service and thence their intention to make use of the service. Those being; perceived locational accuracy and service and display quality.
 
-Park and Ohm {\*Park:2014jp} defined perceived locational accuracy as how well users envision their location in the map, essentially the degree to which mapped features correspond with a user's mental model of the world and where they are in it. This study considers that requests for map data that fail due to errors or return incorrect or incomplete data are a direct hindrance to user acceptance. A mobile map application that featured missing map tiles or incomplete geographic feature data prevents a user from determining their location in the map with respect to their real world situation.
+Park and Ohm {\*Park:2014jp} defined perceived locational accuracy as how well users envision their location in the map, essentially the degree to which mapped features correspond with a user's mental model of the world and where they are in it. This study considers that requests for map data that fail due to errors or return mismatching or incomplete data are a direct hindrance to user acceptance. A mobile map application that featured missing map tiles or incomplete geographic feature data prevents a user from determining their location in the map with respect to their real world situation.
 
 Park and Ohm's {\*Park:2014jp} definition of service and display quality is an extension of earlier general definitions of service quality; "the degree of general performance of an information system and related services." As discussed above, quality as measurable in the context of this work includes response time and likelihood of request success.
 
-A LandgateAPITest suite campaign, explained in the following section, produces metrics aligned with both factors as its outputs.
+A LandgateAPITest suite campaign, explained in the following section, produces mobile suitability metrics aligned with both factors as its outputs.
 
 ## Materials and Methods
 
@@ -561,8 +565,6 @@ Notably, the GetCapabilities tests rarely passed reference checks. Likely causes
 |-----------------------------------------------------|--------------------:|
 | ESRI - BusStops - AttributeFilter - GET - JSON      | 98.79%             |
 | ESRI - BusStops - AttributeFilter - POST - JSON     | 98.20%             |
-| ESRI - BusStops - Big - GET - JSON                  | 100%            |
-| ESRI - BusStops - Big - POST - JSON                 | 100%            |
 | ESRI - BusStops - FeatureByID - GET - JSON          | 99.00%             |
 | ESRI - BusStops - FeatureByID - POST - JSON         | 98.76%             |
 | ESRI - BusStops - GetCapabilities - GET - JSON      | 97.64%             |
@@ -693,9 +695,9 @@ The orange "failed on device" category exhibit three distinct horizontal bands o
 
 The middle band of "on device failures" are those with similar response times to many successful requests. These are the tests cancelled before completion. They had a successful link to the server but the test was interrupted by an incoming phone call or the app was otherwise switched to the background. In line with the application's design goals these tests were aborted, their response time recorded and marked as on device failures.
 
-The uppermost band forms a clear line around 30 seconds in response time. This is the standard time-out length for a web service request on an iOS device. Requests without a response are aborted by the system. Interestingly, the majority of these failures occurred when the device travelled more than 100m.
+The uppermost band forms a clear line around 30 seconds in response time. This is the standard time-out length for a web service request on an iOS device. Requests without a response are aborted by the system. Interestingly, the majority of these failures occurred when the device travelled more than 100m. In such cases, the device is more likely to change mobile network cell tower or enter areas of weaker signal, preventing completion of the exchange.
 
-The tests which failed their reference check appear to follow a similar trend to the successful tests. This is due to the fact that their web service requests were able to complete successfully from the device's point of view.
+Tests with failed reference checks returned data inconsistent with the reference files in the web application's archive. Similarly, the majority occurred when the device travelled more than approximately 50m in the test period. This indicates changing mobile network environment interrupts reception of response data.
 
 The scatterplot shows enough noise to produce R-squared values that are less than ideal. Each value of distance produces a range of response times due to several factors, most notably the response payload size varies by request type. Distance values are not perfect either as consideration must be given to the GPS receiver's desired and possible accuracy.
 
@@ -705,6 +707,8 @@ The results of deploying the LandgateAPITest suite to test SLIP and Landgate's s
 
 The frequency distributions of response times are skewed towards shorter timeframes. Regardless of the dimension studied, for instance OGC versus Esri, XML versus JSON versus image data, the bulk of response times fell within the same order of magnitude and less than a second. The fact that the result charts need a logarithmic axis for response time to show the interquartile range indicates that Landgate's servers are suitable for the range of mobile situations investigated.
 
+Measurement of response time is useful for determining Park and Ohm's {\*Park:2014jp} service and display quality factor. The frequency distribution of response times is an objective measurement which Landgate can use to show improvement of their service delivery.
+
 As other studies showed, JSON responses are lighter and faster to download. They are thus better suited to mobile devices where data caps and slower mobile networks are real limitations. XML and GML suit situations where strict adherence to schema is critical to process success.
 
 Each test type asked the same question of the three server types. The AttributeFilter test should have the same response from GME, OGC and Esri servers as the fundamental query is the same. Yet, each server type responds with differently formatted data, necessitating different referenceObjects for each. The lack of a common format makes developing applications to take advantage of services more complex. More so, the change from GeoJSON in OGC and GME endpoints to the incompatible Esri JSON requires external developers to rework their apps just to maintain existing functionality.
@@ -713,9 +717,13 @@ Esri's purely RESTful implementation denotes errors and exceptions in a manner m
 
 The finding that failures are more frequent with increasing distance travelled is not an issue with Landgate's servers. Longer distances travelled during tests are an outcome of highway speed travel where the device is more likely to encounter signal interruptions or inferior signal strength.
 
-LandgateAPITest discovered only 79 reference check failures. This is, admittedly, a small sample set from which to draw conclusions on whether spatial servers return incorrect or incomplete data in specific circumstances. A few orders of magnitude more such errors could substantiate conclusions. Unfortunately, this would require more time and data download limit than this study has resources to allow.
+LandgateAPITest discovered only 79 reference check failures. This is, admittedly, a small sample set from which to draw conclusions on whether spatial servers return inconsistent or incomplete data in specific circumstances. A few orders of magnitude more such errors could substantiate conclusions. Unfortunately, this would require more time and data download limit than this study has resources to allow.
 
-According to this work, incorrect data are delivered only 0.6% of the time. If this finding is extended, it can be assumed that there are few situations where this would be a critical hindrance for a mobile device user.
+According to this work, inconsistent data are delivered only 0.6% of the time. If this finding is extended, it can be assumed that there are few situations where this would be a critical hindrance for a mobile device user.
+
+Reliable and complete response data helps ensure users can orient themselves in the map compared to their real world location, Park and Ohm's {\*Park:2014jp} perceived locational accuracy. The percentage of responses with failed reference checks is a second metric which demonstrates successful web service data delivery.
+
+Measurements of response time frequency distribution and percentage of reference check failures are LandgateAPITest's mobile suitability metrics. Improving these metrics should lead to greater mobile map user acceptance of SLIP's services, even though they may not realise where the underlying data originates. Accordingly, greater acceptance leads to a greater intention to make use of the services. Should more users and more application developers make use of SLIP's web services Landgate could well be said to be succeeding their shared goal with WALIS to improve access to spatial information.
 
 The OASIS web service quality standard {Kim:2012wm} calls for calculation of Availability, Accessibility and Successability (among others). These are predicated on the assumption that the testing device is guaranteed access to the internet to perform its tests. In other words, the testing device is assumed to be infallible while the tested service is not. This is entirely possible to achieve in controlled conditions, the testing machine simply does not send a request when it is not certain of success, or ignores tests where certain preconditions of controlled experiment are not met. The output then is a percentage of tests where the tester was able to contact the service, the difference from 100% being entirely the fault of the service.
 
@@ -729,12 +737,6 @@ Overall, LandgateAPITest is not an everyday testing suite. There are suitable ap
 
 LandgateAPITest's inability to calculate Successability and related metrics is a hindrance to its deployment as the sole testing application for spatial data infrastructure. It should be deployed alongside conventional testing packages to calculate this information.
 
-Measurement of response time is useful for determining Park and Ohm's {\*Park:2014jp} service and display quality factor. The frequency distribution of response times is a objective measurement which Landgate can use to show improvement of their service delivery.
-
-Reliable and complete response data helps ensure users can orient themselves in the map compared to their real world location, Park and Ohm's {\*Park:2014jp} perceived locational accuracy. The percentage of responses with failed reference checks is a second metric which demonstrates successful web service data delivery.
-
-Improving both these metrics should lead to greater mobile map user acceptance of SLIP's services, even though they may not realise where the underlying data originates. Accordingly, greater acceptance leads to a greater intention to make use of the services. Should more users and more application developers make use of SLIP's web services Landgate could well be said to be succeeding their shared goal with WALIS to improve access to spatial information.
-
 ## Recommendations
 
 Esri ArcGIS Servers can provision OGC and KML web services alongside their Esri REST services. Landgate has enabled WMS services for their Public ArcGIS MapServers, but not WFS or KML. Doing so would improve interoperability for open source apps such as QGIS at little incremental cost. Older infrastructure could then be decommissioned without reduced service to the community.
@@ -743,11 +745,13 @@ Esri JSON is not the same format as the open standard GeoJSON served by GME and 
 
 Should older OGC servers be decommissioned Landgate could offer WFS services from ArcGIS servers. This would allow them to continue to offer OGC standard GML despite changes to underlying server software. Landgate could also, adventurously, offer GeoJSON from ArcGIS for Server with third party extensions.
 
+Any recommendations for improving mobile suitability metrics (response time frequency distributions and reference check percentage) would require detailed discussion between Landgate and their internal and external stakeholders. Given such, these recommendations will not be addressed in this writing.
+
 ## Future Work
 
 This work is by no means exhaustive. There remain several possibilities for expanding the application's reach and improving the depth of information generated from a campaign.
 
-The foremost improvement to LandgateAPITest's functionality would be a more detailed investigation of the tests that failed their reference check, i.e. their response data did not match that stored in the web app database. This process could be semi-automated. Response data could be scanned for keywords such as "exception" in XML key/values to identify exception responses in place of the proper response data. Partial responses could be identified by longest common string comparison functions. Analysis of these categories of failed responses could provide more accurate insight into Landgate's server's suitability for mobile device traffic. This, in turn, would improve SLIP's mobile reliability metric for Landgate and WALIS.
+The foremost improvement to LandgateAPITest's functionality would be a more detailed investigation of the tests that failed their reference check, i.e. their response data did not match that stored in the web app database. This process could be semi-automated. Response data could be scanned for keywords such as "exception" in XML key/values to identify exception responses in place of the proper response data. Partial responses could be identified by longest common string comparison functions. Analysis of these categories of failed responses could provide more accurate insight into Landgate's server's suitability for mobile device traffic. This, in turn, would improve SLIP's mobile suitability metrics for Landgate and WALIS.
 
 A closer collaboration with the Landgate team could permit the investigators to inspect the server logs for the web app's requests. The causes of failed requests could be discerned from a combination of the LandgateAPITest app data and the server's log data. Especially, testers could relate server error conditions and logs to requests with a 500 response.
 
@@ -771,11 +775,11 @@ This work contributes to three aspects of the body of web service evaluation lit
 
 Firstly, LandgateAPITest tests services from an actual mobile device in real-world mobile usage situations. Tests are therefore as close to the real mobile experience as possible. This contrasts with the bulk of academic literature that performs tests on desktop computers emulating mobile devices. This testing campaign showed that the majority of responses were received in under a second and is suitable for mobile use.
 
-Secondly, more aspects of the interaction between client and server than merely average response time are examined. Determining the rate of incorrect responses provides Landgate with a second metric indicative of user acceptance of SLIP's services. The campaign detailed in this work showed only 0.6% of responses returned incorrect responses, but LandgateAPITest in its current form is incapable of determining the cause. Given the increasing frequency of reference check failures with increasing distance travelled it is assumed that the mobile network environment is the main determinant.
+Secondly, more aspects of the interaction between client and server than merely average response time are examined. Determining the rate of inconsistent responses provides Landgate with a second metric indicative of user acceptance of SLIP's services. The campaign detailed in this work showed only 0.6% of responses returned inconsistent responses, but LandgateAPITest in its current form is incapable of determining the cause. Given the increasing frequency of reference check failures with increasing distance travelled it is assumed that the mobile network environment is the main determinant.
 
 Lastly, the examination of a single service provider, Landgate and WALIS's SLIP service, lead to practical and actionable recommendations to improve its suitability for mobile users and application developers. Google Inc.'s deprecation of Google Maps Engine and SLIP's enforced change to Esri servers caused some disruption due to a change in JSON data format. Landgate can smooth such transitions by continuing to serve OGC data from the new Esri servers.
 
-This is not the first work to study each of these aspects, as is evident in the related work section. It is the intersection of these three aspects that grants LandgateAPITest the opportunity to produce actionable recommendations for Landgate. LandgateAPITest is a real-world testing suite, with real-world limitations. However, this does not diminish its utility to service providers.
+This is not the first work to study each of these aspects, as is evident in the related work section. It is the intersection of these three aspects that grants LandgateAPITest the opportunity to produce actionable recommendations for Landgate and provide mobile suitability metrics for objective goal success measurement.
 
 ## References
 
