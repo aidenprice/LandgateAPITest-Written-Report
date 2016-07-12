@@ -2,7 +2,7 @@
 
 The external examiner's comments were received from my supervisor on Monday, 4th of July, 2016.
 
-The examiner's comments are quoted verbatim below. They have been rearranged such that thematically similar comments are placed adjacent one another. This facilitates a single reply to several otherwise disparate comments.
+The examiner's comments are quoted verbatim below. They have been rearranged such that thematically similar comments are placed adjacent one another. This facilitates a single reply to several comments.
 
 ## Grammar
 
@@ -10,11 +10,7 @@ The examiner's comments are quoted verbatim below. They have been rearranged suc
 
 >Punctuation and some Academic Writing Requirements did not Considered Properly
 
-Simply state in your review of addressing the grammatical issues, state that you have made all corrections throughout the thesis. Colloquialisms have been removed and a stronger academic wording has been used in its place.
-
-With academic writing the examiner may have been meaning that diagrams should be place in the middle of a page with text above and below only and not on the side of it.
-
-
+Reviewed language throughout the document to locate grammatical and punctuation issues. Colloquialisms removed and more professionally academic wording applied.
 
 ## Abbreviations
 
@@ -26,9 +22,9 @@ With academic writing the examiner may have been meaning that diagrams should be
 
 >Abbreviation lists and appendix of codes are necessary
 
+A reasonable suggestion which the reader will find implemented as "Appendix-C List of Abbreviations". This is a list of all acronyms found in the document and their expanded versions.
 
-
-
+Also added a subsection to the appendix listing HTTP methods. These are, by convention, written in all capitals. This could lead the reader to the mistaken impression that they are acronyms.
 
 ## Technical Expressions
 
@@ -36,37 +32,28 @@ With academic writing the examiner may have been meaning that diagrams should be
 
 >Some technical expressions in results  were never used before.
 
-Last point in the results area:
-Leaflet is mentioned and hasn’t been mentioned earlier.
+Improved description of Leaflet JavaScript mapping library in "Python Open Source Packages" section.
 
-
+Disambiguation in the List of Abbreviations is a further aid to understanding, particularly for confusingly abbreviated mobile network standard names in the "Results" section.
 
 ## Referencing
 
 >Some parts need more referencing
 
-For further referencing here are a couple of spots and that should cover that feedback
-2.1 Related Work
-The opening sentence, could you add 3 or 4 citations as to studies about Web services.
-The paragraph starting with “The emergence of RESTful web services engendered…” if you can add a few  citations here that would show that there are many studies.
-2.2 Web service quality and discovery
-If you can add a citation or 2 to support your statements in the first paragraph.
+Added references to topic sentences in opening paragraphs of "Related Work" subsections 2.1 and 2.2.
 
-
-
-
-
+Removed some motherhood statements. Lead in sentences which state the obvious and do nothing to add to the context.
 
 ## Introduction
 
 >Introduction can be divided to two sections as introduction and Concepts
 
-
-
-
+Added a new Heading Level 1 section named "Concepts" to separate the "Web Services" and following Heading Level 2 sections from the "Introduction" section proper.
 
 ## Levels of Testing
 
 >It would be helpful to briefly indicate 4 major testing levels in this researches
 
-The second one with testing, just add a little more about the way you went about the testing.
+There is insufficient time to expand the scope of the work to include discussion of the four levels of testing (unit testing, integration testing, system testing and acceptance testings). A tester could apply LandgateAPITest to any, or all, of the levels.
+
+Added extra discussion on the testing approach, situations , times and so forth.

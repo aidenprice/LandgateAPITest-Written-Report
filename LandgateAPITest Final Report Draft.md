@@ -29,63 +29,69 @@ The iOS brains trust at Curtin University, Tristan Reed and Jeremy Siao Him Fa, 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Landgate API Test](#landgate-api-test)
-    - [Abstract](#abstract)
-    - [Acknowledgements](#acknowledgements)
-    - [Table of Contents](#table-of-contents)
-    - [List of Figures](#list-of-figures)
-    - [List of Tables](#list-of-tables)
-    - [Introduction](#introduction)
-        - [Landgate](#landgate)
-        - [Web Services](#web-services)
-        - [Spatial Web Services](#spatial-web-services)
-            - [Open Geospatial Consortium Web Map Service](#open-geospatial-consortium-web-map-service)
-            - [Open Geospatial Consortium Web Feature Service](#open-geospatial-consortium-web-feature-service)
-            - [Google Maps Engine](#google-maps-engine)
-            - [Esri ArcGIS for Server and ArcGIS REST API](#esri-arcgis-for-server-and-arcgis-rest-api)
-    - [Literature Review](#literature-review)
-        - [Similar Work](#similar-work)
-        - [Web Service Quality and Discovery](#web-service-quality-and-discovery)
-        - [Web Service Evaluation](#web-service-evaluation)
-        - [Acceptance](#acceptance)
-    - [Materials and Methods](#materials-and-methods)
-        - [Generalised Workflow](#generalised-workflow)
-        - [Data Model and Structures](#data-model-and-structures)
-            - [TestCampaign](#testcampaign)
-            - [TestMaster](#testmaster)
-                - [TestEndpoint](#testendpoint)
-                - [LocationTest](#locationtest)
-                - [NetworkTest](#networktest)
-                - [PingTest](#pingtest)
-            - [ReferenceObject](#referenceobject)
-            - [Vector](#vector)
-            - [CampaignStats](#campaignstats)
-        - [iOS Mobile Application](#ios-mobile-application)
-            - [Mobile Application Design Principles](#mobile-application-design-principles)
-            - [iOS Application Architecture](#ios-application-architecture)
-            - [Swift Open Source Packages](#swift-open-source-packages)
-                - [Realm Mobile Database](#realm-mobile-database)
-                - [Transporter State Machine](#transporter-state-machine)
-                - [Reachability](#reachability)
-                - [KDCircularProgress](#kdcircularprogress)
-            - [Hardware](#hardware)
-        - [Google Apps Engine Web Service](#google-apps-engine-web-service)
-            - [Web Service Design Principles](#web-service-design-principles)
-            - [Python Application Architecture](#python-application-architecture)
-            - [Python Open Source Packages](#python-open-source-packages)
-                - [Matplotlib](#matplotlib)
-        - [Other Applications Deployed](#other-applications-deployed)
-            - [Paw](#paw)
-            - [Atom](#atom)
-            - [Xcode](#xcode)
-    - [Results](#results)
-    - [Discussion](#discussion)
-    - [Recommendations](#recommendations)
-    - [Future Work](#future-work)
-    - [Conclusions](#conclusions)
-    - [References](#references)
-    - [Appendix A](#appendix-a)
-        - [Web Service Requests](#web-service-requests)
-    - [Appendix B](#appendix-b)
+	- [Abstract](#abstract)
+	- [Acknowledgements](#acknowledgements)
+	- [Table of Contents](#table-of-contents)
+	- [List of Figures](#list-of-figures)
+	- [List of Tables](#list-of-tables)
+	- [Introduction](#introduction)
+		- [Web Services](#web-services)
+		- [Spatial Web Services](#spatial-web-services)
+			- [Open Geospatial Consortium Web Map Service](#open-geospatial-consortium-web-map-service)
+			- [Open Geospatial Consortium Web Feature Service](#open-geospatial-consortium-web-feature-service)
+			- [Google Maps Engine](#google-maps-engine)
+			- [Esri ArcGIS for Server and ArcGIS REST API](#esri-arcgis-for-server-and-arcgis-rest-api)
+		- [Landgate](#landgate)
+	- [Literature Review](#literature-review)
+		- [Related Work](#related-work)
+		- [Web Service Quality and Discovery](#web-service-quality-and-discovery)
+		- [Web Service Evaluation](#web-service-evaluation)
+		- [Acceptance](#acceptance)
+	- [Materials and Methods](#materials-and-methods)
+		- [Generalised Workflow](#generalised-workflow)
+		- [Data Model and Structures](#data-model-and-structures)
+			- [TestCampaign](#testcampaign)
+			- [TestMaster](#testmaster)
+				- [TestEndpoint](#testendpoint)
+				- [LocationTest](#locationtest)
+				- [NetworkTest](#networktest)
+				- [PingTest](#pingtest)
+			- [ReferenceObject](#referenceobject)
+			- [Vector](#vector)
+			- [CampaignStats](#campaignstats)
+		- [iOS Mobile Application](#ios-mobile-application)
+			- [Mobile Application Design Principles](#mobile-application-design-principles)
+			- [iOS Application Architecture](#ios-application-architecture)
+			- [Swift Open Source Packages](#swift-open-source-packages)
+				- [Realm Mobile Database](#realm-mobile-database)
+				- [Transporter State Machine](#transporter-state-machine)
+				- [Reachability](#reachability)
+				- [KDCircularProgress](#kdcircularprogress)
+		- [Google Apps Engine Web Service](#google-apps-engine-web-service)
+			- [Web Service Design Principles](#web-service-design-principles)
+			- [Python Application Architecture](#python-application-architecture)
+			- [Python Open Source Packages](#python-open-source-packages)
+				- [Matplotlib](#matplotlib)
+				- [Leaflet](#leaflet)
+		- [Other Applications Deployed](#other-applications-deployed)
+			- [Paw](#paw)
+			- [Atom](#atom)
+			- [Xcode](#xcode)
+	- [Results](#results)
+		- [Test Regime](#test-regime)
+		- [Test Device Hardware](#test-device-hardware)
+		- [TestEndpoint Successes and Failures](#testendpoint-successes-and-failures)
+		- [Test Results by Response Time](#test-results-by-response-time)
+		- [Test Results by Distance Device Travelled](#test-results-by-distance-device-travelled)
+	- [Discussion](#discussion)
+	- [Recommendations](#recommendations)
+	- [Future Work](#future-work)
+	- [Conclusions](#conclusions)
+	- [References](#references)
+	- [Appendix A - Web Service GET Requests](#appendix-a-web-service-get-requests)
+	- [Appendix B - Web Service POST Requests](#appendix-b-web-service-post-requests)
+	- [Appendix C - List of Abbreviations](#appendix-c-list-of-abbreviations)
+		- [HTTP Method Names](#http-method-names)
 
 <!-- /TOC -->
 
@@ -171,7 +177,7 @@ Landgate's mandate to provide spatial data services through SLIP has been somewh
 
 ### Related Work
 
-Web services are widely studied. However, the scope of applications for web services is broad. There are, therefore, few studies that examine the intersection of geographic web service performance, mobile device context and a single, state-level spatial data infrastructure. Following are a cross-section of papers with aims partially aligned to those of this work.
+Web services are widely studied {Tahir:2013jd, Qiu:2015eq, ElIoiniNabil:2015us}. However, the scope of applications for web services is broad. There are, therefore, few studies that examine the intersection of geographic web service performance, mobile device context and a single, state-level spatial data infrastructure. Following are a cross-section of papers with aims partially aligned to those of this work.
 
 Hamas, Saad and Abed {\*Hamad:2010tr} compared the performance of SOAP and REST APIs on mobile devices. The measured criteria were response time and transmission size which predictably favoured REST interfaces.
 
@@ -197,7 +203,7 @@ Recent work by Cannata, Antonovic and Molinari {\*Cannata:2014dp} load tested th
 
 Tantalisingly, Cannata, Antonovic and Molinari {\*Cannata:2014dp} mentioned that Locust is capable of reporting testing tasks as failed even if the server returns a 200 "Success" response code with an exception in the response data. Unfortunately, they did not go on to explain this capability, nor did their testing uncover any exceptions which Locust could have revealed to them.
 
-The emergence of RESTful web services engendered many studies comparing performance to entrenched SOAP services. By focussing on response performance, few experimental designs take advantage of SOAP's inherent advantages, i.e. a message layer and orchestrated distributed computing. Such a design would allow SOAP APIs to be compared more favourably with REST APIs.
+The emergence of RESTful web services engendered many studies comparing performance to entrenched SOAP services {Castillo:2011ve, Kanagasundaram:2012wv}. By focussing on response performance, few experimental designs take advantage of SOAP's inherent advantages, i.e. a message layer and orchestrated distributed computing. Such a design would allow SOAP APIs to be compared more favourably with REST APIs.
 
 Castillo et al. {\*Castillo:2011ve} compared REST and SOAP service implementations as the intermediary messaging layer for a genetic algorithm and a fitness evaluator. They also presented one of the few papers to elaborate the advantages of the older SOAP API standard against a REST API, but their experiment did not build on this. Their proof of concept methodology introduced a useful control, requests via SOAP and REST sent strings of either 100 or 1,000 characters. The proportional time difference between large and small requests controlled whether the response time depends upon the amount of data sent and received, illuminating how much response time overhead is due to the API employed.
 
@@ -215,7 +221,7 @@ Yan et al. {\*Yan:2012uf} built a cloud testing suite, an approach they called W
 
 ### Web Service Quality and Discovery
 
-Automated web service discovery aims to support semantic web development. An application should be able to bind a web service without supervision from the end user. How then, though, should the application choose which web service to employ from the multitude available, also without requiring user intervention. The investigators below discuss systematically and automatically applied quality metrics as a basis for deciding which web services should be bound.
+Automated web service discovery aims to support semantic web development {Palacios:2011eo, DMello:2010hi}. An application should be able to bind a web service without supervision from the end user. How then, though, should the application choose which web service to employ from the multitude available, also without requiring user intervention. The investigators below discuss systematically and automatically applied quality metrics as a basis for deciding which web services should be bound.
 
 Palacios, Garcia-Banjul and Tuya {\*Palacios:2011eo} surveyed Service Oriented Architecture literature to find articles focussed on dynamic binding. 57% of the 33 articles detected faults in web services and thereby excluded non-responsive services.
 
@@ -523,6 +529,10 @@ The user initiated 284 TestMasters resulting in 16,144 TestEndpoints, as shown i
 | Count Network Results      | 16391     |
 | Count Ping Results         | 16345     |
 
+Tests were undertaken in a broad range of situations common to mobile device use. Situations of varying mobile network signal strength were deliberately sought. Such situations were found while travelling on highways between cities or, Interestingly while crossing the Sydney Harbour Bridge. There were fewer tests conducted while connected to WiFi as the results tend to not be useful except as an upper bound to connection speed.
+
+Device motion ranged from stationary (such as in an office environment) to highway speeds. Note that the chosen level of GPS location accuracy also affected calculation of device speed, particularly where tests complete quickly over a good mobile network but location results less reliable (a common situation in the city).
+
 There were three theatres of action in the campaign. Each test is mapped in a Leaflet web map using the location of its Vector's PreTestLocation (the LocationTest completed before the TestEndpoint began). Visualising 16,000 points would result in an ineffective map, so here closely clustered points are generalised into a heat map. A beneficial side effect of generalisation is to obfuscate precise locations.
 
 The majority of tests took place in Sydney, NSW and its environs. In particular the regular commute over the harbour to the Central Business District, and the roads and freeways to neighbouring cities.
@@ -743,7 +753,9 @@ Esri ArcGIS Servers can provision OGC and KML web services alongside their Esri 
 
 Esri JSON is not the same format as the open standard GeoJSON served by GME and OGC endpoints (note, this is not an OGC standard {Reed:2011kt}). The JSON output from Esri endpoints represents the same data as a response from an OGC or GME endpoint but is laid out differently and must be parsed into an in-memory geometry object before the two can be directly compared. Replacing GeoJSON with Esri JSON requires all applications which depend on these endpoints to adapt to the new format.
 
-Should older OGC servers be decommissioned Landgate could offer WFS services from ArcGIS servers. This would allow them to continue to offer OGC standard GML despite changes to underlying server software. Landgate could also, adventurously, offer GeoJSON from ArcGIS for Server with third party extensions.
+The latest version of ArcGIS Server (10.4) can supply GeoJSON in response to a `Query` request {Anonymous:3DxToBXL}. Landgate employs the previous generation ArcGIS Server, 10.3.1 for their production server infrastructure {Anonymous:81mWLEl8}.
+
+Should older OGC servers be decommissioned Landgate could offer WFS services from their current ArcGIS servers. This would allow them to continue to offer OGC standard GML despite changes to underlying server software.
 
 Any recommendations for improving mobile suitability metrics (response time frequency distributions and reference check percentage) would require detailed discussion between Landgate and their internal and external stakeholders. Given such, these recommendations will not be addressed in this writing.
 
@@ -785,3 +797,81 @@ This is not the first work to study each of these aspects, as is evident in the 
 
 
 ## Appendix A - Web Service GET Requests
+
+## Appendix B - Web Service POST Requests
+
+## Appendix C - List of Abbreviations
+
+| Abbreviation | Expansion                                                                                                                     |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------|
+| AJAX         | Asynchronuos JavaScript and XML                                                                                               |
+| API          | Application Programming Interface                                                                                             |
+| CC BY-SA     | Creative Commons Attribution Share Alike licence                                                                              |
+| CDMA         | Code Division Multiple Access                                                                                                 |
+| CRUD         | Create Read Update Delete                                                                                                     |
+| DSL          | Digital Subscriber Line                                                                                                       |
+| EDGE         | Enhanced Data rates for GSM Evolution                                                                                         |
+| ESRI         | No longer an acronym (previously Environmental Systems Research Institute)                                                    |
+| GAE          | Google Apps Engine                                                                                                            |
+| GeoJSON      | Geographic JavaScript Object Notation                                                                                         |
+| GIS          | Geographic Information System                                                                                                 |
+| GLONASS      | Globalnaya Navigazionnaya Sputnikovaya Sistema                                                                                |
+| GME          | Google Maps Engine                                                                                                            |
+| GML          | Geographic Markup Language                                                                                                    |
+| GPRS         | General Packet Radio Service                                                                                                  |
+| GPS          | Global Positioning System                                                                                                     |
+| GSM          | Global System for Mobile Communications (previously Groupe Special Mobile)                                                    |
+| GUI          | Graphic User Interface                                                                                                        |
+| HELIDEM      | Helvetia-Italy Digital Elevation Model                                                                                        |
+| HSDPA        | High Speed Download Packet Access                                                                                             |
+| HTTP         | HyperText Transfer Protocol                                                                                                   |
+| HTTPS        | HyperText Transfer Protocol Secure (or HTTP over TLS, or HTTP over SSL)                                                       |
+| ID           | Shorthand for identity                                                                                                        |
+| IDE          | Integrated Development Environment                                                                                            |
+| JSON         | JavaScript Object Notation                                                                                                    |
+| KML          | Keyhole Markup Language                                                                                                       |
+| KVP          | Key Value Pair                                                                                                                |
+| LAN          | Local Area Network                                                                                                            |
+| LTE          | Long Term Evolution                                                                                                           |
+| MIT          | Massachusetts Institute of Technology                                                                                         |
+| MVC          | Model View Controller                                                                                                         |
+| NoSQL        | Not strictly an acronym, a term for databases which eschew the standard relational database approach to storage and retrieval |
+| NSW          | New South Wales                                                                                                               |
+| OASIS        | Organisation for the Advancement of Structured Information Standards                                                          |
+| OGC          | Open Geospatial Consortium                                                                                                    |
+| OS           | Operating System                                                                                                              |
+| PC           | Personal Computer                                                                                                             |
+| QGIS         | No longer an acronym (previously Quantum GIS)                                                                                 |
+| QLD          | Queensland                                                                                                                    |
+| REST         | Representational State Transfer                                                                                               |
+| SaaS         | Software as a Service                                                                                                         |
+| SDI          | Spatial Data Infrastructure                                                                                                   |
+| SLIP         | Shared Location Information Platform                                                                                          |
+| SOA          | Service Oriented Architecture                                                                                                 |
+| SOAP         | Simple Object Access Protocol                                                                                                 |
+| TaaS         | Testing as a Service                                                                                                          |
+| TOC          | Table of Contents                                                                                                             |
+| UML          | Unified Modelling Language                                                                                                    |
+| URL          | Uniform Resource Locator                                                                                                      |
+| WA           | Western Australia                                                                                                             |
+| WALIS        | Western Australian Land Information System                                                                                    |
+| WFS          | Web Feature Service                                                                                                           |
+| WMS          | Web Map Service                                                                                                               |
+| WS           | Web Service                                                                                                                   |
+| WSDL         | Web Service Description Language                                                                                              |
+| XML          | eXtensible Markup Language                                                                                                    |
+
+### HTTP Method Names
+
+HTTP Method names are printed in all capital letters by convention. So that they may be disambiguated from acronyms they are listed here.
+
+| HTTP Method |
+|-------------|
+| GET         |
+| POST        |
+| PUT         |
+| HEAD        |
+| OPTIONS     |
+| DELETE      |
+| TRACE       |
+| CONNECT     |
