@@ -1,14 +1,14 @@
-# Product files - reports produced from the main .md file
+# Product files
 *.pdf
 *.doc
 *.docx
-*.html # an early misguided attempt at generic output
+*.html
 
-# Working table files - Excel files used to build the tables in the report
+# Working table files
 *.xls
 *.xlsx
 
-# Working graphics files - Adobe Illustrator and Creately.com files used to make some of the images
+# Working graphics files
 *.ai
 *.cdml
 
