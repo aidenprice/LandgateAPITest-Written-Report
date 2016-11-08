@@ -29,70 +29,70 @@ The iOS brains trust at Curtin University, Tristan Reed and Jeremy Siao Him Fa, 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Landgate API Test](#landgate-api-test)
-	- [Abstract](#abstract)
-	- [Acknowledgements](#acknowledgements)
-	- [Table of Contents](#table-of-contents)
-	- [List of Figures](#list-of-figures)
-	- [List of Tables](#list-of-tables)
-	- [Introduction](#introduction)
-	- [Background](#background)
-		- [Web Services](#web-services)
-		- [Spatial Web Services](#spatial-web-services)
-			- [Open Geospatial Consortium Web Map Service](#open-geospatial-consortium-web-map-service)
-			- [Open Geospatial Consortium Web Feature Service](#open-geospatial-consortium-web-feature-service)
-			- [Google Maps Engine](#google-maps-engine)
-			- [Esri ArcGIS for Server and ArcGIS REST API](#esri-arcgis-for-server-and-arcgis-rest-api)
-		- [Landgate](#landgate)
-	- [Literature Review](#literature-review)
-		- [Related Work](#related-work)
-		- [Web Service Quality and Discovery](#web-service-quality-and-discovery)
-		- [Web Service Evaluation](#web-service-evaluation)
-		- [Acceptance](#acceptance)
-	- [Materials and Methods](#materials-and-methods)
-		- [Generalised Workflow](#generalised-workflow)
-		- [Data Model and Structures](#data-model-and-structures)
-			- [TestCampaign](#testcampaign)
-			- [TestMaster](#testmaster)
-				- [TestEndpoint](#testendpoint)
-				- [LocationTest](#locationtest)
-				- [NetworkTest](#networktest)
-				- [PingTest](#pingtest)
-			- [ReferenceObject](#referenceobject)
-			- [Vector](#vector)
-			- [CampaignStats](#campaignstats)
-		- [iOS Mobile Application](#ios-mobile-application)
-			- [Mobile Application Design Principles](#mobile-application-design-principles)
-			- [iOS Application Architecture](#ios-application-architecture)
-			- [Swift Open Source Packages](#swift-open-source-packages)
-				- [Realm Mobile Database](#realm-mobile-database)
-				- [Transporter State Machine](#transporter-state-machine)
-				- [Reachability](#reachability)
-				- [KDCircularProgress](#kdcircularprogress)
-		- [Google Apps Engine Web Service](#google-apps-engine-web-service)
-			- [Web Service Design Principles](#web-service-design-principles)
-			- [Python Application Architecture](#python-application-architecture)
-			- [Python Open Source Packages](#python-open-source-packages)
-				- [Matplotlib](#matplotlib)
-				- [Leaflet](#leaflet)
-		- [Other Applications Deployed](#other-applications-deployed)
-			- [Paw](#paw)
-			- [Atom](#atom)
-			- [Xcode](#xcode)
-	- [Results](#results)
-		- [Test Regime](#test-regime)
-		- [Test Device Hardware](#test-device-hardware)
-		- [TestEndpoint Successes and Failures](#testendpoint-successes-and-failures)
-		- [Test Results by Response Time](#test-results-by-response-time)
-		- [Test Results by Distance Device Travelled](#test-results-by-distance-device-travelled)
-	- [Discussion](#discussion)
-	- [Recommendations](#recommendations)
-	- [Future Work](#future-work)
-	- [Conclusions](#conclusions)
-	- [References](#references)
-	- [Appendix A - Web Service GET Requests](#appendix-a-web-service-get-requests)
-	- [Appendix B - Web Service POST Requests](#appendix-b-web-service-post-requests)
-	- [Appendix C - List of Abbreviations](#appendix-c-list-of-abbreviations)
-		- [HTTP Method Names](#http-method-names)
+  - [Abstract](#abstract)
+  - [Acknowledgements](#acknowledgements)
+  - [Table of Contents](#table-of-contents)
+  - [List of Figures](#list-of-figures)
+  - [List of Tables](#list-of-tables)
+  - [Introduction](#introduction)
+  - [Background](#background)
+    - [Web Services](#web-services)
+    - [Spatial Web Services](#spatial-web-services)
+      - [Open Geospatial Consortium Web Map Service](#open-geospatial-consortium-web-map-service)
+      - [Open Geospatial Consortium Web Feature Service](#open-geospatial-consortium-web-feature-service)
+      - [Google Maps Engine](#google-maps-engine)
+      - [Esri ArcGIS for Server and ArcGIS REST API](#esri-arcgis-for-server-and-arcgis-rest-api)
+    - [Landgate](#landgate)
+  - [Literature Review](#literature-review)
+    - [Related Work](#related-work)
+    - [Web Service Quality and Discovery](#web-service-quality-and-discovery)
+    - [Web Service Evaluation](#web-service-evaluation)
+    - [Acceptance](#acceptance)
+  - [Materials and Methods](#materials-and-methods)
+    - [Generalised Workflow](#generalised-workflow)
+    - [Data Model and Structures](#data-model-and-structures)
+      - [TestCampaign](#testcampaign)
+      - [TestMaster](#testmaster)
+        - [TestEndpoint](#testendpoint)
+        - [LocationTest](#locationtest)
+        - [NetworkTest](#networktest)
+        - [PingTest](#pingtest)
+      - [ReferenceObject](#referenceobject)
+      - [Vector](#vector)
+      - [CampaignStats](#campaignstats)
+    - [iOS Mobile Application](#ios-mobile-application)
+      - [Mobile Application Design Principles](#mobile-application-design-principles)
+      - [iOS Application Architecture](#ios-application-architecture)
+      - [Swift Open Source Packages](#swift-open-source-packages)
+        - [Realm Mobile Database](#realm-mobile-database)
+        - [Transporter State Machine](#transporter-state-machine)
+        - [Reachability](#reachability)
+        - [KDCircularProgress](#kdcircularprogress)
+    - [Google Apps Engine Web Service](#google-apps-engine-web-service)
+      - [Web Service Design Principles](#web-service-design-principles)
+      - [Python Application Architecture](#python-application-architecture)
+      - [Python Open Source Packages](#python-open-source-packages)
+        - [Matplotlib](#matplotlib)
+        - [Leaflet](#leaflet)
+    - [Other Applications Deployed](#other-applications-deployed)
+      - [Paw](#paw)
+      - [Atom](#atom)
+      - [Xcode](#xcode)
+  - [Results](#results)
+    - [Test Regime](#test-regime)
+    - [Test Device Hardware](#test-device-hardware)
+    - [TestEndpoint Successes and Failures](#testendpoint-successes-and-failures)
+    - [Test Results by Response Time](#test-results-by-response-time)
+    - [Test Results by Distance Device Travelled](#test-results-by-distance-device-travelled)
+  - [Discussion](#discussion)
+  - [Recommendations](#recommendations)
+  - [Future Work](#future-work)
+  - [Conclusions](#conclusions)
+  - [References](#references)
+  - [Appendix A - Web Service GET Requests](#appendix-a-web-service-get-requests)
+  - [Appendix B - Web Service POST Requests](#appendix-b-web-service-post-requests)
+  - [Appendix C - List of Abbreviations](#appendix-c-list-of-abbreviations)
+    - [HTTP Method Names](#http-method-names)
 
 <!-- /TOC -->
 
@@ -166,7 +166,7 @@ Landgate is the trading name of the Western Australian Land Information Authorit
 
 Landgate's role incorporates managing property ownership and transfer records, as well as property valuations to government agencies (“Our story - Landgate,” 2015). Vital to society in the connected age, Landgate is Western Australia's leading spatial data agency. Landgate has successfully commercialised spatial data creation and access. Their cumulative efforts considerably lessened their dependence on funding from the state government. The success of this strategy has led to a projected 5% increase in the number of datasets served through the 2015/16 financial year (Statement of Corporate Intent 2015/16, 2015).
 
-![Organisation of Landgate and WALIS](Graphics\Landgate WALIS & SLIP Org Chart.png)
+![Organisation of Landgate and WALIS](Graphics/Landgate WALIS & SLIP Org Chart.png)
 
 The Western Australian Land Information System (WALIS) is a partnership between government agencies, the private sector, academia and the community. Their aim is to improve access to location information for the betterment of the Western Australian community (Location Information Strategy Program Coordination Team, 2012). The Shared Location Information Platform (SLIP) is WALIS's spatial data portal, the Western Australian government's Spatial Data Infrastructure (SDI), managed by Landgate. The portal presents datasets owned and maintained by authoritative agencies, standardises data formats and simplifies access.
 
@@ -294,7 +294,7 @@ Note that 300 series response codes, the resource moved or redirect codes, are n
 
 Immediately upon the test commencing, the device records the current date and time as a Unix time value, the number of seconds since 00:00 on the first of January 1970. Similarly, when the test concludes (successfully or otherwise) the device records the current date and time again. The total response time is the difference between these two time values.
 
-![Generalised Workflow Flowchart](Graphics\LandgateAPITest Generalised Workflow.png)
+![Generalised Workflow Flowchart](Graphics/LandgateAPITest Generalised Workflow.png)
 
 After all tests in the queue are complete the device stores all tests, their details and response data to a local database. The mobile app can query this database to display results to the user.
 
@@ -322,7 +322,7 @@ A LocationTest is the template and the act of determining the device's location.
 
 The following subsections detail each data object as laid out in the figure below.
 
-![LandgateAPITest Data Model Class Diagram](Graphics\LandgateAPITest Data Model Class Diagram.png)
+![LandgateAPITest Data Model Class Diagram](Graphics/LandgateAPITest Data Model Class Diagram.png)
 
 #### TestCampaign
 
@@ -432,15 +432,15 @@ Given these two points, users could be justly concerned that the application wou
 
 Apple Inc. advocates the Model-View-Controller (MVC) design pattern in object-oriented code. A controller class intermediates all interaction between the data model layer and the views on the device screen. LandgateAPITest follows this pattern by implementing viewcontroller classes for each screen presented to the user.
 
-![Typical Model-View-Controller (MVC) design pattern](Graphics\Mobile Application Architecture-01.png)
+![Typical Model-View-Controller (MVC) design pattern](Graphics/Mobile Application Architecture-01.png)
 
 The majority of the application's logic does not reside in viewcontrollers however. It is a common problem in MVC pattern design that the controller classes amass logic to the point of becoming unwieldy and difficult to maintain. LandgateAPITest's viewcontrollers call upon the SingletonTestManager and SingletonUploader classes when the user initiates a test or an upload to the LandgateAPITest web app respectively. These act as an interface for the model layer, abstracting model logic from the point of view of the viewcontrollers.
 
-![LandgateAPITest's modified MVC design pattern incorporating singleton, state-machine controller classes as a model management layer](Graphics\Mobile Application Architecture-02.png)
+![LandgateAPITest's modified MVC design pattern incorporating singleton, state-machine controller classes as a model management layer](Graphics/Mobile Application Architecture-02.png)
 
 Firing requests at Landgate's endpoints concurrently, rather than synchronously, would give unreliable response time results. An analysis would not be able to determine what proportion of response time was a factor of the device resolving multiple threads of computation. To avoid this complication LandgateAPITest's iOS app uses a state machine architecture.
 
-![State machine UML diagram](Graphics\LandgateAPITest Mobile Application State Diagram.png)
+![State machine UML diagram](Graphics/LandgateAPITest Mobile Application State Diagram.png)
 
 The state machine completes functions sequentially. The completion of each test fires an event function causing the application to change state and after that perform different functions.
 
@@ -524,13 +524,13 @@ The "production_campaign" featured two main pushes of testing. The first in Dece
 
 The user initiated 284 TestMasters resulting in 16,144 TestEndpoints, as shown in the table below. The count of LocationResults, NetworkResults and PingResults are each over 200 higher than the TestEndpoint count as they are run before the first EndpointTest and after the last one. The small differences account for a few dozen TestMasters cancelled or aborted before finalising the tests at the end.
 
-| Test                | Count     |
-|------------------------    |------:    |
-| Count Test Masters         |   284     |
-| Count Test Endpoints       | 16144     |
-| Count Location Results     | 16391     |
-| Count Network Results      | 16391     |
-| Count Ping Results         | 16345     |
+| Test                   | Count |
+| ---------------------- | ----: |
+| Count Test Masters     |   284 |
+| Count Test Endpoints   | 16144 |
+| Count Location Results | 16391 |
+| Count Network Results  | 16391 |
+| Count Ping Results     | 16345 |
 
 Tests were undertaken in a broad range of situations common to mobile device use. Situations of varying mobile network signal strength were deliberately sought. Such situations were found while travelling on highways between cities or, Interestingly while crossing the Sydney Harbour Bridge. There were fewer tests conducted while connected to WiFi as the results tend to not be useful except as an upper bound to connection speed.
 
@@ -554,8 +554,8 @@ Townsville, QLD was the theatre with the least number of tests, but some interes
 
 All tests were performed on an Apple iPhone 6S, model A1688 (a.k.a. iPhone8,1), with 64GB of storage. The standard device comes with a range of mobile radios across many bands; LTE, HSDPA, CDMA, GSM, EDGE, Wi-Fi radios a/b/g/n/ac and GPS and GLONASS receivers (“iPhone 6s Technical Specifications,” 2016).
 
-|    |    |
-|-------------------------------------    |--------------    |
+|                  |                             |
+| ---------------- | --------------------------- |
 | Campaign Name    | production_campaign         |
 | All Device Types | iPhone8,1                   |
 | All iOS Versions | 9.1, 9.2, 9.2.1, 9.3, 9.3.1 |
@@ -574,61 +574,61 @@ Closer examination of referenceCheckSuccess by test type (detailed in the follow
 
 Notably, the GetCapabilities tests rarely passed reference checks. Likely causes include changes to services offered during the test campaign or possibly conflicting timestamps buried in the XML response and reference.
 
-| Test Name                                           | Percent Reference Check Successful |
-|-----------------------------------------------------|--------------------:|
-| ESRI - BusStops - AttributeFilter - GET - JSON      | 98.79%             |
-| ESRI - BusStops - AttributeFilter - POST - JSON     | 98.20%             |
-| ESRI - BusStops - FeatureByID - GET - JSON          | 99.00%             |
-| ESRI - BusStops - FeatureByID - POST - JSON         | 98.76%             |
-| ESRI - BusStops - GetCapabilities - GET - JSON      | 97.64%             |
-| ESRI - BusStops - GetCapabilities - POST - JSON     | 98.99%             |
-| ESRI - BusStops - IntersectFilter - GET - JSON      | 97.31%             |
-| ESRI - BusStops - IntersectFilter - POST - JSON     | 98.21%             |
-| ESRI - BusStops - Small - GET - JSON                | 96.98%             |
-| ESRI - BusStops - Small - POST - JSON               | 97.89%             |
-| ESRI - Topo - Big - POST - Image                    | 99.45%             |
-| ESRI - Topo - Small - GET - Image                   | 99.32%             |
-| ESRI - Topo - Small - POST - Image                  | 100%               |
-| GME - AerialPhoto - Big - GET - Image               | 96.97%             |
-| GME - AerialPhoto - GetTileKVP - GET - Image        | 95.65%             |
-| GME - AerialPhoto - GetTileKVP2 - GET - Image       | 93.75%             |
-| GME - AerialPhoto - GetTileKVP3 - GET - Image       | 90.63%             |
-| GME - AerialPhoto - GetTileKVP4 - GET - Image       | 90.91%             |
-| GME - AerialPhoto - Small - GET - Image             | 86.36%             |
-| GME - AerialPhoto - WMSGetCapabilities - GET - XML  | 0%                 |
-| GME - AerialPhoto - WMTSGetCapabilities - GET - XML | 0%                 |
-| GME - BusStops - AttributeFilter - GET - JSON       | 83.87%             |
-| GME - BusStops - Big - GET - JSON                   | 0%                 |
-| GME - BusStops - DistanceFilter - GET - JSON        | 93.75%             |
-| GME - BusStops - FeatureByID - GET - JSON           | 96.55%             |
-| GME - BusStops - IntersectFilter - GET - JSON       | 90.63%             |
-| GME - BusStops - Small - GET - JSON                 | 0%                 |
-| OGC - AerialPhoto - GetTileKVP - GET - Image        | 98.85%             |
-| OGC - AerialPhoto - GetTileRestful - GET - Image    | 98.36%             |
-| OGC - BusStops - AttributeFilter - GET - JSON       | 0.83%              |
-| OGC - BusStops - AttributeFilter - GET - XML        | 99.72%             |
-| OGC - BusStops - AttributeFilter - POST - JSON      | 98.63%             |
-| OGC - BusStops - AttributeFilter - POST - XML       | 99.45%             |
-| OGC - BusStops - Big - GET - JSON                   | 100%               |
-| OGC - BusStops - Big - GET - XML                    | 100%               |
-| OGC - BusStops - Big - POST - JSON                  | 100%               |
-| OGC - BusStops - Big - POST - XML                   | 100%               |
-| OGC - BusStops - FeatureByID - GET - JSON           | 99.30%             |
-| OGC - BusStops - FeatureByID - GET - XML            | 98.85%             |
-| OGC - BusStops - FeatureByID - POST - JSON          | 100%               |
-| OGC - BusStops - FeatureByID - POST - XML           | 99.54%             |
-| OGC - BusStops - GetCapabilities - GET - XML        | 2.88%              |
-| OGC - BusStops - GetCapabilities - POST - XML       | 1.26%              |
-| OGC - BusStops - IntersectFilter - GET - JSON       | 99.73%             |
-| OGC - BusStops - IntersectFilter - GET - XML        | 99.46%             |
-| OGC - BusStops - IntersectFilter - POST - JSON      | 99.46%             |
-| OGC - BusStops - IntersectFilter - POST - XML       | 100%               |
-| OGC - BusStops - Small - GET - JSON                 | 98.81%             |
-| OGC - BusStops - Small - GET - XML                  | 100%               |
-| OGC - BusStops - Small - POST - JSON                | 99.76%             |
-| OGC - BusStops - Small - POST - XML                 | 98.83%             |
-| OGC - Topo - Big - GET - Image                      | 3.63%              |
-| OGC - Topo - Small - GET - Image                    | 3.48%              |
+| Test Name                                | Percent Reference Check Successful |
+| ---------------------------------------- | ---------------------------------: |
+| ESRI - BusStops - AttributeFilter - GET - JSON |                             98.79% |
+| ESRI - BusStops - AttributeFilter - POST - JSON |                             98.20% |
+| ESRI - BusStops - FeatureByID - GET - JSON |                             99.00% |
+| ESRI - BusStops - FeatureByID - POST - JSON |                             98.76% |
+| ESRI - BusStops - GetCapabilities - GET - JSON |                             97.64% |
+| ESRI - BusStops - GetCapabilities - POST - JSON |                             98.99% |
+| ESRI - BusStops - IntersectFilter - GET - JSON |                             97.31% |
+| ESRI - BusStops - IntersectFilter - POST - JSON |                             98.21% |
+| ESRI - BusStops - Small - GET - JSON     |                             96.98% |
+| ESRI - BusStops - Small - POST - JSON    |                             97.89% |
+| ESRI - Topo - Big - POST - Image         |                             99.45% |
+| ESRI - Topo - Small - GET - Image        |                             99.32% |
+| ESRI - Topo - Small - POST - Image       |                               100% |
+| GME - AerialPhoto - Big - GET - Image    |                             96.97% |
+| GME - AerialPhoto - GetTileKVP - GET - Image |                             95.65% |
+| GME - AerialPhoto - GetTileKVP2 - GET - Image |                             93.75% |
+| GME - AerialPhoto - GetTileKVP3 - GET - Image |                             90.63% |
+| GME - AerialPhoto - GetTileKVP4 - GET - Image |                             90.91% |
+| GME - AerialPhoto - Small - GET - Image  |                             86.36% |
+| GME - AerialPhoto - WMSGetCapabilities - GET - XML |                                 0% |
+| GME - AerialPhoto - WMTSGetCapabilities - GET - XML |                                 0% |
+| GME - BusStops - AttributeFilter - GET - JSON |                             83.87% |
+| GME - BusStops - Big - GET - JSON        |                                 0% |
+| GME - BusStops - DistanceFilter - GET - JSON |                             93.75% |
+| GME - BusStops - FeatureByID - GET - JSON |                             96.55% |
+| GME - BusStops - IntersectFilter - GET - JSON |                             90.63% |
+| GME - BusStops - Small - GET - JSON      |                                 0% |
+| OGC - AerialPhoto - GetTileKVP - GET - Image |                             98.85% |
+| OGC - AerialPhoto - GetTileRestful - GET - Image |                             98.36% |
+| OGC - BusStops - AttributeFilter - GET - JSON |                              0.83% |
+| OGC - BusStops - AttributeFilter - GET - XML |                             99.72% |
+| OGC - BusStops - AttributeFilter - POST - JSON |                             98.63% |
+| OGC - BusStops - AttributeFilter - POST - XML |                             99.45% |
+| OGC - BusStops - Big - GET - JSON        |                               100% |
+| OGC - BusStops - Big - GET - XML         |                               100% |
+| OGC - BusStops - Big - POST - JSON       |                               100% |
+| OGC - BusStops - Big - POST - XML        |                               100% |
+| OGC - BusStops - FeatureByID - GET - JSON |                             99.30% |
+| OGC - BusStops - FeatureByID - GET - XML |                             98.85% |
+| OGC - BusStops - FeatureByID - POST - JSON |                               100% |
+| OGC - BusStops - FeatureByID - POST - XML |                             99.54% |
+| OGC - BusStops - GetCapabilities - GET - XML |                              2.88% |
+| OGC - BusStops - GetCapabilities - POST - XML |                              1.26% |
+| OGC - BusStops - IntersectFilter - GET - JSON |                             99.73% |
+| OGC - BusStops - IntersectFilter - GET - XML |                             99.46% |
+| OGC - BusStops - IntersectFilter - POST - JSON |                             99.46% |
+| OGC - BusStops - IntersectFilter - POST - XML |                               100% |
+| OGC - BusStops - Small - GET - JSON      |                             98.81% |
+| OGC - BusStops - Small - GET - XML       |                               100% |
+| OGC - BusStops - Small - POST - JSON     |                             99.76% |
+| OGC - BusStops - Small - POST - XML      |                             98.83% |
+| OGC - Topo - Big - GET - Image           |                              3.63% |
+| OGC - Topo - Small - GET - Image         |                              3.48% |
 
 See Appendices A and B for a list of URLs for each request.
 
@@ -862,71 +862,71 @@ This is not the first work to study each of these aspects, as is evident in the 
 
 ## Appendix C - List of Abbreviations
 
-| Abbreviation | Expansion                                                                                                                     |
-|--------------|-------------------------------------------------------------------------------------------------------------------------------|
-| AJAX         | Asynchronuos JavaScript and XML                                                                                               |
-| API          | Application Programming Interface                                                                                             |
-| CC BY-SA     | Creative Commons Attribution Share Alike licence                                                                              |
-| CDMA         | Code Division Multiple Access                                                                                                 |
-| CRUD         | Create Read Update Delete                                                                                                     |
-| DSL          | Digital Subscriber Line                                                                                                       |
-| EDGE         | Enhanced Data rates for GSM Evolution                                                                                         |
-| ESRI         | No longer an acronym (previously Environmental Systems Research Institute)                                                    |
-| GAE          | Google Apps Engine                                                                                                            |
-| GeoJSON      | Geographic JavaScript Object Notation                                                                                         |
-| GIS          | Geographic Information System                                                                                                 |
-| GLONASS      | Globalnaya Navigazionnaya Sputnikovaya Sistema                                                                                |
-| GME          | Google Maps Engine                                                                                                            |
-| GML          | Geographic Markup Language                                                                                                    |
-| GPRS         | General Packet Radio Service                                                                                                  |
-| GPS          | Global Positioning System                                                                                                     |
-| GSM          | Global System for Mobile Communications (previously Groupe Special Mobile)                                                    |
-| GUI          | Graphic User Interface                                                                                                        |
-| HELIDEM      | Helvetia-Italy Digital Elevation Model                                                                                        |
-| HSDPA        | High Speed Download Packet Access                                                                                             |
-| HTTP         | HyperText Transfer Protocol                                                                                                   |
-| HTTPS        | HyperText Transfer Protocol Secure (or HTTP over TLS, or HTTP over SSL)                                                       |
-| ID           | Shorthand for identity                                                                                                        |
-| IDE          | Integrated Development Environment                                                                                            |
-| JSON         | JavaScript Object Notation                                                                                                    |
-| KML          | Keyhole Markup Language                                                                                                       |
-| KVP          | Key Value Pair                                                                                                                |
-| LAN          | Local Area Network                                                                                                            |
-| LTE          | Long Term Evolution                                                                                                           |
-| MIT          | Massachusetts Institute of Technology                                                                                         |
-| MVC          | Model View Controller                                                                                                         |
+| Abbreviation | Expansion                                |
+| ------------ | ---------------------------------------- |
+| AJAX         | Asynchronuos JavaScript and XML          |
+| API          | Application Programming Interface        |
+| CC BY-SA     | Creative Commons Attribution Share Alike licence |
+| CDMA         | Code Division Multiple Access            |
+| CRUD         | Create Read Update Delete                |
+| DSL          | Digital Subscriber Line                  |
+| EDGE         | Enhanced Data rates for GSM Evolution    |
+| ESRI         | No longer an acronym (previously Environmental Systems Research Institute) |
+| GAE          | Google Apps Engine                       |
+| GeoJSON      | Geographic JavaScript Object Notation    |
+| GIS          | Geographic Information System            |
+| GLONASS      | Globalnaya Navigazionnaya Sputnikovaya Sistema |
+| GME          | Google Maps Engine                       |
+| GML          | Geographic Markup Language               |
+| GPRS         | General Packet Radio Service             |
+| GPS          | Global Positioning System                |
+| GSM          | Global System for Mobile Communications (previously Groupe Special Mobile) |
+| GUI          | Graphic User Interface                   |
+| HELIDEM      | Helvetia-Italy Digital Elevation Model   |
+| HSDPA        | High Speed Download Packet Access        |
+| HTTP         | HyperText Transfer Protocol              |
+| HTTPS        | HyperText Transfer Protocol Secure (or HTTP over TLS, or HTTP over SSL) |
+| ID           | Shorthand for identity                   |
+| IDE          | Integrated Development Environment       |
+| JSON         | JavaScript Object Notation               |
+| KML          | Keyhole Markup Language                  |
+| KVP          | Key Value Pair                           |
+| LAN          | Local Area Network                       |
+| LTE          | Long Term Evolution                      |
+| MIT          | Massachusetts Institute of Technology    |
+| MVC          | Model View Controller                    |
 | NoSQL        | Not strictly an acronym, a term for databases which eschew the standard relational database approach to storage and retrieval |
-| NSW          | New South Wales                                                                                                               |
-| OASIS        | Organisation for the Advancement of Structured Information Standards                                                          |
-| OGC          | Open Geospatial Consortium                                                                                                    |
-| OS           | Operating System                                                                                                              |
-| PC           | Personal Computer                                                                                                             |
-| QGIS         | No longer an acronym (previously Quantum GIS)                                                                                 |
-| QLD          | Queensland                                                                                                                    |
-| REST         | Representational State Transfer                                                                                               |
-| SaaS         | Software as a Service                                                                                                         |
-| SDI          | Spatial Data Infrastructure                                                                                                   |
-| SLIP         | Shared Location Information Platform                                                                                          |
-| SOA          | Service Oriented Architecture                                                                                                 |
-| SOAP         | Simple Object Access Protocol                                                                                                 |
-| TaaS         | Testing as a Service                                                                                                          |
-| TOC          | Table of Contents                                                                                                             |
-| UML          | Unified Modelling Language                                                                                                    |
-| URL          | Uniform Resource Locator                                                                                                      |
-| WA           | Western Australia                                                                                                             |
-| WALIS        | Western Australian Land Information System                                                                                    |
-| WFS          | Web Feature Service                                                                                                           |
-| WMS          | Web Map Service                                                                                                               |
-| WS           | Web Service                                                                                                                   |
-| WSDL         | Web Service Description Language                                                                                              |
-| XML          | eXtensible Markup Language                                                                                                    |
+| NSW          | New South Wales                          |
+| OASIS        | Organisation for the Advancement of Structured Information Standards |
+| OGC          | Open Geospatial Consortium               |
+| OS           | Operating System                         |
+| PC           | Personal Computer                        |
+| QGIS         | No longer an acronym (previously Quantum GIS) |
+| QLD          | Queensland                               |
+| REST         | Representational State Transfer          |
+| SaaS         | Software as a Service                    |
+| SDI          | Spatial Data Infrastructure              |
+| SLIP         | Shared Location Information Platform     |
+| SOA          | Service Oriented Architecture            |
+| SOAP         | Simple Object Access Protocol            |
+| TaaS         | Testing as a Service                     |
+| TOC          | Table of Contents                        |
+| UML          | Unified Modelling Language               |
+| URL          | Uniform Resource Locator                 |
+| WA           | Western Australia                        |
+| WALIS        | Western Australian Land Information System |
+| WFS          | Web Feature Service                      |
+| WMS          | Web Map Service                          |
+| WS           | Web Service                              |
+| WSDL         | Web Service Description Language         |
+| XML          | eXtensible Markup Language               |
 
 ### HTTP Method Names
 
 HTTP Method names are printed in all capital letters by convention. So that they may be disambiguated from acronyms they are listed here.
 
 | HTTP Method |
-|-------------|
+| ----------- |
 | GET         |
 | POST        |
 | PUT         |

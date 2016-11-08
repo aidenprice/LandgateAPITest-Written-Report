@@ -1,5 +1,4 @@
 # Product files
-*.pdf
 *.doc
 *.docx
 *.html
@@ -13,10 +12,7 @@
 *.cdml
 
 # Files which are not intended for public dissemination
-Response to Feedback.md
-LandgateAPITest Final Report Structure.md
-Graphics\Generalised Workflow Chart.txt
-Literature Review\
+Aiden Price Research Proposal.rtf
 
 
 # Standard Mac gitignore files
